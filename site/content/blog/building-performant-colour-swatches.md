@@ -10,7 +10,7 @@ excerpt: "Using Shopify's storefront API and sessionStorage."
 
 As part of [Pangaia's](https://thepangaia.com/) collection page rebuild we took the opportunity to replace the product cards which appear throughout the site with a single Vue component with several new features.
 
-One of these new features was colour swatches which allow the user to seamlessly switch between the product's colours within the collection page grid. On Pangaia colours are setup as separate products, so instead of just displaying the variants of a product we have to load the information of all the separate related products. The easiest way to do this is to use the `products` query in [Shopify's storefront API](https://shopify.dev/api/storefront/reference/common-objects/queryroot#products-2021-07).
+One of these new features was colour swatches which allow the user to seamlessly switch between the product's colours within the collection page grid. On Pangaia colours are set up as separate products, so instead of just displaying the variants of a product we have to load the information of all the separate related products. The easiest way to do this is to use the `products` query in [Shopify's storefront API](https://shopify.dev/api/storefront/reference/common-objects/queryroot#products-2021-07).
 
 > **Product setup**
 > Product families are linked by having the same prefix in their title and handle. So a 365 Hoodie would be called _365 Hoodie—Navy Blue_ or _365 Hoodie—Jade Green_. To find all colours of the 365 Hoodie we would use the query `title:365 Hoodie*` which finds all products with the [title](https://help.shopify.com/en/manual/online-store/storefront-search#searching-specific-fields) [prefix](https://help.shopify.com/en/manual/online-store/storefront-search#prefix-search) _365 Hoodie_, and a few more besides.
@@ -26,14 +26,14 @@ Next the product card's handle is added to a queue which is used to spread the r
 Then we check if the product family has already been loaded; if the product family's colour array is already available in `sessionStorage` then we use that instead of making a request.
 
 > **Why `sessionStorage`?**
-> We used `sessionStorage` because Pangaia frequently update their product catalogue as products becomes available or go out of stock due to the popular nature of their products. `sessionStorage` persists as long as the tab exists which saves us having to check if the cache should be expired or not.
+> We used `sessionStorage` because Pangaia frequently updates their product catalogue as products become available or go out of stock due to the popular nature of their products. `sessionStorage` persists as long as the tab exists which saves us having to check if the cache should be expired or not.
 
 If the colour array isn't available in `sessionStorage`, but the product family handle has `loading` set to `true`, then we add an EventBus listener to wait for the related request to complete. This is why we use a queue to spread the requests as it gives the first product card time to update `sessionStorage` with the `loading` state.
 
 Finally if none of the previous conditions are met then the storefront API request will be made using the following steps:
 
 1. Add the product family handle to the `colours` object in `sessionStorage` with `loading` set to `true`
-1. Send the request to the storefont API using a title prefix search
+1. Send the request to the storefront API using a title prefix search
 1. Receive the response, remove unrelated products and format their objects
 1. Replace the entry in the `colours` object with the formatted array
 1. Emit an event with the formatted array as the payload
