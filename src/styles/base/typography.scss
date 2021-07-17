@@ -107,6 +107,25 @@ strong {
   font-weight: $WEIGHT_BOLD;
 }
 
+blockquote {
+  background-color: rgba($COLOR_BLUE, 0.1);
+  border-left: 3px solid $COLOR_BLUE;
+  padding: $SPACING_M;
+
+  &:not(:last-child) {
+    margin-bottom: $SPACING_P;
+  }
+
+  strong {
+    display: block;
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+}
+
 .standfirst {
   font-size: 2rem;
   line-height: $LINE_HEIGHT_M;
@@ -144,7 +163,8 @@ strong {
 /**
  * Lists
  */
-ul {
+ul, ol {
+  counter-reset: list;
   font-size: 1.8rem;
   line-height: $LINE_HEIGHT_L;
 
@@ -155,26 +175,37 @@ ul {
   }
 }
 
-li {
-  main & {
-    padding-left: $SPACING_S;
+main {
+  li {
+    padding-left: $SPACING_M;
     position: relative;
 
-    &::before {
-      background-color: currentColor;
-      content: '';
-      display: inline-block;
-      height: 0.35em;
-      left: 0;
-      position: absolute;
-      top: 0.5em;
-      transform: rotate(45deg);
-      width: 0.35em;
-    }
-
     &:not(:last-child) {
-      margin-bottom: $SPACING_3XS;
+      margin-bottom: $SPACING_XS;
     }
+  }
+
+  ul li::before,
+  ol li::before {
+    display: inline-block;
+    left: 0;
+    position: absolute;
+  }
+
+  ul li::before {
+    background-color: $COLOR_BLUE;
+    content: '';
+    height: 0.35em;
+    top: 0.5em;
+    transform: rotate(45deg);
+    width: 0.35em;
+  }
+
+  ol li::before {
+    color: $COLOR_BLUE;
+    content: counter(list) '.';
+    counter-increment: list;
+    top: 0;
   }
 }
 

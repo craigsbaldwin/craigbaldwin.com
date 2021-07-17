@@ -2,6 +2,11 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.5.1 - 2021-07-17
+* Added _Building performant colour swatches_ blog post
+* Updated client logos layout on work page
+* Dependency versions update
+
 ## 12.5.0 - 2021-06-11
 * New grid layout for all pages
 * Updated role description in homepage title

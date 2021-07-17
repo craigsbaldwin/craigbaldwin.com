@@ -7,6 +7,10 @@
 .article {
   &__content {
     margin-bottom: $SPACING_L;
+
+    a {
+      display: unset;
+    }
   }
 
   &__link {
@@ -66,6 +70,9 @@
     }
   }
 
+  /**
+   * Dark mode.
+   */
   .is-dark & {
     &__link {
       color: $COLOR_DARK_MODE_WHITE;
@@ -76,6 +83,9 @@
     }
   }
 
+  /**
+   * Media queries.
+   */
   @include mq($from: medium) {
     &__navigation {
       display: flex;
