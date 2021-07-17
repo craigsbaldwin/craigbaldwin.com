@@ -69,7 +69,9 @@ code {
     border-radius: 3px;
     color: $COLOR_RED;
     display: inline-block;
-    font-size: 1.3rem;
+    // stylelint-disable-next-line
+    font-size: 0.7em;
+    font-weight: $WEIGHT_REGULAR;
     line-height: inherit;
     padding: 0 $SPACING_2XS;
   }
