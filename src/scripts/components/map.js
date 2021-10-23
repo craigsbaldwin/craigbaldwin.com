@@ -1,14 +1,14 @@
 /**
  * Components > Map.
  * ------------------------------------------------------------------------------
- * Mountains map functionality.
+ * Mountains page map functionality.
  *
  * @namespace map
  */
-import {mapData} from '../helpers/map-data';
+import { mapData } from '../helpers/map-data';
 
 /**
- * Create a new header object.
+ * Create a new map object.
  */
 export default () => {
 
@@ -16,6 +16,7 @@ export default () => {
    * Global variables.
    */
   let map = {};
+  let mapToken = 'https://api.mapbox.com/styles/v1/craigbaldwin/cked0xic42aoj19kiqh2ur9ga/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}'
 
   /**
    * Initialise component.
@@ -33,19 +34,32 @@ export default () => {
       scrollWheelZoom: false,
     }).setView([54.518, -3.05], 10);
 
-    L.tileLayer('https://api.mapbox.com/styles/v1/craigbaldwin/cked0xic42aoj19kiqh2ur9ga/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}', {
+    /**
+     * Enable when adding new mountains.
+     */
+    // devMode()
+
+    L.tileLayer(mapToken, {
       accessToken: 'pk.eyJ1IjoiY3JhaWdiYWxkd2luIiwiYSI6ImNrMmhyZXV4bjA4ajMzbW52ejF5c2ppd3oifQ.l_5II-ZwhXVtIcCsgNIwqw',
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 13,
     }).addTo(map);
 
-    L.control.zoom({position: 'topright'}).addTo(map);
-
-    // map.on('contextmenu', (event) => {
-    //   window.alert(event.latlng);
-    // });
+    L.control.zoom({ position: 'topright' }).addTo(map);
 
     addMarkers();
+  }
+
+  /**
+   * Developer mode.
+   * - Adds right-click alert and better map for finding mountains.
+   */
+  function devMode() {
+    mapToken = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+
+    map.on('contextmenu', (event) => {
+      window.alert(event.latlng);
+    });
   }
 
   /**
@@ -65,7 +79,7 @@ export default () => {
         title: location.name,
         riseOnHover: true,
         icon,
-      }).bindPopup(location.name, {closeButton: false}).addTo(map);
+      }).bindPopup(location.name, { closeButton: false }).addTo(map);
     });
   }
 

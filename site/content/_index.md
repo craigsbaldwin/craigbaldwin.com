@@ -1,6 +1,6 @@
 ---
 title: "Index"
-description: "Principal developer at We Make Websites, developing Shopify Plus e-commerce and headless stores."
+description: "Principal developer at We Make Websites, developing Shopify Plus sites and our internal framework."
 handle: "index"
 layout: "index"
 colour: "blue"
@@ -9,5 +9,5 @@ colour: "blue"
 {{<
   card
   title="I make websites"
-  copy="Principal developer at We Make Websites, developing Shopify Plus e-commerce and headless stores."
+  copy="Principal developer at We Make Websites, developing Shopify Plus sites and our internal framework."
 >}}
