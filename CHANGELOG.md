@@ -2,6 +2,15 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.5.2 - 2021-10-23
+* Added _October 2021_ mountains entry
+* Updated homepage content
+* Updated about page content
+* Updated Pangaia work entry to include tagged blog posts
+* Fixed mountains not listing climbed mountains
+* Fixed tag article list layout
+* Dependencies versions update
+
 ## 12.5.1 - 2021-07-17
 * Added _Building performant colour swatches_ blog post
 * Updated client logos layout on work page

@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-description: "Testing"
+description: "Random thoughts, feelings, and bits of code from a Shopify developer and wandering walker. All opinions my own."
 handle: "blog"
 layout: "blog"
 colour: "blue"

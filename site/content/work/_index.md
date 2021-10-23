@@ -1,6 +1,6 @@
 ---
 title: "Work"
-description: "Stuff"
+description: "A selection of projects I've worked on and a few of the clients I've been involved with."
 handle: "work"
 layout: "work"
 colour: "purple"
