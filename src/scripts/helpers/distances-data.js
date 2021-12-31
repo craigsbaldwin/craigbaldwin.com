@@ -1,14 +1,15 @@
 /**
- * Helper: Chart data
+ * Helper: Distances data
  * ------------------------------------------------------------------------------
  * Datasets and settings for each chart.
  *
- * @namespace chartData
+ * @namespace distancesData
  */
 
 /**
  * Elevation data.
- * - Fitbit floors (* 3) + running elevation.
+ * - Fitbit floors (* 3) + Strava running elevation - Strava walking elevation.
+ * - A FitBit floor equals 10ft.
  */
 export const elevationData = {
   type: 'bar',
