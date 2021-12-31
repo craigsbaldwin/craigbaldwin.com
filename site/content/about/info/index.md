@@ -24,7 +24,7 @@ This site has been built using [Hugo](https://gohugo.io/) and the [Victor Hugo](
 
 The repo is continuously deployed using [Netlify](https://www.netlify.com/).
 
-Code quality standards follow [We Make Websites'](https://github.com/we-make-websites/wmw-coding-guidelines) (which I wrote).
+Code quality standards follow [We Make Websites'](https://github.com/we-make-websites/wmw-coding-guidelines/blob/master/README.md) (which I wrote).
 
 ## Legal bit
 
