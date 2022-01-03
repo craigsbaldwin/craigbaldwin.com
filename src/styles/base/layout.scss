@@ -50,12 +50,19 @@ html {
  * Body layout.
  */
 .template {
-  background-color: rgba($COLOR_MID_GREY, 0.25);
+  @include transition(background-color, color);
+  background-color: $COLOR_BACKGROUND;
+  color: $COLOR_BLACK;
   display: flex;
   flex-direction: column;
   margin: $SPACING_S;
   min-height: calc(100vh - (2 * #{$SPACING_S}));
   padding: 0 $SPACING_S;
+
+  .is-dark & {
+    background-color: $COLOR_DARK_MODE_BACKGROUND;
+    color: $COLOR_DARK_MODE_WHITE;
+  }
 }
 
 .container {

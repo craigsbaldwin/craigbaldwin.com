@@ -7,6 +7,35 @@
 .entry {
   $parent: &;
 
+  &::before {
+    @include transition(background-color, border-color);
+    background-color: $COLOR_BLACK;
+    border: 3px solid $COLOR_BACKGROUND;
+    border-radius: 100%;
+    content: '';
+    height: 16px;
+    // Margin - centre dot over timeline
+    left: calc(-#{$SPACING_S} - 13px);
+    position: absolute;
+    top: 4px;
+    transform: translateX(3px);
+    width: 16px;
+    z-index: $LAYER_RAISED;
+  }
+
+  &::after {
+    @include transition(background-color);
+    background-color: $COLOR_BLACK;
+    content: '';
+    height: 2px;
+    left: -$SPACING_2XS;
+    position: absolute;
+    top: 11px;
+    transform: translateX(-100%);
+    width: 7px;
+    z-index: $LAYER_BASE;
+  }
+
   &__title {
     &:not(:last-child) {
       margin-bottom: $SPACING_XS;
@@ -18,6 +47,20 @@
 
     &:not(:last-child) {
       margin-bottom: $SPACING_S;
+    }
+  }
+
+  /**
+   * Dark mode.
+   */
+  .is-dark & {
+    &::before {
+      background-color: $COLOR_DARK_MODE_WHITE;
+      border-color: $COLOR_DARK_MODE_BACKGROUND;
+    }
+
+    &::after {
+      background-color: $COLOR_DARK_MODE_WHITE;
     }
   }
 }

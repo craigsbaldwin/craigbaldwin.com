@@ -1,13 +1,13 @@
 /**
- * Components > Charts.
+ * Components > Distances.
  * ------------------------------------------------------------------------------
  * Distance charts functionality.
  *
- * @namespace charts
+ * @namespace distances
  */
 import Cookies from 'js-cookie';
 
-import {elevationData, totalData, walkingData} from '../helpers/chart-data';
+import {elevationData, totalData, walkingData} from '../helpers/distances-data';
 
  /**
  * DOM selectors.
@@ -19,7 +19,7 @@ const selectors = {
 };
 
 /**
- * Create a new header object.
+ * Create a new distances object.
  */
 export default () => {
 

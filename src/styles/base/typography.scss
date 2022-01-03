@@ -35,18 +35,13 @@ $WEIGHT_BOLD: 700;
 
 /**
  * Element styling.
+ * - Type colours are not set here because they weren't transitioning.
  */
 body {
-  @include transition(color);
-  color: $COLOR_BLACK;
   font-family: $FONT;
   font-size: 1.4rem;
   font-weight: $WEIGHT_REGULAR;
   line-height: $LINE_HEIGHT_S;
-
-  .is-dark & {
-    color: $COLOR_DARK_MODE_WHITE;
-  }
 }
 
 /**

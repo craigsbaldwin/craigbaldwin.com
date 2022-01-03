@@ -2,6 +2,13 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.6.0 - 2022-01-03
+* Started using semantic versioning for updates
+* Updated distances graphs with 2021 data
+* Updated CSS colour variables
+* Updated coding guidelines link to point directly to GitHub readme
+* Updated contact page introduction
+
 ## 12.5.2 - 2021-10-23
 * Added _October 2021_ mountains entry
 * Updated homepage content

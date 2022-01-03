@@ -16,10 +16,10 @@ import {pageHandle} from './helpers/utils';
 /**
  * Global component imports.
  */
-import charts from './components/charts';
 import code from './components/code';
 import counter from './components/counter';
 import darkMode from './components/dark-mode';
+import distances from './components/distances';
 import header from './components/header';
 import highlighter from './components/highlighter';
 import map from './components/map';
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       break;
 
     case 'distances':
-      charts().init();
+      distances().init();
       break;
 
     case 'mountains':

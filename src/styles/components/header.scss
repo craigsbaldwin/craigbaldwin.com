@@ -66,7 +66,7 @@
   @include mq($until: medium) {
     &__navigation {
       @include transition(background-color, transform);
-      background-color: $COLOR_LIGHT_GREY;
+      background-color: $COLOR_BACKGROUND;
       display: flex;
       flex-direction: column;
       height: 100%;
