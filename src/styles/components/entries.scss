@@ -32,51 +32,6 @@
   &__entry {
     grid-column: 2;
     position: relative;
-
-    &::before {
-      @include transition(background-color, border-color);
-      background-color: $COLOR_BLACK;
-      border: 3px solid rgb(229, 229, 229);
-      border-radius: 100%;
-      content: '';
-      height: 16px;
-      // Margin - centre dot over timeline
-      left: calc(-#{$SPACING_S} - 13px);
-      position: absolute;
-      top: 4px;
-      transform: translateX(3px);
-      width: 16px;
-      z-index: $LAYER_RAISED;
-    }
-
-    &::after {
-      @include transition(background-color);
-      background-color: $COLOR_BLACK;
-      content: '';
-      height: 2px;
-      left: -$SPACING_2XS;
-      position: absolute;
-      top: 11px;
-      transform: translateX(-100%);
-      width: 7px;
-      z-index: $LAYER_BASE;
-    }
-  }
-
-  /**
-   * Dark mode.
-   */
-  .is-dark & {
-    #{$parent}__entry {
-      &::before {
-        background-color: $COLOR_DARK_MODE_WHITE;
-        border-color: rgb(32, 76, 59);
-      }
-
-      &::after {
-        background-color: $COLOR_DARK_MODE_WHITE;
-      }
-    }
   }
 
   /**
