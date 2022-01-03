@@ -9,7 +9,7 @@ colour: "red"
 {{<
   card
   title="Get in touch"
-  copy="I'm currently working full-time at We Make Websites but if you have something really interesting then use the details below to get in touch."
+  copy="I'm currently working full-time at We Make Websites but if you have something interesting then use the details below to get in touch."
 >}}
 
 Do not get in touch about job opportunities at [We Make Websites](https://wemakewebsites.homerun.co/).
