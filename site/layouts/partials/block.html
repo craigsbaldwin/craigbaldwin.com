@@ -84,7 +84,7 @@
     {{ end }}
 
     {{ if (ne .Params.hide_image true)}}
-      {{ if .Params.copyright }}
+      {{ if and (.Params.copyright) (ne .Params.block_type "logos") }}
         <div class="block__copyright block__copyright--desktop sub-text">
           {{ .Params.copyright }}
         </div>
@@ -116,7 +116,7 @@
       {{ end }}
 
       {{ if or (eq .Params.block_type "clients") (eq .Params.block_type "logos")}}
-        <div class="block__logo" role="presentation">
+        <div class="block__logo block__logo--{{ .Params.block_type }}" role="presentation">
           {{ partial $logoPath . }}
         </div>
       {{ end }}
@@ -144,7 +144,7 @@
           </div>
         {{ end }}
 
-        {{ if .Params.copyright }}
+        {{ if and (.Params.copyright) (ne .Params.block_type "logos") }}
           <div class="block__copyright block__copyright--mobile sub-text">
             {{ .Params.copyright }}
           </div>

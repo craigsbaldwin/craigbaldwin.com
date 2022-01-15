@@ -8,7 +8,7 @@
   &__content {
     margin-bottom: $SPACING_L;
 
-    a {
+    a:not(.article-link) {
       display: unset;
     }
   }

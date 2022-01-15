@@ -11,7 +11,7 @@
         <h2 class="visually-hidden">Selected</h2>
 
         {{ range .Pages.ByWeight }}
-          {{ if (eq .Params.block_type "clients") }}
+          {{ if and (eq .Params.block_type "clients") (ne .Params.display false) }}
             {{ partial "block" . }}
           {{ end }}
         {{ end }}
@@ -20,7 +20,7 @@
 
         <div class="row row--l8">
           {{ range .Pages.ByTitle }}
-            {{ if (eq .Params.block_type "logos") }}
+            {{ if and (eq .Params.block_type "logos") (ne .Params.display false) }}
               <div class="col s2 m2 l2">
                 {{ partial "block" . }}
               </div>

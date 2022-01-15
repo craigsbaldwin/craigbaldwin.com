@@ -2,6 +2,12 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.7.0 - 2022-01-15
+* Updated work page with latest selected work
+* Fixed blog article link styles
+* Fixed blog bullet styles
+* Dependency updates
+
 ## 12.6.0 - 2022-01-03
 * Started using semantic versioning for updates
 * Updated distances graphs with 2021 data

@@ -1,5 +1,5 @@
 ---
-block_type: "clients"
+block_type: "logos"
 title: "Paul Valentine"
 handle: "paul-valentine"
 link: "https://uk.paul-valentine.com/"
