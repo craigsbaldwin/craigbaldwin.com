@@ -1,5 +1,5 @@
 ---
-block_type: "clients"
+block_type: "logos"
 title: "Direct Doors"
 handle: "direct-doors"
 link: "https://directdoors.com/"
