@@ -8,19 +8,11 @@
   height: auto;
   width: 62%;
 
-  &#{&}--direct-doors,
-  &#{&}--pangaia,
-  &#{&}--paul-valentine,
-  &#{&}--sofasofa {
-    color: $COLOR_WHITE;
-  }
-
   &#{&}--direct-doors {
-    width: 75%;
+    width: 85%;
   }
 
-  &#{&}--emma-bridgewater,
-  &#{&}--hummingbird-bakery {
+  &#{&}--emma-bridgewater {
     width: 88%;
   }
 
@@ -37,7 +29,7 @@
   }
 
   &#{&}--paul-valentine {
-    width: 20%;
+    width: 33%;
   }
 
   &#{&}--sofasofa {
@@ -56,12 +48,23 @@
     width: 24%;
   }
 
+  &#{&}--ufc {
+    width: 46%;
+  }
+
+  /**
+   * Parent modifiers.
+   */
+  .block__logo--clients & {
+    color: $COLOR_WHITE;
+  }
+
   /**
    * Media queries.
    */
   @include mq($from: medium) {
     &#{&}--direct-doors {
-      width: 46%;
+      width: 82%;
     }
 
     &#{&}--pangaia {
@@ -69,7 +72,7 @@
     }
 
     &#{&}--paul-valentine {
-      width: 12%;
+      width: 33%;
     }
 
     &#{&}--sofasofa {
@@ -78,6 +81,10 @@
 
     &#{&}--tp-toys {
       width: 15.5%;
+    }
+
+    &#{&}--ufc {
+      width: 29%;
     }
   }
 }
