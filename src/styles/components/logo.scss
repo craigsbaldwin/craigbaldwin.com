@@ -48,6 +48,10 @@
     width: 24%;
   }
 
+  &#{&}--ufc {
+    width: 46%;
+  }
+
   /**
    * Parent modifiers.
    */
@@ -77,6 +81,10 @@
 
     &#{&}--tp-toys {
       width: 15.5%;
+    }
+
+    &#{&}--ufc {
+      width: 29%;
     }
   }
 }

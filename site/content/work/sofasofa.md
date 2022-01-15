@@ -3,7 +3,7 @@ block_type: "clients"
 title: "SofaSofa"
 handle: "sofasofa"
 link: "https://sofasofa.co.uk"
-weight: 1
+weight: 3
 copyright: "Image © SofaSofa 2020"
 articles: true
 ---

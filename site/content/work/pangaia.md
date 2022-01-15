@@ -3,7 +3,7 @@ block_type: "clients"
 title: "Pangaia"
 handle: "pangaia"
 link: "https://thepangaia.com/"
-weight: 1
+weight: 2
 copyright: "Image © Pangaia 2021"
 articles: true
 srcset: true

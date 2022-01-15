@@ -3,7 +3,7 @@ block_type: "clients"
 title: "TP Toys"
 handle: "tp-toys"
 link: "https://www.tptoys.com/"
-weight: 2
+weight: 4
 copyright: "Image © TP Toys 2021"
 articles: true
 srcset: true
