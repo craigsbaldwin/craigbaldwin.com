@@ -9,4 +9,4 @@ articles: true
 srcset: true
 ---
 
-Led the development with a team of four developers on a large build and an extremely tight turnaround. Notable features include AR and 3D models for products with seamless variant switching and advanced product builder.
+Principal developer leading four developers on a build with an extremely tight turnaround. Notable features include 3D AR model viewer for products with seamless variant switching and advanced multi-step product builder.

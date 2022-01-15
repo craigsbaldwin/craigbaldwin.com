@@ -9,4 +9,8 @@ articles: true
 srcset: true
 ---
 
-Principal developer in charge of ongoing re-development of Pangaia store. Responsible for code quality of two developers, an external agency, and Pangaia's internal developer. Recently launched redesigned home, product, and collection pages.
+Was principal developer responsible for ongoing re-development of Pangaia store. Maintained code quality of two developers, an external agency, and Pangaia's internal developer.
+
+Launched redesigned header, mobile and cart drawer, homepage, product page, and collection page with complex Algolia, Nosto, and dynamic Shopify integrations.
+
+Won Shopify's 2020 [best store rebuild award](https://www.shopify.co.uk/partners/blog/shopify-commerce-awards-2020-winners#store-rebuild).
