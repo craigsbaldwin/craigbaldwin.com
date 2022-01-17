@@ -6,17 +6,17 @@
       <h2>Latest update</h2>
 
       <p class="body-1">
-        <a class="articles__homepage-link text-link" href="/work">
+        <!-- <a class="articles__homepage-link text-link" href="/work">
           <span class="articles__homepage-title">Added new selected work</span>
           <span class="articles__homepage-excerpt body-2">UFC added to work page along with updates to existing work</span>
-        </a>
+        </a> -->
 
-        <!-- {{ range first 1 ($.Site.GetPage "section" "blog").Pages.ByPublishDate.Reverse }}
+        {{ range first 1 ($.Site.GetPage "section" "blog").Pages.ByPublishDate.Reverse }}
           <a class="articles__homepage-link text-link" href="{{ .Permalink }}">
             <span class="articles__homepage-title">{{ .Title }}</span>
             <span class="articles__homepage-excerpt body-2">{{ .Params.Excerpt }}</span>
           </a>
-        {{ end }} -->
+        {{ end }}
       </p>
     </div>
   </div>
