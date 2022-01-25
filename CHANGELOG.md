@@ -2,6 +2,9 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.7.1 - 2022-01-25
+* Fixed blog post code scrollbar
+
 ## 12.7.0 - 2022-01-15
 * Updated work page with latest selected work
 * Fixed blog article link styles

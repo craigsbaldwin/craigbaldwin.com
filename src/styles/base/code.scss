@@ -27,12 +27,12 @@ $COLOR_CODE_DARK_GREY: #808080;
   }
 
   &::-webkit-scrollbar {
+    height: 4px;
     width: 4px;
   }
 
   &::-webkit-scrollbar-thumb {
     background: $COLOR_BLUE;
-    border: 5px solid $COLOR_CODE_BLACK;
   }
 
   pre {

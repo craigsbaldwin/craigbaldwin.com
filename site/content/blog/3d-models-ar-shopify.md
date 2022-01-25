@@ -6,6 +6,8 @@ draft: false
 excerpt: "How we solved seamless 3D model switching for TP Toys."
 ---
 
+> **Update** The below code snippets assumes you are using Vue 2. Inline templates were removed in Vue 3 so you can't directly use Vue in a Liquid template. Instead you will need to pass Liquid variables to Vue using props.
+
 ## Solving requirements
 
 One of the main requirements for the TP Toys' store was the ability to combine augmented reality with 3D models so customers could see the product in their garden. At the same time they needed to be able to see an updated model seamlessly as they changed variant, or product builder configuration.
