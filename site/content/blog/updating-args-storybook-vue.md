@@ -10,7 +10,7 @@ excerpt: "A straightforward way of using events from inside a Vue component to u
 
 Over the past few weeks I've been updating We Make Websites' internal framework with [Storybook](https://storybook.js.org/) so we had a single place to see a projects' components in a sandboxed view.
 
-While doing this I found it particularly tricky to dynmically update the args passed to the Vue component from an event in the Vue component itself. The component in question was a quantity selector with buttons to increment and decrement a value displayed in its input.
+While doing this I found it particularly tricky to dynamically update the args passed to the Vue component from an event in the Vue component itself. The component in question was a quantity selector with buttons to increment and decrement a value displayed in its input.
 
 When I researched it there didn't seem to be a straightforward solution, the Storybook controls available to update the `arg` worked but I thought this wasn't the best way to simulate the different button states based on the quantity value.
 
@@ -69,5 +69,5 @@ Passing the existing `args` variable as a destructured object inside a new objec
 ## References
 
 * [useArgs throws exception when used with Story function](https://github.com/storybookjs/storybook/issues/12006#issuecomment-676277112)
-* [Story parameters do not update hwen they are based on story args](https://github.com/storybookjs/storybook/issues/15325)
+* [Story parameters do not update when they are based on story args](https://github.com/storybookjs/storybook/issues/15325)
 * [How to dynamically mutate "args" in Storybook v6 from the component's action](https://stackoverflow.com/questions/63708208/how-to-dynamically-mutate-args-in-storybook-v6-from-the-components-action/67424836#67424836)
