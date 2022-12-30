@@ -5,45 +5,71 @@
  *
  */
 .work {
+  $parent: &;
+
   &__header {
-    margin-block-end: $SPACING_M;
+    padding-block-end: $SPACING_S;
     // Site header padding + Site header margin
-    padding-block-start: calc(#{$SPACING_S} + #{$SPACING_M});
+    padding-block-start: calc(#{$SPACING_S} + #{$SPACING_S});
     position: relative;
+    z-index: $LAYER_BELOW;
   }
 
-  &__header-before,
-  &__header-after {
+  &__banner-left,
+  &__banner-right {
     background-color: $COLOR_PURPLE;
     content: '';
-    height: 100%;
+    height: calc(100% + 1px);
     position: absolute;
-    top: 0;
-    // Half width - border + one pixel to correct rendering
-    width: calc(50vw - #{$SPACING_S} + 1px);
+    // Correct rendering
+    top: -1px;
+    // Half width + one pixel to correct rendering
+    width: calc(50vw + 1px);
   }
 
-  &__header-before {
+  &__banner-left {
     right: calc(50% - 1px);
   }
 
-  &__header-after {
+  &__banner-right {
     left: calc(50% - 1px);
   }
 
   &__title {
-    padding-block-end: $SPACING_S;
+    color: $COLOR_WHITE;
+    font-family: 'Crimson Pro', serif;
+    font-size: 5rem;
+    font-weight: 300;
     position: relative;
     z-index: $LAYER_BASE;
+  }
 
+  &__image-container {
+    margin-block-end: $SPACING_S;
+    position: relative;
+
+    #{$parent}__banner-left,
+    #{$parent}__banner-right {
+      height: 50%;
+    }
+  }
+
+  &__image {
+    display: inherit;
+    height: auto;
+    position: relative;
+    width: 100%;
+    z-index: $LAYER_BASE;
+  }
+
+  .article__link {
     &::after {
-      background-color: $COLOR_BLACK;
-      bottom: 0;
-      content: '';
-      height: 3px;
-      left: 0;
-      position: absolute;
-      width: 30px;
+      background-color: $COLOR_PURPLE;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: rgba($COLOR_PURPLE, 0.25);
     }
   }
 
@@ -52,8 +78,13 @@
    */
   @include mq($from: medium) {
     &__header {
+      padding-block-end: $SPACING_M;
       // Site header padding + Site header margin
-      padding-block-start: calc(#{$SPACING_M} + #{$SPACING_L});
+      padding-block-start: calc(#{$SPACING_M} + #{$SPACING_M});
+    }
+
+    &__image-container {
+      margin-block-end: $SPACING_M;
     }
   }
 }

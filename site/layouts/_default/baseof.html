@@ -4,7 +4,7 @@
   data-mode="light"
   js-dark-mode="container"
 >
-<head class="no-js">
+<head>
   <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ end }}">
 
   <meta charset="utf-8">
@@ -59,6 +59,9 @@
     template--{{ .Params.handle }}
   "
 >
+  <div class="template__border-left"></div>
+  <div class="template__border-right"></div>
+
   {{ block "header" . }}
     {{ partial "header" . }}
   {{ end }}
@@ -76,8 +79,6 @@
       {{ partial "footer" . }}
     {{ end }}
   </footer>
-
-  {{ partial "theme-strings" . }}
 
   {{ $script := .Site.Data.webpack.main }}
   {{ with $script.js }}

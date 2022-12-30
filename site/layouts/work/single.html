@@ -1,30 +1,88 @@
 {{ define "main" }}
-  <div class="row">
-    <div class="work content-col">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&display=swap"
+    rel="stylesheet"
+  >
+
+  <div class="work row">
+    <div class="content-col">
       <div class="work__header">
         <div
-          class="work__header-before"
-          style="background-color: rgb({{ .Params.header_colour }});"
+          class="work__banner-left"
+          {{ if (.Params.header_colour) }}
+            style="background-color: rgb({{ .Params.header_colour }});"
+          {{ end }}
         ></div>
 
         <div
-          class="work__header-after"
-          style="background-color: rgb({{ .Params.header_colour }});"
+          class="work__banner-right"
+          {{ if (.Params.header_colour) }}
+            style="background-color: rgb({{ .Params.header_colour }});"
+          {{ end }}
         ></div>
-
 
         <h1 class="work__title">{{ $.Page.Title }}</h1>
       </div>
+    </div>
+  </div>
 
+  <div class="work row">
+    <div class="wide-col">
+      <div class="work__image-container">
+        <div
+          class="work__banner-left"
+          {{ if (.Params.header_colour) }}
+            style="background-color: rgb({{ .Params.header_colour }});"
+          {{ end }}
+        ></div>
+
+        <div
+          class="work__banner-right"
+          {{ if (.Params.header_colour) }}
+            style="background-color: rgb({{ .Params.header_colour }});"
+          {{ end }}
+        ></div>
+
+        <img
+          class="work__image"
+          {{ if .Params.alt }}
+            alt="{{ .Params.alt }}"
+          {{ else }}
+            role="presentation"
+          {{ end }}
+          height="600"
+          src="/images/{{ .Params.block_type }}/{{ .Params.handle }}.jpg"
+          {{ if .Params.srcset }}
+            sizes="(min-width: 1300px) 956px, 100vw"
+            srcset="
+              /images/{{ .Params.block_type }}/{{ .Params.handle }}_600x.jpg 600w,
+              /images/{{ .Params.block_type }}/{{ .Params.handle }}.jpg 900w,
+              /images/{{ .Params.block_type }}/{{ .Params.handle }}_1200x.jpg 1200w,
+            "
+          {{ end }}
+          width="900"
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="work row">
+    <div class="content-col">
       {{- .Content -}}
 
-      {{ if .Params.articles }}
-        <p class="work__related">
-          <a href="/tags/{{ .Params.handle }}">
-            Read related blog posts
+      <div class="article__navigation">
+        {{ if .Params.articles }}
+          <a class="article__link" href="/tags/{{ .Params.handle }}">
+            <span class="h3">Read related blog posts</span>
           </a>
-        </p>
-      {{ end }}
+        {{ end }}
+
+        {{ if .Params.articles }}
+          <a class="article__link article__link--next" href="{{ .Params.link }}">
+            <span class="h3">View website</span>
+          </a>
+        {{ end }}
+      </div>
     </div>
   </div>
 {{ end }}

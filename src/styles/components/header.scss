@@ -12,6 +12,7 @@
 
   &__parent {
     background-color: $COLOR_PURPLE;
+    position: relative;
   }
 
   &__container {
@@ -67,6 +68,14 @@
   .template--clients & {
     margin-block-end: 0;
     padding-block-end: 0;
+  }
+
+  .text-link {
+    .template--clients.template--sofasofa &,
+    .template--clients.template--tp-toys &,
+    .template--clients.template--ufc & {
+      color: $COLOR_WHITE;
+    }
   }
 
   /**
@@ -155,6 +164,14 @@
     .template--clients & {
       margin-block-end: 0;
       padding-block-end: 0;
+    }
+
+    &__link {
+      .template--clients.template--sofasofa &,
+      .template--clients.template--tp-toys &,
+      .template--clients.template--ufc & {
+        color: $COLOR_WHITE;
+      }
     }
   }
 }
