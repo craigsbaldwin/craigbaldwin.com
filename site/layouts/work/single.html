@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <div class="row">
+    <div class="work content-col">
+      <div class="work__header">
+        <div
+          class="work__header-before"
+          style="background-color: rgb({{ .Params.header_colour }});"
+        ></div>
+
+        <div
+          class="work__header-after"
+          style="background-color: rgb({{ .Params.header_colour }});"
+        ></div>
+
+
+        <h1 class="work__title">{{ $.Page.Title }}</h1>
+      </div>
+
+      {{- .Content -}}
+
+      {{ if .Params.articles }}
+        <p class="work__related">
+          <a href="/tags/{{ .Params.handle }}">
+            Read related blog posts
+          </a>
+        </p>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

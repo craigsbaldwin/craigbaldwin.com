@@ -3,7 +3,12 @@
 {{ $url := .Permalink }}
 {{ $page := .Title }}
 
-<div class="container">
+<div
+  class="{{ if (.Params.header_colour) }}header__parent {{ end }}container"
+  {{ if (.Params.header_colour) }}
+    style="background-color: rgb({{ .Params.header_colour }});"
+  {{ end }}
+>
   <div class="row">
     <header class="header col content-col" role="banner">
       <div class="header__container">
