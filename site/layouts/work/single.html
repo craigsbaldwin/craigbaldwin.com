@@ -21,7 +21,13 @@
           {{ end }}
         ></div>
 
-        <h1 class="work__title">{{ $.Page.Title }}</h1>
+        <div class="work__header-content">
+          <h1 class="work__title">{{ $.Page.Title }}</h1>
+
+          {{ if (.Params.subtitle) }}
+            <p class="work__subtitle standfirst">{{ .Params.subtitle }}</p>
+          {{ end }}
+        </div>
       </div>
     </div>
   </div>
@@ -51,13 +57,13 @@
             role="presentation"
           {{ end }}
           height="600"
-          src="/images/{{ .Params.block_type }}/{{ .Params.handle }}.jpg"
+          src="/images/work/{{ .Params.handle }}.jpg"
           {{ if .Params.srcset }}
             sizes="(min-width: 1300px) 956px, 100vw"
             srcset="
-              /images/{{ .Params.block_type }}/{{ .Params.handle }}_600x.jpg 600w,
-              /images/{{ .Params.block_type }}/{{ .Params.handle }}.jpg 900w,
-              /images/{{ .Params.block_type }}/{{ .Params.handle }}_1200x.jpg 1200w,
+              /images/work/{{ .Params.handle }}_600x.jpg 600w,
+              /images/work/{{ .Params.handle }}.jpg 900w,
+              /images/work/{{ .Params.handle }}_1200x.jpg 1200w,
             "
           {{ end }}
           width="900"
@@ -68,17 +74,22 @@
 
   <div class="work row">
     <div class="content-col">
-      {{- .Content -}}
+      <div class="work__content">
+        {{- .Content -}}
+      </div>
 
       <div class="article__navigation">
         {{ if .Params.articles }}
-          <a class="article__link" href="/tags/{{ .Params.handle }}">
+          <a class="article__link" href="{{ .Params.link }}">
+            <span class="h3">View website</span>
+          </a>
+
+          <a class="article__link article__link--next" href="/tags/{{ .Params.handle }}">
             <span class="h3">Read related blog posts</span>
           </a>
-        {{ end }}
 
-        {{ if .Params.articles }}
-          <a class="article__link article__link--next" href="{{ .Params.link }}">
+        {{ else }}
+          <a class="article__link article__link--full" href="{{ .Params.link }}">
             <span class="h3">View website</span>
           </a>
         {{ end }}
