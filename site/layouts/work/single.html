@@ -78,22 +78,40 @@
         {{- .Content -}}
       </div>
 
-      <div class="article__navigation">
-        {{ if .Params.articles }}
-          <a class="article__link" href="{{ .Params.link }}">
-            <span class="h3">View website</span>
-          </a>
+      {{ if or (.Params.articles) (.Params.link) }}
+        <div class="article__navigation">
+          {{ if .Params.link }}
+            <a
+              class="
+                article__link
+                {{ if .Params.articles }}
+                {{ else }}
+                  article__link--full
+                {{ end }}
+              "
+              href="{{ .Params.link }}"
+            >
+              <span class="h3">View website</span>
+            </a>
+          {{ end }}
 
-          <a class="article__link article__link--next" href="/tags/{{ .Params.handle }}">
-            <span class="h3">Read related blog posts</span>
-          </a>
-
-        {{ else }}
-          <a class="article__link article__link--full" href="{{ .Params.link }}">
-            <span class="h3">View website</span>
-          </a>
-        {{ end }}
-      </div>
+          {{ if .Params.articles }}
+            <a
+              class="
+                article__link
+                {{ if .Params.link }}
+                  article__link--next
+                {{ else }}
+                  article__link--full
+                {{ end }}
+              "
+              href="/tags/{{ .Params.handle }}"
+            >
+              <span class="h3">Read related blog posts</span>
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
     </div>
   </div>
 {{ end }}
