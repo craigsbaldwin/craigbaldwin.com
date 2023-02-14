@@ -18,6 +18,13 @@
   .is-dark & {
     background-color: $COLOR_DARK_MODE_WHITE;
   }
+
+  .template--clients.template--pangaia &,
+  .template--clients.template--sofasofa &,
+  .template--clients.template--tp-toys &,
+  .template--clients.template--ufc & {
+    background-color: $COLOR_WHITE;
+  }
 }
 
 .burger {

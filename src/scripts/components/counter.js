@@ -11,7 +11,7 @@
  */
 const selectors = {
   counter: '[js-counter="number"]',
-  days: '[js-counter="days"]',
+  unit: '[js-counter="unit"]',
 };
 
 /**
@@ -24,7 +24,7 @@ export default () => {
    */
   const nodeSelectors = {
     counter: document.querySelector(selectors.counter),
-    days: document.querySelector(selectors.days),
+    unit: document.querySelector(selectors.unit),
   };
 
   /**
@@ -43,12 +43,12 @@ export default () => {
     const now = new Date();
 
     let difference = (now - launch);
-    difference = Math.ceil(difference / 1000 / 60 / 60 / 24);
+    difference = parseFloat(difference / 1000 / 60 / 60 / 24 / 365).toFixed(2);
 
     nodeSelectors.counter.innerText = difference;
 
-    if (difference === 1) {
-      nodeSelectors.days.innerText = 'day';
+    if (difference < 2) {
+      nodeSelectors.unit.innerText = 'year';
     }
   }
 

@@ -65,6 +65,10 @@ $LAYER_POPUP: 5;
     grid-column: span 4;
   }
 
+  &#{&}--s6 {
+    grid-template-columns: repeat(6, minmax(10px, 1fr));
+  }
+
   @include mq($from: medium) {
     grid-template-columns: repeat(8, minmax(10px, 1fr));
 

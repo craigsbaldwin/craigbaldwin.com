@@ -7,6 +7,7 @@
 html {
   @include transition(background-color);
   background-color: $COLOR_WHITE;
+  overflow-x: hidden;
 
   &.is-dark {
     background-color: $COLOR_BLACK;
@@ -57,7 +58,24 @@ html {
   flex-direction: column;
   margin: $SPACING_S;
   min-height: calc(100vh - (2 * #{$SPACING_S}));
-  padding: 0 $SPACING_S;
+
+  &__border-left,
+  &__border-right {
+    background-color: $COLOR_WHITE;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: $SPACING_S;
+    z-index: $LAYER_BASE;
+  }
+
+  &__border-left {
+    left: 0;
+  }
+
+  &__border-right {
+    right: 0;
+  }
 
   .is-dark & {
     background-color: $COLOR_DARK_MODE_BACKGROUND;
@@ -68,6 +86,7 @@ html {
 .container {
   margin: 0 auto;
   max-width: $SITE_WIDTH;
+  padding: 0 $SPACING_S;
   width: 100%;
 }
 

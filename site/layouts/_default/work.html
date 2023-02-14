@@ -5,28 +5,30 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row blocks">
+    <h2 class="visually-hidden">Selected</h2>
+
+    {{ range .Pages.ByWeight }}
+      {{ if and (eq .Params.block_type "clients") (ne .Params.display false) }}
+        <div class="col s4 l5">
+          {{ partial "block" . }}
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+
+  <div class="row blocks">
     <div class="col wide-col">
-      <div class="blocks">
-        <h2 class="visually-hidden">Selected</h2>
-
-        {{ range .Pages.ByWeight }}
-          {{ if and (eq .Params.block_type "clients") (ne .Params.display false) }}
-            {{ partial "block" . }}
-          {{ end }}
-        {{ end }}
-
+      <div class="row row--s6 row--m8 row--l8">
         <h2 class="visually-hidden">More</h2>
 
-        <div class="row row--l8">
-          {{ range .Pages.ByTitle }}
-            {{ if and (eq .Params.block_type "logos") (ne .Params.display false) }}
-              <div class="col s2 m2 l2">
-                {{ partial "block" . }}
-              </div>
-            {{ end }}
+        {{ range .Pages.ByTitle }}
+          {{ if and (eq .Params.block_type "logos") (ne .Params.display false) }}
+            <div class="col s2 m2 l2">
+              {{ partial "block" . }}
+            </div>
           {{ end }}
-        </div>
+        {{ end }}
       </div>
     </div>
   </div>
