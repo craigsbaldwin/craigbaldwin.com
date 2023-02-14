@@ -7,6 +7,7 @@ This changelog only provides headline changes, see the commit history for all ch
 * Updated about page content
 * Updated work page layout and added screenshots
 * Updated distances graphs with 2022 data
+* Updated info page counter to be in years
 
 ## 12.7.1 - 2022-01-25
 * Fixed blog post code scrollbar
