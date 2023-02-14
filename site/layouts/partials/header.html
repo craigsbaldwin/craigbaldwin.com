@@ -3,7 +3,24 @@
 {{ $url := .Permalink }}
 {{ $page := .Title }}
 
-<div class="container">
+<div
+  class="{{ if (eq .Params.block_type "clients") }}header__parent {{ end }}container"
+  {{ if (.Params.header_colour) }}
+    style="background-color: rgb({{ .Params.header_colour }});"
+  {{ end }}
+>
+  {{ if (eq .Params.block_type "clients") }}
+    <div
+      class="work__banner-left"
+      style="background-color: rgb({{ .Params.header_colour }});"
+    ></div>
+
+      <div
+      class="work__banner-right"
+      style="background-color: rgb({{ .Params.header_colour }});"
+    ></div>
+  {{ end }}
+
   <div class="row">
     <header class="header col content-col" role="banner">
       <div class="header__container">
