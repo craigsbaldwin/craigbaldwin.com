@@ -1,6 +1,6 @@
 ---
 block_type: "logos"
-display: false
+display: true
 title: "Newbie"
 handle: "newbie"
 link: "https://newbiestore.com/"

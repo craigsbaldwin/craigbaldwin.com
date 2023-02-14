@@ -2,11 +2,11 @@
 block_type: "clients"
 title: "Pangaia"
 handle: "pangaia"
-link: "https://thepangaia.com/"
 weight: 2
 copyright: "Image © Pangaia 2021"
 articles: true
 srcset: true
+header_colour: "152, 98, 246"
 ---
 
 Was principal developer responsible for ongoing re-development of Pangaia store. Maintained code quality of two developers, an external agency, and Pangaia's internal developer.

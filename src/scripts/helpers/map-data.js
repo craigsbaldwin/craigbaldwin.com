@@ -148,6 +148,11 @@ export function mapData() {
     {name: 'Long Side', latLng: [54.644742, -3.163636], region: 'lakes'},
     {name: 'Bakestall', latLng: [54.665888, -3.138562], region: 'lakes'},
     {name: 'Lonscale Fell', latLng: [54.634413, -3.108164], region: 'lakes'},
+
+    {name: 'Pike of Blisco', latLng: [54.428028, -3.124666], region: 'lakes'},
+    {name: 'Cold Pike', latLng: [54.422538, -3.137541], region: 'lakes'},
+    {name: 'Crinkle Crags', latLng: [54.434616, -3.157454], region: 'lakes'},
+    {name: 'Bowfell', latLng: [54.447588, -3.165865], region: 'lakes'},
   ];
 
   return data;

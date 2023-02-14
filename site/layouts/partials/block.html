@@ -13,21 +13,27 @@
     {{ end }}
   "
 >
-  {{ if .Params.link }}
+  {{ if and (eq .Params.block_type "logos") (.Params.link) }}
     <a
       class="block__link"
       href="{{ .Params.link }}"
       aria-label="Visit the {{ .Title }} store"
     >
+  {{ else if (eq .Params.block_type "clients") }}
+    <a
+      class="block__link"
+      href="{{ .Permalink }}"
+      aria-label="Read more about {{ .Title }}"
+    >
   {{ end }}
 
   <div class="block__image-container">
-    {{ if (ne .Params.block_type "logos")}}
+    {{ if (ne .Params.block_type "logos") }}
       <div class="block__meta-container row row--m10 row--l8">
         <div class="block__meta col s4 m3">
           <h2 class="block__title">{{ .Title }}</h2>
 
-          {{ if or (eq .Params.block_type "clients") (eq .Params.block_type "mountains")}}
+          {{ if or (eq .Params.block_type "clients") (eq .Params.block_type "mountains") }}
             <div class="block__stats sub-text">
               <!-- Mountains stats -->
               {{ if .Params.location }}
@@ -84,12 +90,6 @@
     {{ end }}
 
     {{ if (ne .Params.hide_image true)}}
-      {{ if and (.Params.copyright) (ne .Params.block_type "logos") }}
-        <div class="block__copyright block__copyright--desktop sub-text">
-          {{ .Params.copyright }}
-        </div>
-      {{ end }}
-
       {{ if (ne .Params.block_type "logos")}}
         <img
           class="block__image"
@@ -123,33 +123,17 @@
     {{ end }}
   </div>
 
-  {{ if .Params.link }}
+  {{ if or (eq .Params.block_type "clients") (.Params.link) }}
     </a>
   {{ end }}
 
-  {{ if or (eq .Params.block_type "clients") (eq .Params.block_type "mountains")}}
+  {{ if (eq .Params.block_type "mountains") }}
     <div class="row row--m8">
       <div class="col s4 m6 l5-10">
         <div class="block__content">
           {{ .Content }}
         </div>
-
-        {{ if .Params.articles }}
-          <div class="block__content">
-            <p>
-              <a class="block__articles" href="/tags/{{ .Params.handle }}">
-                Read related blog posts
-              </a>
-            </p>
-          </div>
-        {{ end }}
-
-        {{ if and (.Params.copyright) (ne .Params.block_type "logos") }}
-          <div class="block__copyright block__copyright--mobile sub-text">
-            {{ .Params.copyright }}
-          </div>
-        {{ end }}
-        </div>
+      </div>
     </div>
   {{ end }}
 </div>

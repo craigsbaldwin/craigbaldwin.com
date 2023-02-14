@@ -6,9 +6,14 @@
  */
 .header {
   $parent: &;
-  margin-bottom: $SPACING_M;
-  padding: $SPACING_S 0;
+  margin-block-end: $SPACING_M;
+  padding-block: $SPACING_S;
   position: relative;
+
+  &__parent {
+    background-color: $COLOR_PURPLE;
+    position: relative;
+  }
 
   &__container {
     align-items: center;
@@ -57,6 +62,20 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  .template--clients & {
+    margin-block-end: 0;
+    padding-block-end: 0;
+  }
+
+  .text-link {
+    .template--clients.template--pangaia &,
+    .template--clients.template--sofasofa &,
+    .template--clients.template--tp-toys &,
+    .template--clients.template--ufc & {
+      color: $COLOR_WHITE;
     }
   }
 
@@ -117,8 +136,8 @@
   }
 
   @include mq($from: medium) {
-    margin-bottom: $SPACING_L;
-    padding: $SPACING_M 0;
+    margin-block-end: $SPACING_L;
+    padding-block: $SPACING_M;
 
     &__skip-link {
       // Aligning skip link with logo link
@@ -141,6 +160,20 @@
 
     &__dark-mode {
       display: none;
+    }
+
+    .template--clients & {
+      margin-block-end: 0;
+      padding-block-end: 0;
+    }
+
+    &__link {
+      .template--clients.template--pangaia &,
+      .template--clients.template--sofasofa &,
+      .template--clients.template--tp-toys &,
+      .template--clients.template--ufc & {
+        color: $COLOR_WHITE;
+      }
     }
   }
 }

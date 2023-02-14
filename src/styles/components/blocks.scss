@@ -5,17 +5,29 @@
  *
  */
 .blocks {
-  &__block {
-    &:not(:last-child) {
-      margin-bottom: $SPACING_L;
-    }
+  $parent: &;
+
+  &__block:not(:last-child) {
+    margin-block-end: $SPACING_L;
+  }
+
+  + #{$parent} {
+    margin-block-start: $SPACING_L;
   }
 
   @include mq($from: medium) {
-    &__block {
-      &:not(:last-child) {
-        margin-bottom: $SPACING_XL;
-      }
+    &__block:not(:last-child) {
+      margin-block-end: $SPACING_XL;
+    }
+
+    + #{$parent} {
+      margin-block-start: $SPACING_XL;
+    }
+  }
+
+  @include mq($from: large) {
+    &.row {
+      gap: $SPACING_M;
     }
   }
 }

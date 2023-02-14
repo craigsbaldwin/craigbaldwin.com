@@ -1,0 +1,117 @@
+{{ define "main" }}
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&display=swap"
+    rel="stylesheet"
+  >
+
+  <div class="work row">
+    <div class="content-col">
+      <div class="work__header">
+        <div
+          class="work__banner-left"
+          {{ if (.Params.header_colour) }}
+            style="background-color: rgb({{ .Params.header_colour }});"
+          {{ end }}
+        ></div>
+
+        <div
+          class="work__banner-right"
+          {{ if (.Params.header_colour) }}
+            style="background-color: rgb({{ .Params.header_colour }});"
+          {{ end }}
+        ></div>
+
+        <div class="work__header-content">
+          <h1 class="work__title">{{ $.Page.Title }}</h1>
+
+          {{ if (.Params.subtitle) }}
+            <p class="work__subtitle standfirst">{{ .Params.subtitle }}</p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="work row">
+    <div class="wide-col">
+      <div class="work__image-container">
+        <div
+          class="work__banner-left"
+          {{ if (.Params.header_colour) }}
+            style="background-color: rgb({{ .Params.header_colour }});"
+          {{ end }}
+        ></div>
+
+        <div
+          class="work__banner-right"
+          {{ if (.Params.header_colour) }}
+            style="background-color: rgb({{ .Params.header_colour }});"
+          {{ end }}
+        ></div>
+
+        <img
+          class="work__image"
+          {{ if .Params.alt }}
+            alt="{{ .Params.alt }}"
+          {{ else }}
+            role="presentation"
+          {{ end }}
+          height="600"
+          src="/images/work/{{ .Params.handle }}.jpg"
+          {{ if .Params.srcset }}
+            sizes="(min-width: 1300px) 956px, 100vw"
+            srcset="
+              /images/work/{{ .Params.handle }}_600x.jpg 600w,
+              /images/work/{{ .Params.handle }}.jpg 900w,
+              /images/work/{{ .Params.handle }}_1200x.jpg 1200w,
+            "
+          {{ end }}
+          width="900"
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="work row">
+    <div class="content-col">
+      <div class="work__content">
+        {{- .Content -}}
+      </div>
+
+      {{ if or (.Params.articles) (.Params.link) }}
+        <div class="article__navigation">
+          {{ if .Params.link }}
+            <a
+              class="
+                article__link
+                {{ if .Params.articles }}
+                {{ else }}
+                  article__link--full
+                {{ end }}
+              "
+              href="{{ .Params.link }}"
+            >
+              <span class="h3">View website</span>
+            </a>
+          {{ end }}
+
+          {{ if .Params.articles }}
+            <a
+              class="
+                article__link
+                {{ if .Params.link }}
+                  article__link--next
+                {{ else }}
+                  article__link--full
+                {{ end }}
+              "
+              href="/tags/{{ .Params.handle }}"
+            >
+              <span class="h3">Read related blog posts</span>
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

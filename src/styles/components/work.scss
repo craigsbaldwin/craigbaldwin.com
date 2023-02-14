@@ -1,0 +1,110 @@
+/**
+ * Components > Work.
+ * ------------------------------------------------------------------------------
+ * A single work entry.
+ *
+ */
+.work {
+  $parent: &;
+
+  &__header {
+    padding-block-end: $SPACING_P;
+    // Site header padding + Site header margin
+    padding-block-start: calc(#{$SPACING_S} + #{$SPACING_S});
+    position: relative;
+    z-index: $LAYER_BELOW;
+  }
+
+  &__banner-left,
+  &__banner-right {
+    background-color: $COLOR_PURPLE;
+    content: '';
+    height: calc(100% + 1px);
+    position: absolute;
+    // Correct rendering
+    top: -1px;
+    // Half width + one pixel to correct rendering
+    width: calc(50vw + 1px);
+  }
+
+  &__banner-left {
+    right: calc(50% - 1px);
+  }
+
+  &__banner-right {
+    left: calc(50% - 1px);
+  }
+
+  &__header-content {
+    color: $COLOR_WHITE;
+    position: relative;
+    z-index: $LAYER_BASE;
+  }
+
+  &__title {
+    font-family: 'Crimson Pro', serif;
+    font-size: 5rem;
+    font-weight: 300;
+  }
+
+  &__subtitle {
+    margin-block-start: $SPACING_S;
+  }
+
+  &__image-container {
+    margin-block-end: $SPACING_M;
+    position: relative;
+
+    #{$parent}__banner-left,
+    #{$parent}__banner-right {
+      height: 50%;
+    }
+  }
+
+  &__image {
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0 2px 4px -1px;
+    display: inherit;
+    height: auto;
+    position: relative;
+    width: 100%;
+    z-index: $LAYER_BASE;
+  }
+
+  .article__link {
+    &::after {
+      background-color: $COLOR_PURPLE;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: rgba($COLOR_PURPLE, 0.25);
+    }
+  }
+
+  .article__navigation {
+    margin-block-start: $SPACING_M;
+  }
+
+  /**
+   * Media queries.
+   */
+  @include mq($from: medium) {
+    &__header {
+      padding-block-end: $SPACING_M;
+      // Site header padding + Site header margin
+      padding-block-start: calc(#{$SPACING_M} + #{$SPACING_M});
+    }
+
+    &__subtitle {
+      margin-block-start: $SPACING_M;
+    }
+
+    &__image-container {
+      margin-block-end: $SPACING_L;
+    }
+
+    .article__navigation {
+      margin-block-start: $SPACING_L;
+    }
+  }
+}
