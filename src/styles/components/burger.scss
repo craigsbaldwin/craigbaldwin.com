@@ -4,6 +4,8 @@
  * The burger menu and its animation.
  *
  */
+// stylelint-disable declaration-no-important
+
 .burger,
 .burger::before,
 .burger::after {
@@ -19,6 +21,7 @@
     background-color: $COLOR_DARK_MODE_WHITE;
   }
 
+  .template--clients.template--childsplay-clothing &,
   .template--clients.template--pangaia &,
   .template--clients.template--sofasofa &,
   .template--clients.template--tp-toys &,
@@ -43,12 +46,12 @@
   }
 
   &#{&}--middle {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   &#{&}--outside {
     $distance: 8px;
-    background-color: transparent;
+    background-color: transparent !important;
 
     &::before {
       transform: translateY(-$distance);
