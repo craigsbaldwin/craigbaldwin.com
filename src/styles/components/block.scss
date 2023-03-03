@@ -79,11 +79,11 @@
     align-items: center;
     bottom: $SPACING_S;
     display: flex;
-    // Full height - height of title - image bottom margin
-    height: calc(100% - 47px - #{$SPACING_S});
+    height: 100%;
     justify-content: center;
     left: 0;
     position: absolute;
+    top: 0;
     width: 100%;
     z-index: $LAYER_BASE;
   }
@@ -133,6 +133,15 @@
     #{$parent}__logo {
       bottom: 0;
       height: 100%;
+    }
+  }
+
+  /**
+   * Clients customisation.
+   */
+  &#{&}--clients {
+    #{$parent}__meta {
+      @include visually-hidden;
     }
   }
 
@@ -191,12 +200,6 @@
       background-color: mix($COLOR_MID_GREY, $COLOR_WHITE, 25%);
       padding-bottom: $SPACING_M;
       padding-right: $SPACING_M;
-    }
-
-    &__logo {
-      bottom: $SPACING_M;
-      // Height - image bottom margin
-      height: calc(100% - #{$SPACING_M});
     }
 
     &__content {
