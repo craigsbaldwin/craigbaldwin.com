@@ -4,9 +4,10 @@
  * Determines base layout styling.
  *
  */
-html {
+body {
   @include transition(background-color);
   background-color: $COLOR_WHITE;
+  overflow-x: hidden;
 
   &.is-dark {
     background-color: $COLOR_BLACK;
@@ -15,10 +16,6 @@ html {
   &.no-transition {
     transition: none;
   }
-}
-
-body {
-  overflow-x: hidden;
 }
 
 /**
@@ -80,7 +77,7 @@ body {
     right: 0;
   }
 
-  .is-dark & {
+  &.is-dark {
     background-color: $COLOR_DARK_MODE_BACKGROUND;
     color: $COLOR_DARK_MODE_WHITE;
   }

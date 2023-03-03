@@ -21,11 +21,7 @@
     background-color: $COLOR_DARK_MODE_WHITE;
   }
 
-  .template--clients.template--childsplay-clothing &,
-  .template--clients.template--pangaia &,
-  .template--clients.template--sofasofa &,
-  .template--clients.template--tp-toys &,
-  .template--clients.template--ufc & {
+  body:not(.is-open).template--clients & {
     background-color: $COLOR_WHITE;
   }
 }

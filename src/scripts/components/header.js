@@ -119,6 +119,7 @@ export default () => {
    * Open the navigation drawer.
    */
   function openNavigationDrawer() {
+    document.body.classList.add(cssClasses.open)
     nodeSelectors.menuButton.classList.add(cssClasses.active);
     nodeSelectors.navigationDrawer.classList.add(cssClasses.active);
 
@@ -133,6 +134,7 @@ export default () => {
    * Close the navigation drawer.
    */
   function closeNavigationDrawer() {
+    document.body.classList.remove(cssClasses.open)
     nodeSelectors.menuButton.classList.remove(cssClasses.active);
     nodeSelectors.navigationDrawer.classList.remove(cssClasses.active);
 

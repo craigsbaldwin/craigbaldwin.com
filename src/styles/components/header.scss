@@ -30,6 +30,14 @@
   &__logo {
     position: relative;
     z-index: $LAYER_HEADER;
+
+    body:not(.is-open).template--clients & {
+      color: $COLOR_WHITE;
+    }
+
+    body:not(.is-dark) & {
+      @include transition(color);
+    }
   }
 
   &__menu {
@@ -68,16 +76,6 @@
   .template--clients & {
     margin-block-end: 0;
     padding-block-end: 0;
-  }
-
-  .text-link {
-    .template--clients.template--childsplay-clothing &,
-    .template--clients.template--pangaia &,
-    .template--clients.template--sofasofa &,
-    .template--clients.template--tp-toys &,
-    .template--clients.template--ufc & {
-      color: $COLOR_WHITE;
-    }
   }
 
   /**
@@ -169,11 +167,7 @@
     }
 
     &__link {
-      .template--clients.template--childsplay-clothing &,
-      .template--clients.template--pangaia &,
-      .template--clients.template--sofasofa &,
-      .template--clients.template--tp-toys &,
-      .template--clients.template--ufc & {
+      body:not(.is-open).template--clients & {
         color: $COLOR_WHITE;
       }
     }
