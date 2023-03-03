@@ -119,10 +119,11 @@ export default () => {
    * Open the navigation drawer.
    */
   function openNavigationDrawer() {
+    document.body.classList.add(cssClasses.open)
     nodeSelectors.menuButton.classList.add(cssClasses.active);
     nodeSelectors.navigationDrawer.classList.add(cssClasses.active);
 
-    disableBodyScroll(document.body);
+    disableBodyScroll(nodeSelectors.navigationDrawer);
     setTabindex(0);
     setAriaProperties(true);
 
@@ -133,10 +134,11 @@ export default () => {
    * Close the navigation drawer.
    */
   function closeNavigationDrawer() {
+    document.body.classList.remove(cssClasses.open)
     nodeSelectors.menuButton.classList.remove(cssClasses.active);
     nodeSelectors.navigationDrawer.classList.remove(cssClasses.active);
 
-    enableBodyScroll(document.body);
+    enableBodyScroll(nodeSelectors.navigationDrawer);
     setTabindex(-1);
     setAriaProperties(false);
 

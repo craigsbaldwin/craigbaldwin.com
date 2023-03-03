@@ -7,7 +7,8 @@
 export default {
   active: 'is-active',
   dark: 'is-dark',
-  hidden: 'is-hidden',
   disableTransition: 'no-transition',
+  hidden: 'is-hidden',
+  open: 'is-open',
   tabbable: 'is-tabbable',
 };

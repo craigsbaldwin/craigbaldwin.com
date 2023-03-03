@@ -12,16 +12,16 @@ colour: "orange"
   copy="I'm Craig Baldwin, principal developer at We Make Websites, Shopify expert, avid runner and walker, living in Winchester."
 >}}
 
-I've worked at [We Make Websites](https://wemakewebsites.com/) for over five years, specialising in the front-end development of Shopify e-commerce stores. I'm a principal developer and work on key client accounts as well as developing our internal framework. I've led the development and launch of nine stores and supported the ongoing development of many more.
+I've worked at [We Make Websites](https://wemakewebsites.com/) for over five years, specialising in the front-end development of Shopify e-commerce stores. I'm a principal developer, working on key client accounts as well as developing our internal framework and compiler. I've led the development and launch of nine stores and supported the development of almost 50 stores.
 
-<!-- Childsplay, UFC Store, TP Toys, SofaSofa, This Works, Sons, Autonative, Underalls, Direct Doors -->
+<!-- Childsplay Clothing, UFC Store, TP Toys, SofaSofa, This Works, Sons, Autonative (Ford), Underalls, Direct Doors -->
 
 I enjoy technically challenging briefs which require complex logical problem solving and have a tendency for perfectism in my code. My background in Graphic Design means I have an attention for detail and an eye for design.
 
 ## Skills
 Regularly code in HTML, SCSS, vanilla JavaScript, Vue.js, and Shopify Liquid. Responsible for the development of our custom compiler built using Webpack, Node, Browsersync, and Shopify's Theme Kit with integrations with Figma tokens and Storybook.
 
-Experienced using Bitbucket, DeployBot, Git, Github, Figma, GraphQL, Contentful, and data layers. The company workflow follows the agile methodology and includes the use of Google Workspace, Jira, Notion, Slack, and VS Code.
+Experienced using Bitbucket, DeployBot, Git, GitHub, Figma, GraphQL, Contentful, and data layers. The company workflow follows the agile methodology and includes the use of Google Workspace, Jira, Notion, Slack, and VS Code.
 
 ## Responsibilities
 

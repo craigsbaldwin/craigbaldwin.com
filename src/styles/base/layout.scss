@@ -4,13 +4,25 @@
  * Determines base layout styling.
  *
  */
-html {
-  @include transition(background-color);
-  background-color: $COLOR_WHITE;
+body {
+  @include transition(background-color, border-color, color);
+  background-color: $COLOR_BACKGROUND;
+  border: $SPACING_S solid $COLOR_WHITE;
+  color: $COLOR_BLACK;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   overflow-x: hidden;
 
   &.is-dark {
-    background-color: $COLOR_BLACK;
+    background-color: $COLOR_DARK_MODE_BACKGROUND;
+    border-color: $COLOR_BLACK;
+    color: $COLOR_DARK_MODE_WHITE;
+
+    .template__border-left,
+    .template__border-right {
+      background-color: $COLOR_BLACK;
+    }
   }
 
   &.no-transition {
@@ -48,19 +60,12 @@ html {
 }
 
 /**
- * Body layout.
+ * Template borders.
  */
 .template {
-  @include transition(background-color, color);
-  background-color: $COLOR_BACKGROUND;
-  color: $COLOR_BLACK;
-  display: flex;
-  flex-direction: column;
-  margin: $SPACING_S;
-  min-height: calc(100vh - (2 * #{$SPACING_S}));
-
   &__border-left,
   &__border-right {
+    @include transition(background-color);
     background-color: $COLOR_WHITE;
     height: 100vh;
     position: absolute;
@@ -77,9 +82,11 @@ html {
     right: 0;
   }
 
-  .is-dark & {
-    background-color: $COLOR_DARK_MODE_BACKGROUND;
-    color: $COLOR_DARK_MODE_WHITE;
+  &.is-dark {
+    .template__border-left,
+    .template__border-right {
+      background-color: $COLOR_BLACK;
+    }
   }
 }
 

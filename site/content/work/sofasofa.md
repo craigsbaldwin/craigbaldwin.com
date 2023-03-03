@@ -9,4 +9,6 @@ articles: true
 header_colour: "241, 91, 26"
 ---
 
-Senior developer working in close partnership with the designer to launch a technically challenging re-branded website with a tight focus on user experience. Headline features such as swatch sample request powered by Vue components.
+Senior developer working in close partnership with the project's designer to launch a technically challenging re-branded website with a tight focus on user experience.
+
+Headline features include sofa finder, sample swatch requests, and material protection powered by Vue components. Particularly proud of the attention to detail throughout the site including numerous micro-animations.
