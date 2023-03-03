@@ -2,6 +2,9 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## - 2023-03-03
+* Fixed border colour not updating in dark mode
+
 ## 12.8.0 - 2023-02-14
 * Added _November 2022_ mountains entry
 * Updated about page content
