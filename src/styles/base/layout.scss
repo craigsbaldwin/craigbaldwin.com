@@ -7,7 +7,6 @@
 html {
   @include transition(background-color);
   background-color: $COLOR_WHITE;
-  overflow-x: hidden;
 
   &.is-dark {
     background-color: $COLOR_BLACK;
@@ -16,6 +15,10 @@ html {
   &.no-transition {
     transition: none;
   }
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /**

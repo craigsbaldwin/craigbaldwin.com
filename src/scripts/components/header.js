@@ -136,7 +136,7 @@ export default () => {
     nodeSelectors.menuButton.classList.remove(cssClasses.active);
     nodeSelectors.navigationDrawer.classList.remove(cssClasses.active);
 
-    enableBodyScroll(document.body);
+    enableBodyScroll(nodeSelectors.navigationDrawer);
     setTabindex(-1);
     setAriaProperties(false);
 
