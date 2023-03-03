@@ -61,6 +61,7 @@ html {
 
   &__border-left,
   &__border-right {
+    @include transition(background-color);
     background-color: $COLOR_WHITE;
     height: 100vh;
     position: absolute;
@@ -80,6 +81,11 @@ html {
   .is-dark & {
     background-color: $COLOR_DARK_MODE_BACKGROUND;
     color: $COLOR_DARK_MODE_WHITE;
+
+    &__border-left,
+    &__border-right {
+      background-color: $COLOR_BLACK;
+    }
   }
 }
 
