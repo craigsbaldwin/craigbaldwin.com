@@ -122,7 +122,7 @@ export default () => {
     nodeSelectors.menuButton.classList.add(cssClasses.active);
     nodeSelectors.navigationDrawer.classList.add(cssClasses.active);
 
-    disableBodyScroll(document.body);
+    disableBodyScroll(nodeSelectors.navigationDrawer);
     setTabindex(0);
     setAriaProperties(true);
 
