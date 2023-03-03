@@ -1,6 +1,6 @@
 {
   "name": "craigbaldwin.com",
-  "version": "12.8.0",
+  "version": "12.9.0",
   "description": "Version 12 of the craigbaldwin.com personal site",
   "repository": "csbrightside/craigbaldwin.com",
   "author": "Craig Baldwin",
@@ -51,7 +51,7 @@
     "whatwg-fetch": "^3.0.0"
   },
   "dependencies": {
-    "body-scroll-lock": "^2.6.4",
+    "body-scroll-lock": "3.1.5",
     "countup.js": "^2.0.4",
     "instant.page": "^3.0.0",
     "js-cookie": "^2.2.1"
