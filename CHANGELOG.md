@@ -3,7 +3,10 @@
 This changelog only provides headline changes, see the commit history for all changes.
 
 ## - 2023-03-03
-* Fixed _UFC_ work page content
+* Added _Childsplay Clothing_ to work entry
+* Updated layout stylings
+* Fixed _UFC_ work entry content
+* Fixed menu drawer not disabling body scroll on open
 * Fixed border colour not updating in dark mode
 
 ## 12.8.0 - 2023-02-14
