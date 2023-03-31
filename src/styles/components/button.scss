@@ -7,7 +7,7 @@
 .button {
   @include button-reset;
   cursor: pointer;
-  font-family: var(--font-family);
+  font-family: var(--font-family-body);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-baseline);
   text-decoration: none;

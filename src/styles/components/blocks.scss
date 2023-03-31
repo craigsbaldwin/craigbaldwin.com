@@ -8,26 +8,26 @@
   $parent: &;
 
   &__block:not(:last-child) {
-    margin-block-end: $SPACING_L;
+    margin-block-end: var(--spacing-l);
   }
 
   + #{$parent} {
-    margin-block-start: $SPACING_L;
+    margin-block-start: var(--spacing-l);
   }
 
-  @include mq($from: medium) {
+  @include mq($from: m) {
     &__block:not(:last-child) {
-      margin-block-end: $SPACING_XL;
+      margin-block-end: var(--spacing-xl);
     }
 
     + #{$parent} {
-      margin-block-start: $SPACING_XL;
+      margin-block-start: var(--spacing-xl);
     }
   }
 
-  @include mq($from: large) {
+  @include mq($from: l) {
     &.row {
-      gap: $SPACING_M;
+      gap: var(--spacing-m);
     }
   }
 }

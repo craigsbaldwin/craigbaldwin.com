@@ -6,7 +6,7 @@
  */
 .article {
   &__content {
-    margin-bottom: $SPACING_L;
+    margin-block-end: var(--spacing-l);
 
     a:not(.article-link) {
       display: unset;
@@ -15,10 +15,10 @@
 
   &__link {
     @include transition(color);
-    color: $COLOR_BLACK;
+    color: var(--color-text-primary);
     display: flex;
     flex-direction: column;
-    padding: $SPACING_S;
+    padding: var(--spacing-s);
     position: relative;
     text-decoration: none;
     width: 100%;
@@ -35,19 +35,19 @@
 
     &::before {
       @include transition(background-color);
-      background-color: $COLOR_BLACK;
+      background-color: var(--color-text-primary);
       width: 1px;
     }
 
     &::after {
-      background-color: $COLOR_BLUE;
+      background-color: var(--color-blue);
       display: none;
       width: 3px;
     }
 
     &:hover,
     &:focus {
-      background-color: rgba($COLOR_BLUE, 0.25);
+      background-color: var(--color-blue-hover);
 
       &::after {
         display: block;
@@ -56,10 +56,10 @@
 
     &#{&}--next {
       align-items: flex-end;
-      margin-left: auto;
+      margin-inline-start: auto;
 
       .text-body-s {
-        text-align: right;
+        text-align: end;
       }
 
       &::before,
@@ -71,22 +71,9 @@
   }
 
   /**
-   * Dark mode.
-   */
-  .is-dark & {
-    &__link {
-      color: $COLOR_DARK_MODE_WHITE;
-
-      &::before {
-        background-color: $COLOR_DARK_MODE_WHITE;
-      }
-    }
-  }
-
-  /**
    * Media queries.
    */
-  @include mq($from: medium) {
+  @include mq($from: m) {
     &__navigation {
       display: flex;
     }

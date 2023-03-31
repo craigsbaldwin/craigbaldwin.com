@@ -4,26 +4,10 @@
  * Determines base styles.
  *
  */
-// stylelint-disable declaration-no-important
-
-html {
-  @media (prefers-reduced-motion: reduce) {
-    animation: none !important;
-    transition: none !important;
-
-    *,
-    *::before,
-    *::after {
-      animation: none !important;
-      transition: none !important;
-    }
-  }
-}
-
 body {
-  background-color: $COLOR_BACKGROUND;
-  border: $SPACING_S solid $COLOR_WHITE;
-  color: $COLOR_BLACK;
+  background-color: var(--color-background);
+  border: var(--border-width-body) solid var(--color-border);
+  color: var(--color-text-primary);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -34,16 +18,14 @@ body {
  * Selection.
  */
 ::selection {
-  @include transition(background-color, color);
-  background-color: $COLOR_BLACK;
-  color: $COLOR_WHITE;
+  background-color: var(--color-text-primary);
+  color: var(--color-text-inverse);
 }
 
 // stylelint-disable-next-line
 ::-moz-selection {
-  @include transition(background-color, color);
-  background-color: $COLOR_BLACK;
-  color: $COLOR_WHITE;
+  background-color: var(--color-text-primary);
+  color: var(--color-text-inverse);
 }
 
 /**
@@ -52,13 +34,12 @@ body {
 .template {
   &__border-left,
   &__border-right {
-    @include transition(background-color);
-    background-color: $COLOR_WHITE;
+    background-color: var(--color-border);
     height: 100vh;
     position: absolute;
     top: 0;
-    width: $SPACING_S;
-    z-index: $LAYER_BASE;
+    width: var(--border-width-body);
+    z-index: var(--layer-flat);
   }
 
   &__border-left {
@@ -68,26 +49,19 @@ body {
   &__border-right {
     right: 0;
   }
-
-  &.is-dark {
-    .template__border-left,
-    .template__border-right {
-      background-color: $COLOR_BLACK;
-    }
-  }
 }
 
 .container {
   margin: 0 auto;
   max-width: var(--max-content-width);
-  padding: 0 $SPACING_S;
+  padding: 0 var(--layout-margin);
   width: 100%;
 }
 
 .main {
-  margin-bottom: $SPACING_L;
+  margin-block-end: var(--spacing-l);
 
-  @include mq($from: medium) {
-    margin-bottom: $SPACING_2XL;
+  @include mq($from: m) {
+    margin-block-end: var(--spacing-2xl);
   }
 }

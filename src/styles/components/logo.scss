@@ -64,13 +64,13 @@
    * Parent modifiers.
    */
   .block__logo--clients & {
-    color: $COLOR_WHITE;
+    color: var(--color-text-inverse);
   }
 
   /**
    * Media queries.
    */
-  @include mq($from: medium) {
+  @include mq($from: m) {
     &#{&}--childsplay-clothing {
       width: 54%;
     }

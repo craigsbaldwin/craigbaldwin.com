@@ -10,19 +10,15 @@
 .burger::before,
 .burger::after {
   @include transition(background-color, opacity var(--timing-normal), transform);
-  background-color: $COLOR_BLACK;
+  background-color: var(--color-text-primary);
   content: '';
   height: 2px;
   position: absolute;
   transform-origin: 50% 50%;
   width: 28px;
 
-  .is-dark & {
-    background-color: $COLOR_DARK_MODE_WHITE;
-  }
-
   body:not(.is-open).template--clients & {
-    background-color: $COLOR_WHITE;
+    background-color: var(--color-background);
   }
 }
 

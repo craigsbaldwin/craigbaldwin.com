@@ -8,25 +8,25 @@
   $parent: &;
 
   &:not(:last-child) {
-    margin-bottom: $SPACING_S;
+    margin-block-end: var(--spacing-s);
   }
 
   &__excerpt {
     position: relative;
 
     &:not(:last-child) {
-      margin-bottom: $SPACING_SXS;
+      margin-block-end: var(--spacing-s);
     }
   }
 
   &__meta-title {
     display: inline;
-    margin-right: $SPACING_3XS;
+    margin-inline-end: var(--spacing-3xs);
   }
 
   &__tag {
     &:not(:last-child) {
-      margin-right: $SPACING_2XS;
+      margin-inline-end: var(--spacing-2xs);
     }
   }
 
@@ -45,7 +45,7 @@
 
   &__homepage-title {
     display: block;
-    margin-bottom: $SPACING_2XS;
+    margin-block-end: var(--spacing-2xs);
     text-decoration: underline;
   }
 
@@ -58,13 +58,13 @@
    */
   &#{&}--large {
     &:not(:last-child) {
-      margin-bottom: $SPACING_L;
+      margin-block-end: var(--spacing-l);
     }
   }
 
   &#{&}--small {
     #{$parent}__title {
-      margin-bottom: $SPACING_2XS;
+      margin-block-end: var(--spacing-2xs);
     }
   }
 

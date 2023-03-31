@@ -7,7 +7,7 @@
 .footnote {
   @include transition(color);
   align-items: center;
-  color: $COLOR_BLACK;
+  color: var(--color-text-primary);
   display: flex;
   height: 60px;
   position: relative;
@@ -16,7 +16,7 @@
 
   &::before,
   &::after {
-    background-color: $COLOR_BLACK;
+    background-color: var(--color-text-primary);
     content: '';
     height: 100%;
     left: 0;
@@ -36,7 +36,7 @@
   }
 
   &__content {
-    padding-left: $SPACING_S;
+    padding-inline-start: var(--spacing-s);
   }
 
   &.is-active,
@@ -51,42 +51,42 @@
     }
 
     &.footnote--about {
-      background-color: rgba($COLOR_ORANGE, 0.25);
+      background-color: var(--color-orange-hover);
 
       &::after {
-        background-color: $COLOR_ORANGE;
+        background-color: var(--color-orange);
       }
     }
 
     &.footnote--blog {
-      background-color: rgba($COLOR_BLUE, 0.25);
+      background-color: var(--color-blue-hover);
 
       &::after {
-        background-color: $COLOR_BLUE;
+        background-color: var(--color-blue);
       }
     }
 
     &.footnote--work {
-      background-color: rgba($COLOR_PURPLE, 0.25);
+      background-color: var(--color-purple-hover);
 
       &::after {
-        background-color: $COLOR_PURPLE;
+        background-color: var(--color-purple);
       }
     }
 
     &.footnote--stats {
-      background-color: rgba($COLOR_GREEN, 0.25);
+      background-color: var(--color-green-hover);
 
       &::after {
-        background-color: $COLOR_GREEN;
+        background-color: var(--color-green);
       }
     }
 
     &.footnote--contact {
-      background-color: rgba($COLOR_RED, 0.25);
+      background-color: var(--color-red-hover);
 
       &::after {
-        background-color: $COLOR_RED;
+        background-color: var(--color-red);
       }
     }
   }
@@ -103,15 +103,7 @@
     }
   }
 
-  .is-dark & {
-    color: $COLOR_DARK_MODE_WHITE;
-
-    &::before {
-      background-color: $COLOR_DARK_MODE_WHITE;
-    }
-  }
-
-  @include mq($from: medium) {
+  @include mq($from: m) {
     height: 80px;
   }
 }

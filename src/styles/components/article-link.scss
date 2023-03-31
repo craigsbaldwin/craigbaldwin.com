@@ -6,19 +6,16 @@
  */
 .article-link {
   $parent: &;
-  @include transition(color);
-  color: $COLOR_BLACK;
   display: flex;
   flex-direction: column;
-  margin-bottom: $SPACING_P;
-  padding: $SPACING_S;
+  margin-block-end: var(--spacing-l);
+  padding: var(--spacing-s);
   position: relative;
   text-decoration: none;
 
   &::before,
   &::after {
-    @include transition(border-color);
-    border-color: $COLOR_BLACK;
+    border-color: var(--color-text-primary);
     border-style: solid;
     content: '';
     height: 100%;
@@ -38,21 +35,19 @@
   }
 
   &__title {
-    @extend %h2;
-    font-weight: var(--font-weight-bold);
-    margin-bottom: $SPACING_2XS;
+    margin-block-end: var(--spacing-2xs);
   }
 
   + h2 {
-    margin-top: $SPACING_ML;
+    margin-block-start: var(--spacing-l);
   }
 
   &:hover,
   &:focus {
-    background-color: rgba($COLOR_BLUE, 0.25);
+    background-color: var(--color-blue-hover);
 
     &::before {
-      background-color: $COLOR_BLUE;
+      background-color: var(--color-blue);
       border-left: 0;
       opacity: 1;
       width: 3px;
@@ -60,15 +55,6 @@
 
     &::after {
       opacity: 0;
-    }
-  }
-
-  .is-dark & {
-    color: $COLOR_DARK_MODE_WHITE;
-
-    &::before,
-    &::after, {
-      border-color: $COLOR_DARK_MODE_WHITE;
     }
   }
 }

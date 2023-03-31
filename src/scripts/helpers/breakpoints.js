@@ -5,17 +5,17 @@
  * - These values should mirror the breakpoint values defined in `grid.scss`.
  */
 export const values = {
-  tiny: 320,
-  small: 576,
-  medium: 768,
-  large: 1024,
-  wide: 1328,
+  xs: 0,
+  s: 576,
+  m: 768,
+  l: 1024,
+  xl: 1366,
 };
 
 export default {
-  tiny: `${values.tiny}px`,
-  small: `${values.small}px`,
-  medium: `${values.medium}px`,
-  large: `${values.large}px`,
-  wide: `${values.wide}px`,
+  xs: `${values.tiny}px`,
+  s: `${values.small}px`,
+  m: `${values.medium}px`,
+  l: `${values.large}px`,
+  xl: `${values.wide}px`,
 };

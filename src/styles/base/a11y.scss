@@ -33,15 +33,14 @@ textarea:enabled {
  * - Overrides .visually-hidden when focused.
  */
 .skip-link {
-  @include transition(background-color, color);
   @include visually-hidden;
   align-items: center;
-  background-color: $COLOR_BLACK;
-  color: $COLOR_DARK_MODE_WHITE;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
   display: flex;
   justify-content: center;
   left: 0;
-  padding: $SPACING_S $SPACING_M;
+  padding: var(--spacing-s) var(--spacing-m);
   text-decoration: none;
   top: 0;
 
@@ -49,7 +48,7 @@ textarea:enabled {
     @include visually-shown(absolute);
     height: auto;
     width: auto;
-    z-index: $LAYER_POPUP;
+    z-index: var(--layer-temporary);
   }
 
   .is-tabbable & {

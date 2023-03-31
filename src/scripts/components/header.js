@@ -47,7 +47,7 @@ export default () => {
    * Initialise component.
    */
   function init() {
-    if (!window.matchMedia(`(min-width: ${breakpoints.medium})`).matches) {
+    if (!window.matchMedia(`(min-width: ${breakpoints.m})`).matches) {
       setInitState();
     }
 
@@ -58,7 +58,7 @@ export default () => {
    * Sets initial state based on screen size.
    */
   function setInitState() {
-    if (window.matchMedia(`(min-width: ${breakpoints.medium})`).matches) {
+    if (window.matchMedia(`(min-width: ${breakpoints.m})`).matches) {
       setTabindex(0);
       clearAriaProperties(true);
       return;
@@ -200,7 +200,7 @@ export default () => {
     const newWidth = window.innerWidth;
 
     if (
-      !window.matchMedia(`(min-width: ${breakpoints.medium})`).matches &&
+      !window.matchMedia(`(min-width: ${breakpoints.m})`).matches &&
       newWidth !== initWidth
     ) {
       closeNavigationDrawer();

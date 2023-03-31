@@ -6,12 +6,12 @@
  */
 .header {
   $parent: &;
-  margin-block-end: $SPACING_M;
-  padding-block: $SPACING_S;
+  margin-block-end: var(--spacing-m);
+  padding-block: var(--spacing-s);
   position: relative;
 
   &__parent {
-    background-color: $COLOR_PURPLE;
+    background-color: var(--color-purple);
     position: relative;
   }
 
@@ -29,10 +29,10 @@
 
   &__logo {
     position: relative;
-    z-index: $LAYER_HEADER;
+    z-index: var(--layer-sticky);
 
     body:not(.is-open).template--clients & {
-      color: $COLOR_WHITE;
+      color: var(--color-text-inverse);
     }
 
     body:not(.is-dark) & {
@@ -48,10 +48,10 @@
     // Negative margin so padding rests on title height instead
     margin: -20px 0;
     position: relative;
-    transform: translateX($SPACING_S);
+    transform: translateX(var(--spacing-s));
     // Force menu button to touch edge of page
-    width: calc(50px + #{$SPACING_S} - 10px);
-    z-index: $LAYER_HEADER;
+    width: calc(50px + #{var(--spacing-s)} - 10px);
+    z-index: var(--layer-sticky);
   }
 
   &__list {
@@ -81,22 +81,22 @@
   /**
    * Navigation is a drawer on mobile devices.
    */
-  @include mq($until: medium) {
+  @include mq($until: m) {
     &__navigation {
       @include transition(background-color, transform);
-      background-color: $COLOR_BACKGROUND;
+      background-color: var(--color-background);
       display: flex;
       flex-direction: column;
       height: 100%;
       justify-content: center;
       // Border + padding
-      padding: ($SPACING_S + $SPACING_S);
+      padding: (var(--spacing-s) + var(--spacing-s));
       position: fixed;
       right: 0;
       top: 0;
       transform: translateX(100%);
       width: 100%;
-      z-index: $LAYER_DRAWER;
+      z-index: var(--layer-overlay);
 
       &.is-active {
         transform: translateX(0);
@@ -104,12 +104,12 @@
     }
 
     &__list {
-      margin-top: auto;
+      margin-block-start: auto;
     }
 
     &__list-item {
       &:not(:last-child) {
-        margin-bottom: $SPACING_M;
+        margin-block-end: var(--spacing-m);
       }
     }
 
@@ -124,23 +124,17 @@
     }
 
     &__dark-mode {
-      margin-top: auto;
-    }
-
-    .is-dark & {
-      #{$parent}__navigation {
-        background-color: $COLOR_BLACK;
-      }
+      margin-block-start: auto;
     }
   }
 
-  @include mq($from: medium) {
-    margin-block-end: $SPACING_L;
-    padding-block: $SPACING_M;
+  @include mq($from: m) {
+    margin-block-end: var(--spacing-l);
+    padding-block: var(--spacing-m);
 
     &__skip-link {
       // Aligning skip link with logo link
-      padding-top: calc(#{$SPACING_L} + 4px);
+      padding-block-start: calc(var(--spacing-l) + 4px);
     }
 
     &__menu {
@@ -153,7 +147,7 @@
 
     &__list-item {
       &:not(:last-child) {
-        margin-right: $SPACING_M;
+        margin-inline-end: var(--spacing-m);
       }
     }
 
@@ -168,7 +162,7 @@
 
     &__link {
       body:not(.is-open).template--clients & {
-        color: $COLOR_WHITE;
+        color: var(--color-text-inverse);
       }
     }
   }

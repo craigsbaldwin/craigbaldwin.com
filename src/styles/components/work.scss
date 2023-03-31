@@ -8,16 +8,16 @@
   $parent: &;
 
   &__header {
-    padding-block-end: $SPACING_P;
+    padding-block-end: var(--spacing-l);
     // Site header padding + Site header margin
-    padding-block-start: calc(#{$SPACING_S} + #{$SPACING_S});
+    padding-block-start: calc(var(--spacing-s) + var(--spacing-s));
     position: relative;
-    z-index: $LAYER_BELOW;
+    z-index: var(--layer-base);
   }
 
   &__banner-left,
   &__banner-right {
-    background-color: $COLOR_PURPLE;
+    background-color: var(--color-purple);
     content: '';
     height: calc(100% + 1px);
     position: absolute;
@@ -36,9 +36,9 @@
   }
 
   &__header-content {
-    color: $COLOR_WHITE;
+    color: var(--color-text-inverse);
     position: relative;
-    z-index: $LAYER_BASE;
+    z-index: var(--layer-flat);
   }
 
   &__title {
@@ -48,11 +48,11 @@
   }
 
   &__subtitle {
-    margin-block-start: $SPACING_S;
+    margin-block-start: var(--spacing-s);
   }
 
   &__image-container {
-    margin-block-end: $SPACING_M;
+    margin-block-end: var(--spacing-m);
     position: relative;
 
     #{$parent}__banner-left,
@@ -67,44 +67,44 @@
     height: auto;
     position: relative;
     width: 100%;
-    z-index: $LAYER_BASE;
+    z-index: var(--layer-flat);
   }
 
   .article__link {
     &::after {
-      background-color: $COLOR_PURPLE;
+      background-color: var(--color-purple);
     }
 
     &:hover,
     &:focus {
-      background-color: rgba($COLOR_PURPLE, 0.25);
+      background-color: rgba(var(--color-purple), 0.25);
     }
   }
 
   .article__navigation {
-    margin-block-start: $SPACING_M;
+    margin-block-start: var(--spacing-m);
   }
 
   /**
    * Media queries.
    */
-  @include mq($from: medium) {
+  @include mq($from: m) {
     &__header {
-      padding-block-end: $SPACING_M;
+      padding-block-end: var(--spacing-m);
       // Site header padding + Site header margin
-      padding-block-start: calc(#{$SPACING_M} + #{$SPACING_M});
+      padding-block-start: calc(var(--spacing-m) + var(--spacing-m));
     }
 
     &__subtitle {
-      margin-block-start: $SPACING_M;
+      margin-block-start: var(--spacing-m);
     }
 
     &__image-container {
-      margin-block-end: $SPACING_L;
+      margin-block-end: var(--spacing-l);
     }
 
     .article__navigation {
-      margin-block-start: $SPACING_L;
+      margin-block-start: var(--spacing-l);
     }
   }
 }

@@ -4,26 +4,12 @@
  * Styles for code markdown.
  *
  */
-// stylelint-disable color-no-hex
-
-$COLOR_CODE_BLACK: #1e1e1e;
-$COLOR_CODE_DARK_GREEN: #529949;
-$COLOR_CODE_LIGHT_GREEN: #4ebb7d;
-$COLOR_CODE_DARK_BLUE: #569cd6;
-$COLOR_CODE_LIGHT_BLUE: #9cdcfe;
-$COLOR_CODE_ORANGE: #ce9178;
-$COLOR_CODE_DARK_YELLOW: #d7ba7d;
-$COLOR_CODE_LIGHT_YELLOW: #dcdcaa;
-$COLOR_CODE_PURPLE: #c586c0;
-$COLOR_CODE_WHITE: #fff;
-$COLOR_CODE_DARK_GREY: #808080;
-
 .highlight {
-  background-color: $COLOR_CODE_BLACK;
+  background-color: var(--color-code-black);
   overflow-y: auto;
 
   &:not(:last-child) {
-    margin-bottom: $SPACING_P;
+    margin-block-end: var(--spacing-l);
   }
 
   &::-webkit-scrollbar {
@@ -32,48 +18,47 @@ $COLOR_CODE_DARK_GREY: #808080;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: $COLOR_BLUE;
+    background: var(--color-blue);
   }
 
   pre {
-    padding: $SPACING_S;
-    padding-right: 0;
+    padding: var(--spacing-s);
+    padding-inline-end: 0;
   }
 }
 
 code {
-  color: $COLOR_DARK_MODE_WHITE;
+  color: var(--color-text-code);
   display: block;
-  font-family: 'Source Code Pro', monospace;
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-family: var(--font-family-code);
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-xl);
   min-width: fit-content;
-  padding-right: $SPACING_S;
+  padding-inline-end: var(--spacing-s);
 
   &::selection,
   span::selection {
-    background-color: $COLOR_BLUE;
-    color: $COLOR_DARK_MODE_WHITE;
+    background-color: var(--color-blue);
+    color: var(--color-text-code);
   }
 
   .ln {
     opacity: 0.5;
-    padding-right: $SPACING_S;
+    padding-inline-end: var(--spacing-s);
   }
 
   /**
    * Inline code.
    */
   &:not([class]) {
-    background-color: rgba($COLOR_CODE_DARK_GREY, 0.1);
+    background-color: var(--color-code-dark-grey-tint);
     border-radius: 3px;
-    color: $COLOR_RED;
+    color: var(--color-red);
     display: inline-block;
-    // stylelint-disable-next-line
-    font-size: 0.7em;
+    font-size: var(--font-size-xs);
     font-weight: var(--font-weight-regular);
     line-height: inherit;
-    padding: 0 $SPACING_2XS;
+    padding: 0 var(--spacing-2xs);
   }
 }
 
@@ -83,22 +68,22 @@ code {
 .language-html {
   // Element
   .nt {
-    color: $COLOR_CODE_DARK_BLUE;
+    color: var(--color-code-dark-blue);
   }
 
   // Chevron
   .p {
-    color: $COLOR_CODE_DARK_GREY;
+    color: var(--color-code-dark-grey);
   }
 
   // Attribute
   .na, .err {
-    color: $COLOR_CODE_LIGHT_BLUE;
+    color: var(--color-code-light-blue);
   }
 
   // Value
   .s {
-    color: $COLOR_CODE_ORANGE;
+    color: var(--color-code-orange);
   }
 }
 
@@ -106,32 +91,32 @@ code {
  * Used for Liquid.
  */
 .language-htm {
-  color: $COLOR_CODE_LIGHT_BLUE;
+  color: var(--color-code-light-blue);
 
   .start, .end {
-    color: $COLOR_CODE_LIGHT_YELLOW;
+    color: var(--color-code-light-yellow);
   }
 
   .percent {
-    color: $COLOR_CODE_DARK_GREY;
+    color: var(--color-code-dark-grey);
   }
 
   .set {
-    color: $COLOR_CODE_DARK_BLUE;
+    color: var(--color-code-dark-blue);
   }
 
   // Operators (=, |, > etc.)
   .p {
-    color: $COLOR_CODE_WHITE;
+    color: var(--color-code-white);
   }
 
   // Filters, objects, sub-objects
   .fo, .so {
-    color: $COLOR_CODE_LIGHT_GREEN;
+    color: var(--color-code-light-green);
   }
 
   .string {
-    color: $COLOR_CODE_ORANGE;
+    color: var(--color-code-orange);
   }
 }
 
@@ -141,37 +126,37 @@ code {
 .language-css {
   // Comments
   .c {
-    color: $COLOR_CODE_DARK_GREEN;
+    color: var(--color-code-dark-green);
   }
 
   // Properties
   .k, .k + .o, .o + .kc {
-    color: $COLOR_CODE_LIGHT_BLUE;
+    color: var(--color-code-light-blue);
   }
 
   // Class
   .nc, .nt, {
-    color: $COLOR_CODE_DARK_YELLOW;
+    color: var(--color-code-dark-yellow);
   }
 
   // Punctuation
   .p {
-    color: $COLOR_CODE_WHITE;
+    color: var(--color-code-white);
   }
 
   // Value
   .kt, .mf {
-    color: $COLOR_CODE_LIGHT_GREEN;
+    color: var(--color-code-light-green);
   }
 
   // Strings
   .s1, .kc, .n {
-    color: $COLOR_CODE_ORANGE;
+    color: var(--color-code-orange);
   }
 
   // SASS variables
   .p + .err, .err + .n, .o + .err {
-    color: $COLOR_CODE_LIGHT_BLUE;
+    color: var(--color-code-light-blue);
   }
 }
 
@@ -181,36 +166,36 @@ code {
 .language-js {
   // Comments
   .cm {
-    color: $COLOR_CODE_DARK_GREEN;
+    color: var(--color-code-dark-green);
   }
 
   // Functions, boolean, operators
   .kd, .kc, .kr, .operator {
-    color: $COLOR_CODE_DARK_BLUE;
+    color: var(--color-code-dark-blue);
   }
 
   // Selectors
   .nx, .nb {
-    color: $COLOR_CODE_LIGHT_BLUE;
+    color: var(--color-code-light-blue);
   }
 
   // If, this
   .k {
-    color: $COLOR_CODE_PURPLE;
+    color: var(--color-code-purple);
   }
 
   // Strings
   .s1 {
-    color: $COLOR_CODE_ORANGE;
+    color: var(--color-code-orange);
   }
 
   // Numbers
   .mi, .mf {
-    color: $COLOR_CODE_LIGHT_GREEN;
+    color: var(--color-code-light-green);
   }
 
   // Function
   .function {
-    color: $COLOR_CODE_LIGHT_YELLOW;
+    color: var(--color-code-light-yellow);
   }
 }
