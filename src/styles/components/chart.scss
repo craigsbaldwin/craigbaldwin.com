@@ -5,6 +5,10 @@
  *
  */
 .chart {
+  &:not(:last-child) {
+    margin-block-end: var(--spacing-3xl);
+  }
+
   &__title {
     margin-block-end: var(--spacing-l);
   }
@@ -18,12 +22,21 @@
   }
 
   &__details {
-    margin-block-start: var(--spacing-s);
+    margin-block-start: var(--spacing-m);
   }
 
-  @include mq($from: m) {
+  @include mq($from: l) {
+    &:not(:last-child) {
+      margin-block-end: var(--spacing-5xl);
+    }
+
     &__chart {
       padding-block-end: 49%;
+    }
+
+    &__details {
+      margin-block-start: var(--spacing-l);
+      width: 68%;
     }
   }
 }

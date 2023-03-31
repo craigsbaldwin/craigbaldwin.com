@@ -43,6 +43,12 @@
     }
   }
 
+  .template--about &,
+  .template--stats & {
+    // Desired margin - text grid gap
+    margin-block-end: calc(var(--spacing-xl) - var(--spacing-s));
+  }
+
   /**
    * Colours.
    */
@@ -78,6 +84,12 @@
 
     &__copy {
       width: 68%;
+    }
+
+    .template--about &,
+    .template--stats & {
+      // Desired margin - text grid gap
+      margin-block-end: calc(var(--spacing-3xl) - var(--spacing-s));
     }
   }
 }

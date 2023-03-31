@@ -8,12 +8,12 @@
   $parent: &;
 
   &__title {
-    margin-block-end: var(--spacing-l);
+    margin-block-end: var(--spacing-xl);
   }
 
   &__timeline {
     display: grid;
-    gap: var(--spacing-m) var(--spacing-s);
+    gap: var(--spacing-xl) var(--spacing-m);
     grid-template-columns: 4px 1fr;
     position: relative;
 
@@ -37,7 +37,7 @@
   /**
    * Media queries.
    */
-  @include mq($from: m) {
+  @include mq($from: l) {
     &__timeline {
       grid-template-columns: 1fr 4px 1fr;
 
@@ -49,24 +49,23 @@
     &__entry {
       &:nth-child(odd) {
         grid-column: 1;
-        margin-block-start: -var(--spacing-m);
-        text-align: end;
+        text-align: right;
       }
 
       &:nth-child(odd)::before {
         left: unset;
-        right: calc(-#{var(--spacing-s)} - 7px);
+        right: calc((var(--spacing-m) * -1) - 7px);
       }
 
       &:nth-child(odd)::after {
         left: unset;
-        right: -var(--spacing-2xs);
-        transform: translateX(100%);
+        right: calc(var(--spacing-2xs) * -1);
+        translate: 100% 0;
       }
 
       &:nth-child(even) {
         grid-column: 3;
-        margin-block-start: var(--spacing-xl);
+        margin-block-start: var(--spacing-6xl);
       }
 
       &:first-child {

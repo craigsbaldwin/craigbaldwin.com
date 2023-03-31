@@ -5,7 +5,7 @@
  *
  */
 .map {
-  margin-block-end: var(--spacing-l);
+  margin-block-end: var(--spacing-2xl);
   mix-blend-mode: darken;
 
   &__display {
@@ -99,8 +99,8 @@
     }
   }
 
-  @include mq($from: m) {
-    margin-block-end: var(--spacing-xl);
+  @include mq($from: l) {
+    margin-block-end: var(--spacing-4xl);
 
     &__display {
       padding-block-end: 45%;

@@ -88,3 +88,15 @@
     margin-block-end: var(--spacing-7xl);
   }
 }
+
+.mountains-grid {
+  display: grid;
+  gap: var(--spacing-3xl);
+
+  /**
+   * Media queries.
+   */
+  @include mq($from: l) {
+    gap: var(--spacing-7xl);
+  }
+}

@@ -15,7 +15,7 @@
     content: '';
     height: 16px;
     // Margin - centre dot over timeline
-    left: calc(-#{var(--spacing-s)} - 13px);
+    left: calc((var(--spacing-m) * -1) - 13px);
     position: absolute;
     top: 4px;
     transform: translateX(3px);
@@ -28,25 +28,29 @@
     background-color: var(--color-text-primary);
     content: '';
     height: 2px;
-    left: -var(--spacing-2xs);
+    left: calc(var(--spacing-2xs) * -1);
     position: absolute;
     top: 11px;
-    transform: translateX(-100%);
+    translate: -100% 0;
     width: 7px;
     z-index: var(--layer-flat);
   }
 
-  &__title {
-    &:not(:last-child) {
-      margin-block-end: var(--spacing-xs);
+  &__content {
+    display: grid;
+    gap: var(--spacing-xs);
+    padding-block-start: var(--spacing-3xs);
+
+    p {
+      font-size: var(--font-size-s);
     }
   }
 
-  &__content p {
-    font-size: 1.4rem;
+  &__link a {
+    text-decoration: underline;
 
-    &:not(:last-child) {
-      margin-block-end: var(--spacing-s);
+    &:hover {
+      text-decoration: none;
     }
   }
 }

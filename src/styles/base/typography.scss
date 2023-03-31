@@ -68,6 +68,11 @@ p, .text-body-m {
   font-weight: var(--font-weight-regular);
 }
 
+.text-body-xs {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+}
+
 /**
  * Strong.
  */
@@ -99,4 +104,17 @@ ul, ol {
   counter-reset: list;
   font-size: var(--font-size-m);
   line-height: var(--line-height-l);
+}
+
+/**
+ * Templates.
+ */
+.template--stats {
+  h2 a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
