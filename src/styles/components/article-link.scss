@@ -39,7 +39,7 @@
 
   &__title {
     @extend %h2;
-    font-weight: $WEIGHT_BOLD;
+    font-weight: var(--font-weight-bold);
     margin-bottom: $SPACING_2XS;
   }
 

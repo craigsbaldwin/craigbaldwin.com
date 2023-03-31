@@ -23,8 +23,8 @@
 
   &__heading {
     font-size: 1.4rem;
-    font-weight: $WEIGHT_REGULAR;
-    line-height: $LINE_HEIGHT_S;
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-baseline);
   }
 
   &__logo {
@@ -55,7 +55,7 @@
   }
 
   &__list {
-    line-height: $LINE_HEIGHT_S;
+    line-height: var(--line-height-baseline);
   }
 
   &__list-item {
@@ -65,7 +65,7 @@
   }
 
   &__link.is-active {
-    font-weight: $WEIGHT_BOLD;
+    font-weight: var(--font-weight-bold);
     text-decoration: none;
 
     &:hover {

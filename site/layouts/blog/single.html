@@ -11,11 +11,11 @@
           <div class="card card--{{ lower $.Page.Title }}">
             <h1 class="card__title">{{ .Params.Title }}</h1>
 
-            <p class="card__copy standfirst">
+            <p class="card__copy text-body-l">
               {{ .Params.Excerpt }}
             </p>
 
-            <p class="card__meta sub-text col">
+            <p class="card__meta text-body-s col">
               {{ partial "article-meta.html" . }}
             </p>
           </div>
@@ -30,14 +30,14 @@
         {{ with .NextInSection }}
           <a class="article__link article__link--next" href="{{ .Permalink }}">
             <span class="h3">Next article</span>
-            <span class="sub-text">{{ .Title }}</span>
+            <span class="text-body-s">{{ .Title }}</span>
           </a>
         {{ end }}
 
         {{ with .PrevInSection }}
           <a class="article__link" href="{{ .Permalink }}">
             <span class="h3">Previous article</span>
-            <span class="sub-text">{{ .Title }}</span>
+            <span class="text-body-s">{{ .Title }}</span>
           </a>
         {{ end }}
       </div>

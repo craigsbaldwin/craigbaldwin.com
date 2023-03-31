@@ -36,7 +36,7 @@
 
   &__meta {
     @include transition(background-color);
-    line-height: $LINE_HEIGHT_S;
+    line-height: var(--line-height-baseline);
     padding-bottom: $SPACING_S;
     padding-right: $SPACING_S;
   }
@@ -46,7 +46,7 @@
   }
 
   &__copyright {
-    line-height: $LINE_HEIGHT_S;
+    line-height: var(--line-height-baseline);
     margin-top: $SPACING_S;
 
     &#{&}--desktop {

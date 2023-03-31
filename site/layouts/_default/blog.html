@@ -10,11 +10,11 @@
               <a href="{{ .Permalink }}">{{ .Title }}</a>
             </h2>
 
-            <p class="articles__excerpt body-1">
+            <p class="articles__excerpt text-body-m">
               {{ .Params.Excerpt }}
             </p>
 
-            <p class="articles__meta sub-text">
+            <p class="articles__meta text-body-s">
               {{ partial "article-meta.html" . }}
             </p>
           </div>
@@ -24,7 +24,7 @@
               <a href="{{ .Permalink }}">{{ .Title }}</a>
             </h2>
 
-            <p class="articles__meta sub-text">
+            <p class="articles__meta text-body-s">
               {{ partial "article-meta.html" . }}
             </p>
           </div>

@@ -71,7 +71,7 @@ code {
     display: inline-block;
     // stylelint-disable-next-line
     font-size: 0.7em;
-    font-weight: $WEIGHT_REGULAR;
+    font-weight: var(--font-weight-regular);
     line-height: inherit;
     padding: 0 $SPACING_2XS;
   }

@@ -3,7 +3,7 @@
     <div class="content-col">
       <div class="row row--m6">
         <div class="card">
-          <span class="card__subtitle sub-text">
+          <span class="card__subtitle text-body-s">
             Tags >
           </span>
 
@@ -18,11 +18,11 @@
               <a href="{{ .Permalink }}">{{ .Title }}</a>
             </h2>
 
-            <p class="articles__excerpt body-1">
+            <p class="articles__excerpt text-body-m">
               {{ .Params.Excerpt }}
             </p>
 
-            <p class="articles__meta sub-text">
+            <p class="articles__meta text-body-s">
               {{ partial "article-meta.html" . }}
             </p>
           </div>
@@ -32,7 +32,7 @@
               <a href="{{ .Permalink }}">{{ .Title }}</a>
             </h2>
 
-            <p class="articles__meta sub-text">
+            <p class="articles__meta text-body-s">
               {{ partial "article-meta.html" . }}
             </p>
           </div>

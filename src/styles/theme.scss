@@ -6,15 +6,18 @@
  */
 
 /**
+ * Config styles.
+ */
+@import 'config/mixins';
+@import 'config/variables';
+
+/**
  * Base styles.
  */
 @import 'base/reset';
-@import 'base/animation';
 @import 'base/grid';
 @import 'base/colour';
-@import 'base/helpers';
 @import 'base/layout';
-@import 'base/icon';
 @import 'base/typography';
 @import 'base/code';
 @import 'base/a11y';
@@ -31,6 +34,7 @@
 @import 'components/card';
 @import 'components/chart';
 @import 'components/dark-mode';
+@import 'components/icon';
 @import 'components/entries';
 @import 'components/entry';
 @import 'components/footer';

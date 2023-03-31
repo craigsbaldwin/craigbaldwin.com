@@ -7,53 +7,12 @@
 @import '~sass-mq';
 
 /**
- * Variables.
- */
-$mq-breakpoints: (
-  tiny: 320px,
-  small: 576px,
-  medium: 768px,
-  large: 1024px,
-  wide: 1328px
-);
-
-/**
- * Grid.
- */
-$SITE_WIDTH: 120rem;
-
-/**
- * Spacing.
- */
-$SPACING_3XS: 0.25rem;
-$SPACING_2XS: 0.5rem;
-$SPACING_XS: 1rem;
-$SPACING_SXS: 1.5rem;
-$SPACING_S: 2rem;
-$SPACING_P: 2.5rem; // Text paragraph
-$SPACING_M: 3rem;
-$SPACING_ML: 5rem;
-$SPACING_L: 6rem;
-$SPACING_XL: 9rem;
-$SPACING_2XL: 12rem;
-
-/**
- * Layers.
- */
-$LAYER_BELOW: 0;
-$LAYER_BASE: 1;
-$LAYER_RAISED: 2;
-$LAYER_DRAWER: 3;
-$LAYER_HEADER: 4;
-$LAYER_POPUP: 5;
-
-/**
  * Grid layout.
  */
 .row {
   display: grid;
-  gap: $SPACING_S;
-  grid-template-columns: repeat(4, minmax(10px, 1fr));
+  gap: var(--layout-gutter);
+  grid-template-columns: repeat($layout-mobile-columns, minmax(10px, 1fr));
 
   .s2 {
     grid-column: span 2;
@@ -69,8 +28,8 @@ $LAYER_POPUP: 5;
     grid-template-columns: repeat(6, minmax(10px, 1fr));
   }
 
-  @include mq($from: medium) {
-    grid-template-columns: repeat(8, minmax(10px, 1fr));
+  @include mq($from: m) {
+    grid-template-columns: repeat($layout-tablet-columns, minmax(10px, 1fr));
 
     .content-col {
       grid-column: 2 / 8;
@@ -104,8 +63,8 @@ $LAYER_POPUP: 5;
     }
   }
 
-  @include mq($from: large) {
-    grid-template-columns: repeat(10, minmax(10px, 1fr));
+  @include mq($from: l) {
+    grid-template-columns: repeat($layout-desktop-columns, minmax(10px, 1fr));
 
     .content-col {
       grid-column: 3 / 9;

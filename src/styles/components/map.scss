@@ -39,7 +39,7 @@
   .leaflet-control-attribution a {
     @include transition(color);
     color: $COLOR_BLACK;
-    font-family: $FONT;
+    font-family: var(--font-family);
   }
 
   &__progress {
@@ -67,8 +67,8 @@
   }
 
   &__progress-text {
-    font-weight: $WEIGHT_BOLD;
-    line-height: $LINE_HEIGHT_S;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-baseline);
     padding: $SPACING_2XS $SPACING_XS $SPACING_3XS;
     position: absolute;
     right: $SPACING_XS;
@@ -77,7 +77,7 @@
     z-index: 2;
 
     &#{&}--count {
-      @include transition(color, opacity $TIMING_L ease);
+      @include transition(color, opacity var(--timing-slow) ease);
       color: $COLOR_WHITE;
       opacity: 0;
 

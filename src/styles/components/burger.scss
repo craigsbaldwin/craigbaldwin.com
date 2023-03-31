@@ -9,7 +9,7 @@
 .burger,
 .burger::before,
 .burger::after {
-  @include transition(background-color, opacity $TIMING_M, transform);
+  @include transition(background-color, opacity var(--timing-normal), transform);
   background-color: $COLOR_BLACK;
   content: '';
   height: 2px;

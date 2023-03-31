@@ -2,13 +2,13 @@
 <!-- Site footer. -->
 <div class="row">
   <div class="footer__base content-col">
-    <span class="footer__item sub-text">
+    <span class="footer__item text-body-s">
       &copy; 2008-{{ now.Format "2006" }} Craig Baldwin
     </span>
 
     {{ range .Site.Menus.footer }}
       <a
-        class="footer__item footer__link text-link sub-text"
+        class="footer__item footer__link text-link text-body-s"
         href="{{ .URL }}"
       >
         {{ .Title }}

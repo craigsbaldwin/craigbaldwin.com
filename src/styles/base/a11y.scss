@@ -6,13 +6,6 @@
  */
 
 /**
- * Default focus styling for browsers.
- */
-@mixin focus-ring() {
-  outline: 2px solid $COLOR_BLACK;
-}
-
-/**
  * Reset focus state on tabbable elements.
  */
 [tabindex],
@@ -57,11 +50,6 @@ textarea:enabled {
     height: auto;
     width: auto;
     z-index: $LAYER_POPUP;
-  }
-
-  .is-dark & {
-    background-color: $COLOR_DARK_MODE_WHITE;
-    color: $COLOR_BLACK;
   }
 
   .is-tabbable & {
