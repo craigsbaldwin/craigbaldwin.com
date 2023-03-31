@@ -59,9 +59,9 @@ body {
 }
 
 .main {
-  margin-block-end: var(--spacing-l);
+  margin-block-end: var(--spacing-3xl);
 
   @include mq($from: m) {
-    margin-block-end: var(--spacing-2xl);
+    margin-block-end: var(--spacing-7xl);
   }
 }
