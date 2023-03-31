@@ -8,7 +8,7 @@
 
 :root {
   // Border width
-  --border-width-body: 2rem;
+  --border-width-body: 1.2rem;
 
   // Brand colours
   --color-blue: rgb(52, 152, 219);
@@ -63,7 +63,7 @@
 
   // Font size
   --font-size-xs: 0.7rem;
-  --font-size-s: 0.8rem;
+  --font-size-s: 0.9rem;
   --font-size-m: 1rem;
   --font-size-l: 1.2rem;
   --font-size-xl: 1.4rem;
@@ -81,14 +81,15 @@
   --layer-flat: 1;
   --layer-raised: 2;
   --layer-heightened: 4;
+  --layer-navigation: 7;
   --layer-sticky: 8;
   --layer-window-overlay: 12;
   --layer-overlay: 16;
   --layer-temporary: 20;
 
   // Layout
-  --layout-margin: var(--spacing-s);
-  --layout-gutter: var(--spacing-xl);
+  --layout-margin: var(--spacing-m);
+  --layout-gutter: var(--spacing-m);
 
   // Line height
   --line-height-baseline: 1;
@@ -149,6 +150,6 @@ $breakpoint-l: 64rem; // 1024px
 $breakpoint-xl: 85.375rem; // 1366px
 
 $layout-gutter: var(--layout-gutter);
-$layout-mobile-columns: 4;
-$layout-tablet-columns: 8;
-$layout-desktop-columns: 10;
+$layout-mobile-columns: 6;
+$layout-tablet-columns: 6;
+$layout-desktop-columns: 12;
