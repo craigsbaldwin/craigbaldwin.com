@@ -41,3 +41,12 @@
     }
   }
 }
+
+.text-grid {
+  display: grid;
+  gap: var(--spacing-s);
+
+  h2 {
+    margin-block-start: var(--spacing-m);
+  }
+}

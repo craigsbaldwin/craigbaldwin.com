@@ -5,9 +5,9 @@
 <div class="card card--{{ lower $.Page.Title }}">
   {{ if .Get "title" }}
     {{ if (eq $page "Index") }}
-      <h2 class="card__title text-heading-m">{{ .Get "title" }}</h2>
+      <h2 class="card__title text-heading-xl">{{ .Get "title" }}</h2>
     {{ else }}
-      <h1 class="card__title text-heading-m">{{ .Get "title" }}</h1>
+      <h1 class="card__title text-heading-xl">{{ .Get "title" }}</h1>
     {{ end }}
   {{ end }}
 

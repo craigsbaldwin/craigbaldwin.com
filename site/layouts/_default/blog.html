@@ -1,6 +1,6 @@
 {{ define "main" }}
-  <div class="row">
-    <div class="content-col">
+  <div class="grid">
+    <div class="col xs-span l3-11">
       {{- .Content -}}
 
       {{ range $index, $element := .Pages.ByPublishDate.Reverse }}

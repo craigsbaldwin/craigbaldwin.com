@@ -26,25 +26,23 @@ html, body {
  */
 // h1
 .text-heading-xl {
-  font-size: var(--font-size-5xl);
-  font-weight: var(--font-weight-bold);
-}
-
-// h2
-.text-heading-l {
-  font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
-}
-
-// h2-5
-.text-heading-m {
   font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+}
+
+h2, .text-heading-l {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-heading-m {
+  font-size: var(--font-size-l);
   font-weight: var(--font-weight-bold);
 }
 
 // h3
 .text-heading-s {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
 }
 
