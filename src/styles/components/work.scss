@@ -8,9 +8,7 @@
   $parent: &;
 
   &__header {
-    padding-block-end: var(--spacing-l);
-    // Site header padding + Site header margin
-    padding-block-start: calc(var(--spacing-s) + var(--spacing-s));
+    padding: var(--spacing-xl) 0;
     position: relative;
     z-index: var(--layer-base);
   }
@@ -41,18 +39,12 @@
     z-index: var(--layer-flat);
   }
 
-  &__title {
-    font-family: 'Crimson Pro', serif;
-    font-size: 5rem;
-    font-weight: 300;
-  }
-
   &__subtitle {
-    margin-block-start: var(--spacing-s);
+    margin-block-start: var(--spacing-l);
   }
 
   &__image-container {
-    margin-block-end: var(--spacing-m);
+    margin-block-end: var(--spacing-xl);
     position: relative;
 
     #{$parent}__banner-left,
@@ -77,12 +69,12 @@
 
     &:hover,
     &:focus {
-      background-color: rgba(var(--color-purple), 0.25);
+      background-color: var(--color-purple-hover);
     }
   }
 
   .article__navigation {
-    margin-block-start: var(--spacing-m);
+    margin-block-start: var(--spacing-xl);
   }
 
   /**
@@ -90,9 +82,7 @@
    */
   @include mq($from: m) {
     &__header {
-      padding-block-end: var(--spacing-m);
-      // Site header padding + Site header margin
-      padding-block-start: calc(var(--spacing-m) + var(--spacing-m));
+      padding: var(--spacing-3xl) 0;
     }
 
     &__subtitle {
@@ -100,11 +90,11 @@
     }
 
     &__image-container {
-      margin-block-end: var(--spacing-l);
+      margin-block-end: var(--spacing-3xl);
     }
 
     .article__navigation {
-      margin-block-start: var(--spacing-l);
+      margin-block-start: var(--spacing-3xl);
     }
   }
 }

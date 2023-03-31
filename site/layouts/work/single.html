@@ -1,11 +1,6 @@
 {{ define "main" }}
-  <link
-    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&display=swap"
-    rel="stylesheet"
-  >
-
-  <div class="work row">
-    <div class="content-col">
+  <div class="work grid">
+    <div class="col xs-span l3-11">
       <div class="work__header">
         <div
           class="work__banner-left"
@@ -22,7 +17,7 @@
         ></div>
 
         <div class="work__header-content">
-          <h1 class="work__title">{{ $.Page.Title }}</h1>
+          <h1 class="work__title text-heading-2xl">{{ $.Page.Title }}</h1>
 
           {{ if (.Params.subtitle) }}
             <p class="work__subtitle text-body-l">{{ .Params.subtitle }}</p>
@@ -32,8 +27,8 @@
     </div>
   </div>
 
-  <div class="work row">
-    <div class="wide-col">
+  <div class="work grid">
+    <div class="col xs-span l2-12">
       <div class="work__image-container">
         <div
           class="work__banner-left"
@@ -72,9 +67,9 @@
     </div>
   </div>
 
-  <div class="work row">
-    <div class="content-col">
-      <div class="work__content">
+  <div class="work grid">
+    <div class="col xs-span l3-11">
+      <div class="work__content text-grid">
         {{- .Content -}}
       </div>
 

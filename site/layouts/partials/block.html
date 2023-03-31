@@ -5,7 +5,6 @@
 
 <div
   class="
-    blocks__block
     block
     block--{{ .Params.block_type }}
     {{ if (eq .Params.hide_image true)}}
@@ -30,7 +29,7 @@
   <div class="block__image-container">
     {{ if (ne .Params.block_type "logos") }}
       <div class="block__meta-container row row--m10 row--l8">
-        <div class="block__meta col s4 m3">
+        <div class="block__meta col xs4 m3">
           <h2 class="block__title">{{ .Title }}</h2>
 
           {{ if or (eq .Params.block_type "clients") (eq .Params.block_type "mountains") }}
@@ -129,7 +128,7 @@
 
   {{ if (eq .Params.block_type "mountains") }}
     <div class="row row--m8">
-      <div class="col s4 m6 l5-10">
+      <div class="col xs4 m6 l5-10">
         <div class="block__content">
           {{ .Content }}
         </div>

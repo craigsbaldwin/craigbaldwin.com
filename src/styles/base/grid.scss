@@ -31,13 +31,40 @@
     grid-column: span $layout-mobile-columns;
   }
 
+  &.xs2 {
+    grid-column: span 2;
+  }
+
+  &.xs4 {
+    grid-column: span 4;
+  }
+
+  /**
+   * Media queries.
+   */
   @include mq($from: l) {
     &.xs-span {
       grid-column: span $layout-desktop-columns;
     }
 
+    &.l2 {
+      grid-column: span 2;
+    }
+
+    &.l2-12 {
+      grid-column: 2 / 12;
+
+      &.grid {
+        grid-template-columns: repeat(10, minmax(10px, 1fr));
+      }
+    }
+
     &.l3-11 {
       grid-column: 3 / 11;
+    }
+
+    &.l6 {
+      grid-column: span 6;
     }
   }
 }
@@ -48,5 +75,16 @@
 
   h2 {
     margin-block-start: var(--spacing-m);
+  }
+}
+
+.work-grid {
+  margin-block-end: var(--spacing-3xl);
+
+  /**
+   * Media queries.
+   */
+  @include mq($from: l) {
+    margin-block-end: var(--spacing-7xl);
   }
 }
