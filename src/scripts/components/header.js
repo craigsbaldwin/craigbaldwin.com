@@ -18,7 +18,6 @@ const selectors = {
   menuButton: '[js-header="menuButton"]',
   navigationDrawer: '[js-header="navigationDrawer"]',
   navigationLink: '[js-header="navigationLink"]',
-  darkMode: '[js-dark-mode="toggle"]',
 };
 
 /**
@@ -74,7 +73,6 @@ export default () => {
    */
   function setTabindex(tabindex) {
     nodeSelectors.navigationLink.forEach((element) => element.setAttribute('tabindex', tabindex));
-    nodeSelectors.navigationDrawer.querySelector(selectors.darkMode).setAttribute('tabindex', tabindex);
   }
 
   /**
