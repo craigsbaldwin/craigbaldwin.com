@@ -59,8 +59,15 @@
   }
 
   &__list-item {
-    &#{&}--home {
+    padding: 0;
+    position: unset;
+
+    &::before {
       display: none;
+    }
+
+    &:not(:last-child) {
+      margin: 0;
     }
   }
 

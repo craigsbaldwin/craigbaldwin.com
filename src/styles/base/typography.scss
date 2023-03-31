@@ -104,17 +104,48 @@ ul, ol {
   counter-reset: list;
   font-size: var(--font-size-m);
   line-height: var(--line-height-l);
+
+  li {
+    padding-left: var(--spacing-m);
+    position: relative;
+
+    &::before {
+      display: inline-block;
+      left: 0;
+      position: absolute;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: var(--spacing-s);
+    }
+  }
+}
+
+ul li::before {
+  background-color: var(--color-blue);
+  content: '';
+  height: 0.3em;
+  rotate: 45deg;
+  top: 0.5em;
+  width: 0.3em;
+}
+
+ol li::before {
+  color: var(--color-blue);
+  content: counter(list) '.';
+  counter-increment: list;
+  top: 0;
 }
 
 /**
- * Templates.
+ * Links.
  */
-.template--stats {
-  h2 a {
-    text-decoration: underline;
+h2 a,
+p a,
+li a {
+  text-decoration: underline;
 
-    &:hover {
-      text-decoration: none;
-    }
+  &:hover {
+    text-decoration: none;
   }
 }

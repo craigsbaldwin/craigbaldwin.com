@@ -44,7 +44,8 @@
   }
 
   .template--about &,
-  .template--stats & {
+  .template--stats &,
+  .template--content & {
     // Desired margin - text grid gap
     margin-block-end: calc(var(--spacing-xl) - var(--spacing-s));
   }
