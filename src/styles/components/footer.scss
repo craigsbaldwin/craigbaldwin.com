@@ -5,39 +5,29 @@
  *
  */
 .footer {
+  margin-block-end: var(--spacing-l);
   margin-block-start: auto;
-
-  &__footnotes {
-    display: grid;
-    gap: var(--spacing-s);
-    grid-template-columns: repeat(2, 1fr);
-    margin-block-end: var(--spacing-m);
-  }
 
   &__base {
     display: flex;
     flex-wrap: wrap;
+    gap: var(--spacing-s);
   }
 
-  &__item {
-    margin-block-end: var(--spacing-s);
+  &__link {
+    text-decoration: underline;
 
-    &:not(:last-child) {
-      margin-inline-end: var(--spacing-s);
+    &:hover {
+      text-decoration: none;
     }
   }
 
+  /**
+   * Media queries.
+   */
   @include mq($from: m) {
-    &__footnotes {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    &__item {
-      margin-block-end: var(--spacing-m);
-
-      &:not(:last-child) {
-        margin-inline-end: var(--spacing-m);
-      }
+    &__base {
+      gap: var(--spacing-m);
     }
   }
 }

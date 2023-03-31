@@ -115,7 +115,6 @@
 
   @include mq($from: m) {
     margin-block-end: var(--spacing-2xl);
-    padding: var(--spacing-l) 0;
 
     &__container {
       align-items: baseline;
