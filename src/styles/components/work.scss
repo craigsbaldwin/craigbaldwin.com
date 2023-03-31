@@ -73,14 +73,10 @@
     }
   }
 
-  .article__navigation {
-    margin-block-start: var(--spacing-xl);
-  }
-
   /**
    * Media queries.
    */
-  @include mq($from: m) {
+  @include mq($from: l) {
     &__header {
       padding: var(--spacing-3xl) 0;
     }
@@ -91,10 +87,6 @@
 
     &__image-container {
       margin-block-end: var(--spacing-3xl);
-    }
-
-    .article__navigation {
-      margin-block-start: var(--spacing-3xl);
     }
   }
 }

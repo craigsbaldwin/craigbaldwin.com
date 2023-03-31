@@ -43,6 +43,10 @@
     }
   }
 
+  &__meta {
+    margin-block-start: var(--spacing-l);
+  }
+
   .template--about &,
   .template--stats &,
   .template--content & {

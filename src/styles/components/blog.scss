@@ -12,6 +12,11 @@
     margin-block-end: var(--spacing-xl);
   }
 
+  &__article {
+    display: grid;
+    gap: var(--spacing-2xs);
+  }
+
   &__title,
   &__tag {
     text-decoration: underline;

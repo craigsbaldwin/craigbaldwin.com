@@ -8,10 +8,6 @@
   background-color: var(--color-code-black);
   overflow-y: auto;
 
-  &:not(:last-child) {
-    margin-block-end: var(--spacing-l);
-  }
-
   &::-webkit-scrollbar {
     height: 4px;
     width: 4px;
@@ -22,8 +18,9 @@
   }
 
   pre {
-    padding: var(--spacing-s);
-    padding-inline-end: 0;
+    margin: 0;
+    padding: var(--spacing-m) var(--spacing-s);
+    padding-right: 0;
   }
 }
 
@@ -31,10 +28,10 @@ code {
   color: var(--color-text-code);
   display: block;
   font-family: var(--font-family-code);
-  font-size: var(--font-size-l);
-  line-height: var(--line-height-xl);
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-l);
   min-width: fit-content;
-  padding-inline-end: var(--spacing-s);
+  padding-right: var(--spacing-m);
 
   &::selection,
   span::selection {
@@ -43,8 +40,9 @@ code {
   }
 
   .ln {
-    opacity: 0.5;
-    padding-inline-end: var(--spacing-s);
+    opacity: 0.3;
+    padding-right: var(--spacing-m);
+    user-select: none;
   }
 
   /**
@@ -55,7 +53,7 @@ code {
     border-radius: 3px;
     color: var(--color-red);
     display: inline-block;
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-s);
     font-weight: var(--font-weight-regular);
     line-height: inherit;
     padding: 0 var(--spacing-2xs);

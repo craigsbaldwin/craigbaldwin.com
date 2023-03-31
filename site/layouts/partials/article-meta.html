@@ -6,10 +6,13 @@
 {{ with .Params.tags }}
   {{ range . }}
     {{ $href := print (absURL "tags/") (urlize .) }}
-    <a class="blog__tag" href="{{ $href }}">{{ . }}</a>
+    <a
+      class="blog__tag"
+      href="{{ $href }}"
+    >{{ . }}</a>
   {{ end }}
 {{ end }}
 
 <span class="blog__return-link">
-  &nbsp; | &nbsp; <a class="text-link" href="/blog">Back to blog</a>
+  &nbsp; | &nbsp; <a href="/blog">Back to blog</a>
 </span>
