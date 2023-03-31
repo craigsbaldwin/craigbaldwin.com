@@ -47,16 +47,17 @@
   --color-dark-grey: rgb(124, 124, 124);
   --color-mid-grey: rgb(200, 200, 200);
   --color-light-grey: rgb(241, 241, 241);
+  --color-dark-mode: rgb(70, 75, 81);
 
   // Use-case colours
   --color-background: var(--color-light-grey);
-  --color-primary: var(--color-black);
-  --color-border: var(--color-white);
   --color-border-primary: var(--color-black);
-  --color-text-primary: var(--color-black);
+  --color-border: var(--color-white);
+  --color-primary: var(--color-black);
+  --color-system-focus: var(--color-primary);
   --color-text-code: var(--color-light-grey);
   --color-text-inverse: var(--color-light-grey);
-  --color-system-focus: var(--color-primary);
+  --color-text-primary: var(--color-black);
 
   // Font family
   --font-family-body: 'Eczar', serif;
@@ -132,6 +133,10 @@
    * Dark mode.
    */
   @media (prefers-color-scheme: dark) {
+    --color-background: var(--color-dark-mode);
+    --color-border: var(--color-black);
+    --color-primary: var(--color-light-grey);
+    --color-text-inverse: var(--color-black);
     --color-text-primary: var(--color-light-grey);
   }
 }
