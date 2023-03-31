@@ -6,7 +6,7 @@
  */
 .card {
   $parent: &;
-  margin-block-end: var(--spacing-m) l;
+  margin-block-end: var(--spacing-2xl);
   width: 100%;
 
   &__subtitle {
@@ -28,8 +28,8 @@
   }
 
   &__title {
-    margin-block-end: var(--spacing-s);
-    padding-block-end: var(--spacing-s);
+    margin-block-end: var(--spacing-l);
+    padding-block-end: var(--spacing-m);
     position: relative;
 
     &::after {
@@ -40,12 +40,6 @@
       left: 0;
       position: absolute;
       width: 30px;
-    }
-  }
-
-  &__copy {
-    &:not(:last-child) {
-      margin-block-end: var(--spacing-s);
     }
   }
 
@@ -80,6 +74,10 @@
    * Media queries.
    */
   @include mq($from: l) {
-    margin-block-end: var(--spacing-l);
+    margin-block-end: var(--spacing-5xl);
+
+    &__copy {
+      width: 66%;
+    }
   }
 }

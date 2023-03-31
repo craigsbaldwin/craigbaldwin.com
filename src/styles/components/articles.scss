@@ -33,20 +33,17 @@
   /**
    * Homepage.
    */
-  &__homepage-link {
-    text-decoration: none;
-
-    &:hover {
-      #{$parent}__homepage-title {
-        text-decoration: none;
-      }
-    }
+  &__homepage {
+    display: grid;
+    gap: var(--spacing-xs);
   }
 
-  &__homepage-title {
-    display: block;
-    margin-block-end: var(--spacing-2xs);
+  &__homepage-link {
     text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   &__homepage-excerpt {
