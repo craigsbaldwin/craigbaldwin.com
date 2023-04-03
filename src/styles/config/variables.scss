@@ -59,6 +59,9 @@
   --color-text-inverse: var(--color-light-grey);
   --color-text-primary: var(--color-black);
 
+  // Easing
+  --easing-normal: cubic-bezier(0.645, 0.045, 0.355, 1);
+
   // Font family
   --font-family-body: 'Eczar', serif;
   --font-family-code: 'Source Code Pro', monospace;

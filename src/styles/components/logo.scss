@@ -61,16 +61,9 @@
   }
 
   /**
-   * Parent modifiers.
-   */
-  .block__logo--clients & {
-    color: var(--color-text-inverse);
-  }
-
-  /**
    * Media queries.
    */
-  @include mq($from: m) {
+  @include mq($from: l) {
     &#{&}--childsplay-clothing {
       width: 54%;
     }

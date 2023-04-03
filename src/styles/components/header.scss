@@ -88,7 +88,7 @@
   /**
    * Navigation is a drawer on mobile devices.
    */
-  @include mq($until: m) {
+  @include mq($until: l) {
     &__navigation {
       @include transition(background-color, translate);
       align-items: center;
@@ -120,7 +120,7 @@
     }
   }
 
-  @include mq($from: m) {
+  @include mq($from: l) {
     margin-block-end: var(--spacing-2xl);
 
     &__container {

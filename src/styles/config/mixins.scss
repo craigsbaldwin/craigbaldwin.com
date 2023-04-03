@@ -44,7 +44,7 @@
 @function get-transition-properties($transition) {
   $property: transform;
   $duration: var(--timing-slow);
-  $easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+  $easing: var(--easing-normal);
   $delay: null;
 
   $defaultProperties: (

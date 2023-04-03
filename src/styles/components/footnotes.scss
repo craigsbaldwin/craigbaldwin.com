@@ -106,7 +106,7 @@
   /**
    * Media queries.
    */
-  @include mq($from: m) {
+  @include mq($from: l) {
     grid-template-columns: repeat(4, 1fr);
 
     &__footnote {
