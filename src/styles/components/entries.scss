@@ -8,17 +8,17 @@
   $parent: &;
 
   &__title {
-    margin-bottom: $SPACING_P;
+    margin-block-end: var(--spacing-xl);
   }
 
   &__timeline {
     display: grid;
-    gap: $SPACING_M $SPACING_S;
+    gap: var(--spacing-xl) var(--spacing-m);
     grid-template-columns: 4px 1fr;
     position: relative;
 
     &::before {
-      background-color: $COLOR_GREEN;
+      background-color: var(--color-green);
       border-radius: 2px;
       content: '';
       height: 100%;
@@ -37,7 +37,7 @@
   /**
    * Media queries.
    */
-  @include mq($from: medium) {
+  @include mq($from: l) {
     &__timeline {
       grid-template-columns: 1fr 4px 1fr;
 
@@ -49,28 +49,27 @@
     &__entry {
       &:nth-child(odd) {
         grid-column: 1;
-        margin-top: -$SPACING_M;
         text-align: right;
       }
 
       &:nth-child(odd)::before {
         left: unset;
-        right: calc(-#{$SPACING_S} - 7px);
+        right: calc((var(--spacing-m) * -1) - 7px);
       }
 
       &:nth-child(odd)::after {
         left: unset;
-        right: -$SPACING_2XS;
-        transform: translateX(100%);
+        right: calc(var(--spacing-2xs) * -1);
+        translate: 100% 0;
       }
 
       &:nth-child(even) {
         grid-column: 3;
-        margin-top: $SPACING_XL;
+        margin-block-start: var(--spacing-6xl);
       }
 
       &:first-child {
-        margin-top: 0;
+        margin-block-start: 0;
       }
     }
   }

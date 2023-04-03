@@ -6,15 +6,17 @@
  */
 
 /**
+ * Config styles.
+ */
+@import 'config/mixins';
+@import 'config/variables';
+
+/**
  * Base styles.
  */
 @import 'base/reset';
-@import 'base/animation';
 @import 'base/grid';
-@import 'base/colour';
-@import 'base/helpers';
 @import 'base/layout';
-@import 'base/icon';
 @import 'base/typography';
 @import 'base/code';
 @import 'base/a11y';
@@ -24,18 +26,18 @@
  */
 @import 'components/article-link';
 @import 'components/article';
-@import 'components/articles';
 @import 'components/block';
-@import 'components/blocks';
+@import 'components/blog';
 @import 'components/burger';
 @import 'components/card';
 @import 'components/chart';
-@import 'components/dark-mode';
 @import 'components/entries';
 @import 'components/entry';
 @import 'components/footer';
 @import 'components/footnotes';
 @import 'components/header';
+@import 'components/icon';
 @import 'components/logo';
 @import 'components/map';
+@import 'components/update';
 @import 'components/work';

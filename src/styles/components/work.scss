@@ -8,16 +8,14 @@
   $parent: &;
 
   &__header {
-    padding-block-end: $SPACING_P;
-    // Site header padding + Site header margin
-    padding-block-start: calc(#{$SPACING_S} + #{$SPACING_S});
+    padding: var(--spacing-xl) 0;
     position: relative;
-    z-index: $LAYER_BELOW;
+    z-index: var(--layer-base);
   }
 
   &__banner-left,
   &__banner-right {
-    background-color: $COLOR_PURPLE;
+    background-color: var(--color-purple);
     content: '';
     height: calc(100% + 1px);
     position: absolute;
@@ -36,23 +34,17 @@
   }
 
   &__header-content {
-    color: $COLOR_WHITE;
+    color: var(--color-text-inverse);
     position: relative;
-    z-index: $LAYER_BASE;
-  }
-
-  &__title {
-    font-family: 'Crimson Pro', serif;
-    font-size: 5rem;
-    font-weight: 300;
+    z-index: var(--layer-flat);
   }
 
   &__subtitle {
-    margin-block-start: $SPACING_S;
+    margin-block-start: var(--spacing-l);
   }
 
   &__image-container {
-    margin-block-end: $SPACING_M;
+    margin-block-end: var(--spacing-xl);
     position: relative;
 
     #{$parent}__banner-left,
@@ -67,44 +59,34 @@
     height: auto;
     position: relative;
     width: 100%;
-    z-index: $LAYER_BASE;
+    z-index: var(--layer-flat);
   }
 
   .article__link {
     &::after {
-      background-color: $COLOR_PURPLE;
+      background-color: var(--color-purple);
     }
 
     &:hover,
     &:focus {
-      background-color: rgba($COLOR_PURPLE, 0.25);
+      background-color: var(--color-purple-hover);
     }
-  }
-
-  .article__navigation {
-    margin-block-start: $SPACING_M;
   }
 
   /**
    * Media queries.
    */
-  @include mq($from: medium) {
+  @include mq($from: l) {
     &__header {
-      padding-block-end: $SPACING_M;
-      // Site header padding + Site header margin
-      padding-block-start: calc(#{$SPACING_M} + #{$SPACING_M});
+      padding: var(--spacing-3xl) 0;
     }
 
     &__subtitle {
-      margin-block-start: $SPACING_M;
+      margin-block-start: var(--spacing-m);
     }
 
     &__image-container {
-      margin-block-end: $SPACING_L;
-    }
-
-    .article__navigation {
-      margin-block-start: $SPACING_L;
+      margin-block-end: var(--spacing-3xl);
     }
   }
 }

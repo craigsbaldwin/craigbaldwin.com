@@ -1,22 +1,18 @@
 <!-- Partials > Footer. -->
 <!-- Site footer. -->
-<div class="row">
-  <div class="footer__base content-col">
-    <span class="footer__item sub-text">
+<div class="grid">
+  <div class="footer__base col xs-span l3-11">
+    <span class="footer__item text-body-s">
       &copy; 2008-{{ now.Format "2006" }} Craig Baldwin
     </span>
 
     {{ range .Site.Menus.footer }}
       <a
-        class="footer__item footer__link text-link sub-text"
+        class="footer__item footer__link text-body-s"
         href="{{ .URL }}"
       >
         {{ .Title }}
       </a>
     {{ end }}
-
-    <span class="footer__item footer__link">
-      {{ partial "dark-mode" . }}
-    </span>
   </div>
 </div>

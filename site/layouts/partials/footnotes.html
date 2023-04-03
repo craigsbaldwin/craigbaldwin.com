@@ -3,16 +3,15 @@
 {{ $url := .Permalink }}
 {{ $page := .Title }}
 
-<div class="row">
-  <div class="content-col">
+<div class="grid">
+  <div class="col xs-span l3-11">
     <h2 class="visually-hidden">Other pages</h2>
 
-    <div class="footer__footnotes">
+    <div class="footer__footnotes footnotes">
       {{ range .Site.Menus.main }}
         <a
           class="
-            footer__footnote
-            footnote footnote--{{ .Identifier}}
+            footnotes__footnote footnotes__footnote--{{ .Identifier}}
             {{ if (eq $url .URL) }}is-active{{ end }}
             {{ if (eq .Title "Contact") }}is-hidden{{ end }}
             {{ if and (eq $page "Distances") (eq .Title "Stats") }}is-active{{ end }}
@@ -22,13 +21,11 @@
           "
           href="{{ .URL }}"
         >
-          <span class="footnote__content">
-            <h3 class="footnote__title">{{ .Title }}</h3>
+          <h3 class="footnotes__footnote-title text-body-s">{{ .Title }}</h3>
 
-            <p class="footnote__copy sub-text">
-              {{ .Post }}
-            </p>
-          </span>
+          <p class="text-body-s">
+            {{ .Post }}
+          </p>
         </a>
       {{ end }}
     </div>

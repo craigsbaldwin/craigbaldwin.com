@@ -4,7 +4,12 @@
 {{ $page := .Title }}
 
 <div
-  class="{{ if (eq .Params.block_type "clients") }}header__parent {{ end }}container"
+  class="
+    {{ if (eq .Params.block_type "clients") }}
+      header__parent
+    {{ end }}
+    container
+  "
   {{ if (.Params.header_colour) }}
     style="background-color: rgb({{ .Params.header_colour }});"
   {{ end }}
@@ -21,10 +26,16 @@
     ></div>
   {{ end }}
 
-  <div class="row">
-    <header class="header col content-col" role="banner">
+  <div class="grid">
+    <header
+      class="header col xs-span l3-11"
+      role="banner"
+    >
       <div class="header__container">
-        <a class="skip-link" href="{{ .Permalink }}#MainContent">
+        <a
+          class="skip-link"
+          href="{{ .Permalink }}#MainContent"
+        >
           Skip to content
         </a>
 
@@ -32,7 +43,10 @@
           <h1 class="header__heading">
         {{ end }}
 
-        <a class="header__logo text-link" href="{{ "/" | relURL }}">
+        <a
+          class="header__logo text-body-s"
+          href="{{ "/" | relURL }}"
+        >
           {{ $.Site.Params.siteTitle }}
         </a>
 
@@ -59,13 +73,22 @@
         >
           <ul class="header__list">
             {{ range .Site.Menus.main }}
-              <li class="header__list-item header__list-item--{{ .Identifier }}">
+              <li
+                class="
+                  header__list-item
+                  header__list-item--{{ .Identifier }}
+                "
+              >
                 <a
                   class="
                     header__link
-                    navigation
-                    {{ if in $url .URL }}is-active{{ end }}
-                    {{ if and (in $url "/tags/") (eq .Title "Blog") }}is-active{{ end }}
+                    text-body-s
+                    {{ if in $url .URL }}
+                      is-active
+                    {{ end }}
+                    {{ if and (in $url "/tags/") (eq .Title "Blog") }}
+                      is-active
+                    {{ end }}
                   "
                   href="{{ .URL }}"
                   js-header="navigationLink"
@@ -77,10 +100,6 @@
               </li>
             {{ end }}
           </ul>
-
-          <div class="header__dark-mode">
-            {{ partial "dark-mode" . }}
-          </div>
         </nav>
       </div>
     </header>

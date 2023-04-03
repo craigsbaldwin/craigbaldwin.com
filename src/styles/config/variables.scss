@@ -1,0 +1,164 @@
+/**
+ * Config > Variables.
+ * -----------------------------------------------------------------------------
+ * CSS and SASS variables.
+ *
+ */
+// stylelint-disable
+
+:root {
+  // Border width
+  --border-width-body: 1.2rem;
+
+  // Brand colours
+  --color-blue: rgb(52, 152, 219);
+  --color-green: rgb(46, 204, 113);
+  --color-orange: rgb(230, 126, 34);
+  --color-purple: rgb(155, 89, 182);
+  --color-red: rgb(231, 76, 60);
+
+  // Brand tints
+  --color-blue-hover: rgba(52, 152, 219, 0.25);
+  --color-blue-tint: rgba(52, 152, 219, 0.1);
+  --color-green-hover: rgba(46, 204, 113, 0.25);
+  --color-orange-hover: rgba(230, 126, 34, 0.25);
+  --color-purple-hover: rgba(155, 89, 182, 0.25);
+  --color-red-hover: rgba(231, 76, 60, 0.25);
+
+  // Code colours
+  --color-code-black: rgb(30, 30, 30);
+  --color-code-dark-blue: rgb(86, 156, 214);
+  --color-code-dark-green: rgb(82, 153, 73);
+  --color-code-dark-grey: rgb(128, 128, 128);
+  --color-code-dark-yellow: rgb(215, 186, 125);
+  --color-code-light-blue: rgb(156, 220, 254);
+  --color-code-light-green: rgb(78, 187, 125);
+  --color-code-light-yellow: rgb(220, 220, 170);
+  --color-code-orange: rgb(206, 145, 120);
+  --color-code-purple: rgb(197, 134, 192);
+  --color-code-white: rgb(255, 255, 255);
+
+  // Code tints
+  --color-code-dark-grey-tint: rgb(128, 128, 128, 0.1);
+
+  // Neutral colours
+  --color-black: rgb(27, 34, 41);
+  --color-white: rgb(255, 255, 255);
+  --color-dark-grey: rgb(124, 124, 124);
+  --color-mid-grey: rgb(200, 200, 200);
+  --color-light-grey: rgb(241, 241, 241);
+  --color-dark-mode: rgb(70, 75, 81);
+
+  // Use-case colours
+  --color-background: var(--color-light-grey);
+  --color-border-primary: var(--color-black);
+  --color-border: var(--color-white);
+  --color-primary: var(--color-black);
+  --color-system-focus: var(--color-primary);
+  --color-text-code: var(--color-light-grey);
+  --color-text-inverse: var(--color-light-grey);
+  --color-text-primary: var(--color-black);
+
+  // Easing
+  --easing-normal: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  // Font family
+  --font-family-body: 'Eczar', serif;
+  --font-family-code: 'Source Code Pro', monospace;
+
+  // Font size
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.9rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.2rem;
+  --font-size-xl: 1.4rem;
+  --font-size-2xl: 1.6rem;
+  --font-size-3xl: 1.8rem;
+  --font-size-4xl: 2rem;
+  --font-size-5xl: 3rem;
+
+  // Font weight
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  // Layer
+  --layer-base: 0;
+  --layer-flat: 1;
+  --layer-raised: 2;
+  --layer-heightened: 4;
+  --layer-navigation: 7;
+  --layer-sticky: 8;
+  --layer-window-overlay: 12;
+  --layer-overlay: 16;
+  --layer-temporary: 20;
+
+  // Layout
+  --layout-margin: var(--spacing-m);
+  --layout-gutter: var(--spacing-m);
+
+  // Line height
+  --line-height-baseline: 1;
+  --line-height-m: 1.35;
+  --line-height-l: 1.5;
+  --line-height-xl: 1.6;
+
+  // Max-content-width
+  --max-content-width: 90rem; // 1440px
+
+  // Scale
+  --scale-base: 16px;
+
+  // Spacing
+  --spacing-4xs: 0.0625rem; // 1px
+  --spacing-3xs: 0.125rem; // 2px
+  --spacing-2xs: 0.25rem; // 4px
+  --spacing-xs: 0.5rem; // 8px
+  --spacing-s: 0.75rem; // 12px
+  --spacing-m: 1rem; // 16px
+  --spacing-l: 1.5rem; // 24px
+  --spacing-xl: 2rem; // 32px
+  --spacing-2xl: 2.5rem; // 40px
+  --spacing-3xl: 3rem; // 48px
+  --spacing-4xl: 3.5rem; // 56px
+  --spacing-5xl: 4rem; // 64px
+  --spacing-6xl: 4.5rem; // 72px
+  --spacing-7xl: 5rem; // 80px
+  --spacing-8xl: 6.25rem; // 100px
+  --spacing-9xl: 7.5rem; // 120px
+  --spacing-10xl: 8.75rem; // 140px
+
+  // Timing
+  --timing-normal: 0.4s;
+  --timing-slow: 0.6s;
+  --timing-slower: 1.2s;
+
+  /**
+   * Dark mode.
+   */
+  @media (prefers-color-scheme: dark) {
+    --color-background: var(--color-dark-mode);
+    --color-border: var(--color-black);
+    --color-primary: var(--color-light-grey);
+    --color-text-inverse: var(--color-black);
+    --color-text-primary: var(--color-light-grey);
+  }
+}
+
+$mq-breakpoints: (
+  xs: 0,
+  s: 576px,
+  m: 768px,
+  l: 1024px,
+  xl: 1366px
+);
+
+$breakpoint-xs: 0; // 0px
+$breakpoint-s: 36rem; // 576px
+$breakpoint-m: 48rem; // 768px
+$breakpoint-l: 64rem; // 1024px
+$breakpoint-xl: 85.375rem; // 1366px
+
+$layout-gutter: var(--layout-gutter);
+$layout-mobile-columns: 6;
+$layout-tablet-columns: 6;
+$layout-desktop-columns: 12;
