@@ -61,6 +61,13 @@
   }
 
   /**
+   * Parent modifiers.
+   */
+  .block__logo--clients & {
+    color: var(--color-white);
+  }
+
+  /**
    * Media queries.
    */
   @include mq($from: l) {
