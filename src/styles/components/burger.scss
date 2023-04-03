@@ -4,19 +4,21 @@
  * The burger menu and its animation.
  *
  */
+// stylelint-disable declaration-no-important
+
 .burger,
 .burger::before,
 .burger::after {
-  @include transition(background-color, opacity $TIMING_M, transform);
-  background-color: $COLOR_BLACK;
+  @include transition(background-color, opacity var(--timing-normal), transform);
+  background-color: var(--color-text-primary);
   content: '';
   height: 2px;
   position: absolute;
   transform-origin: 50% 50%;
   width: 28px;
 
-  .is-dark & {
-    background-color: $COLOR_DARK_MODE_WHITE;
+  body:not(.is-open).template--clients & {
+    background-color: var(--color-background);
   }
 
   .template--clients.template--pangaia &,
@@ -43,12 +45,12 @@
   }
 
   &#{&}--middle {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   &#{&}--outside {
     $distance: 8px;
-    background-color: transparent;
+    background-color: transparent !important;
 
     &::before {
       transform: translateY(-$distance);

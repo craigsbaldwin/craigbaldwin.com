@@ -1,140 +1,102 @@
 /**
  * Base > Grid.
  * ------------------------------------------------------------------------------
- * Layout grid and media breakpoints.
+ * Layout grid.
  *
  */
 @import '~sass-mq';
 
 /**
- * Variables.
+ * Grid classes.
  */
-$mq-breakpoints: (
-  tiny: 320px,
-  small: 576px,
-  medium: 768px,
-  large: 1024px,
-  wide: 1328px
-);
-
-/**
- * Grid.
- */
-$SITE_WIDTH: 120rem;
-
-/**
- * Spacing.
- */
-$SPACING_3XS: 0.25rem;
-$SPACING_2XS: 0.5rem;
-$SPACING_XS: 1rem;
-$SPACING_SXS: 1.5rem;
-$SPACING_S: 2rem;
-$SPACING_P: 2.5rem; // Text paragraph
-$SPACING_M: 3rem;
-$SPACING_ML: 5rem;
-$SPACING_L: 6rem;
-$SPACING_XL: 9rem;
-$SPACING_2XL: 12rem;
-
-/**
- * Layers.
- */
-$LAYER_BELOW: 0;
-$LAYER_BASE: 1;
-$LAYER_RAISED: 2;
-$LAYER_DRAWER: 3;
-$LAYER_HEADER: 4;
-$LAYER_POPUP: 5;
-
-/**
- * Grid layout.
- */
-.row {
+.grid {
   display: grid;
-  gap: $SPACING_S;
-  grid-template-columns: repeat(4, minmax(10px, 1fr));
+  gap: var(--layout-gutter);
+  grid-template-columns: repeat($layout-mobile-columns, minmax(10px, 1fr));
 
-  .s2 {
+  @include mq($from: m) {
+    grid-template-columns: repeat($layout-tablet-columns, minmax(10px, 1fr));
+  }
+
+  @include mq($from: l) {
+    grid-template-columns: repeat($layout-desktop-columns, minmax(10px, 1fr));
+  }
+}
+
+/**
+ * Column classes.
+ */
+.grid > .col {
+  &.xs-span {
+    grid-column: span $layout-mobile-columns;
+  }
+
+  &.xs2 {
     grid-column: span 2;
   }
 
-  .content-col,
-  .wide-col,
-  .s4 {
+  &.xs4 {
     grid-column: span 4;
   }
 
-  &#{&}--s6 {
-    grid-template-columns: repeat(6, minmax(10px, 1fr));
-  }
-
-  @include mq($from: medium) {
-    grid-template-columns: repeat(8, minmax(10px, 1fr));
-
-    .content-col {
-      grid-column: 2 / 8;
+  /**
+   * Media queries.
+   */
+  @include mq($from: l) {
+    &.xs-span {
+      grid-column: span $layout-desktop-columns;
     }
 
-    .wide-col {
-      grid-column: 1 / 9;
+    &.l2 {
+      grid-column: span 2;
     }
 
-    .m3 {
-      grid-column: unset;
-      grid-column-end: span 3;
+    &.l2-12 {
+      grid-column: 2 / 12;
+
+      &.grid {
+        grid-template-columns: repeat(10, minmax(10px, 1fr));
+      }
     }
 
-    .m6 {
-      grid-column: unset;
-      grid-column-end: span 6;
+    &.l3-11 {
+      grid-column: 3 / 11;
     }
 
-    .m8 {
-      grid-column: unset;
-      grid-column-end: span 8;
-    }
-
-    &#{&}--m6 {
-      grid-template-columns: repeat(6, minmax(10px, 1fr));
-    }
-
-    &#{&}--m8 {
-      grid-template-columns: repeat(8, minmax(10px, 1fr));
+    &.l6 {
+      grid-column: span 6;
     }
   }
+}
 
-  @include mq($from: large) {
-    grid-template-columns: repeat(10, minmax(10px, 1fr));
+.text-grid {
+  display: grid;
+  gap: var(--spacing-s);
 
-    .content-col {
-      grid-column: 3 / 9;
-    }
+  h2 {
+    margin-block-start: var(--spacing-m);
+  }
+}
 
-    .wide-col {
-      grid-column: 2 / 10;
-    }
+.work-grid {
+  margin-block-end: var(--spacing-3xl);
 
-    .l2 {
-      grid-column: unset;
-      grid-column-end: span 2;
-    }
+  /**
+   * Media queries.
+   */
+  @include mq($from: l) {
+    margin-block-end: var(--spacing-7xl);
+  }
+}
 
-    .l5 {
-      grid-column: unset;
-      grid-column-end: span 5;
-    }
+.mountains-grid {
+  display: grid;
+  gap: var(--spacing-3xl);
 
-    .l5-10 {
-      grid-column: 4 / 9;
-    }
-
-    &#{&}--l6 {
-      grid-template-columns: repeat(6, minmax(10px, 1fr));
-    }
-
-    &#{&}--l8 {
-      grid-template-columns: repeat(8, minmax(10px, 1fr));
-    }
+  /**
+   * Media queries.
+   */
+  @include mq($from: l) {
+    gap: var(--spacing-7xl);
   }
 }

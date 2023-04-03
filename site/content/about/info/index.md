@@ -1,6 +1,6 @@
 ---
 title: "Info"
-description: "You are viewing version 12.8.0 of the site."
+description: "You are viewing version 12.9.0 of the site."
 handle: "info"
 layout: "text"
 colour: "orange"
@@ -9,7 +9,7 @@ colour: "orange"
 {{<
   card
   title="Info"
-  copy="You are viewing version 12.8.0 of the site."
+  copy="You are viewing version 12.9.0 of the site."
 >}}
 
 Version 12 has been online for {{< counter >}}. It was launched on 16/11/2019.
@@ -25,4 +25,3 @@ This site has been built using [Hugo](https://gohugo.io/) and the [Victor Hugo](
 The repo is continuously deployed using [Netlify](https://www.netlify.com/).
 
 Code quality standards follow [We Make Websites'](https://github.com/we-make-websites/wmw-coding-guidelines/blob/master/README.md) (which I wrote).
-

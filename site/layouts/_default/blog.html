@@ -1,35 +1,38 @@
 {{ define "main" }}
-  <div class="row">
-    <div class="content-col">
+  <div class="grid">
+    <div class="col xs-span l3-11">
       {{- .Content -}}
 
-      {{ range $index, $element := .Pages.ByPublishDate.Reverse }}
-        {{ if (eq $index 0) }}
-          <div class="articles articles--large">
-            <h2 class="articles__title">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h2>
+      <div class="blog">
+        {{ range $index, $element := .Pages.ByPublishDate.Reverse }}
+          {{ if (eq $index 0) }}
+            <div class="blog__article blog__first">
+              <h2 class="blog__title text-heading-m">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </h2>
 
-            <p class="articles__excerpt body-1">
-              {{ .Params.Excerpt }}
-            </p>
+              <p class="blog__excerpt text-body-m">
+                {{ .Params.Excerpt }}
+              </p>
 
-            <p class="articles__meta sub-text">
-              {{ partial "article-meta.html" . }}
-            </p>
-          </div>
-        {{ else }}
-          <div class="articles articles--small s8">
-            <h2 class="articles__title h2-5">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h2>
+              <p class="blog__meta text-body-s">
+                {{ partial "article-meta.html" . }}
+              </p>
+            </div>
 
-            <p class="articles__meta sub-text">
-              {{ partial "article-meta.html" . }}
-            </p>
-          </div>
+          {{ else }}
+            <div class="blog__article">
+              <h2 class="blog__title text-heading-s">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </h2>
+
+              <p class="blog__meta text-body-s">
+                {{ partial "article-meta.html" . }}
+              </p>
+            </div>
+          {{ end }}
         {{ end }}
-      {{ end }}
+      </div>
     </div>
   </div>
 {{ end }}

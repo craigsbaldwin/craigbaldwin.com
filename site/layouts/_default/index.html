@@ -1,23 +1,24 @@
 {{ define "main" }}
-  <div class="row">
-    <div class="content-col">
+  <div class="grid">
+    <div class="col xs-span l3-11">
       {{- .Content -}}
 
-      <h2>Latest update</h2>
-
-      <p class="body-1">
-        <!-- <a class="articles__homepage-link text-link" href="/work">
-          <span class="articles__homepage-title">Added new selected work</span>
-          <span class="articles__homepage-excerpt body-2">UFC added to work page along with updates to existing work</span>
-        </a> -->
+      <div class="update">
+        <h2 class="text-heading-s">Latest update</h2>
 
         {{ range first 1 ($.Site.GetPage "section" "blog").Pages.ByPublishDate.Reverse }}
-          <a class="articles__homepage-link text-link" href="{{ .Permalink }}">
-            <span class="articles__homepage-title">{{ .Title }}</span>
-            <span class="articles__homepage-excerpt body-2">{{ .Params.Excerpt }}</span>
+          <a
+            class="update__link text-body-m"
+            href="{{ .Permalink }}"
+          >
+            {{ .Title }}
           </a>
+
+          <p class="update__excerpt text-body-s">
+            {{ .Params.Excerpt }}
+          </p>
         {{ end }}
-      </p>
+        </div>
     </div>
   </div>
 {{ end }}

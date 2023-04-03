@@ -9,58 +9,48 @@
 
   &::before {
     @include transition(background-color, border-color);
-    background-color: $COLOR_BLACK;
-    border: 3px solid $COLOR_BACKGROUND;
+    background-color: var(--color-text-primary);
+    border: 3px solid var(--color-background);
     border-radius: 100%;
     content: '';
     height: 16px;
     // Margin - centre dot over timeline
-    left: calc(-#{$SPACING_S} - 13px);
+    left: calc((var(--spacing-m) * -1) - 13px);
     position: absolute;
     top: 4px;
     transform: translateX(3px);
     width: 16px;
-    z-index: $LAYER_RAISED;
+    z-index: var(--layer-raised);
   }
 
   &::after {
     @include transition(background-color);
-    background-color: $COLOR_BLACK;
+    background-color: var(--color-text-primary);
     content: '';
     height: 2px;
-    left: -$SPACING_2XS;
+    left: calc(var(--spacing-2xs) * -1);
     position: absolute;
     top: 11px;
-    transform: translateX(-100%);
+    translate: -100% 0;
     width: 7px;
-    z-index: $LAYER_BASE;
+    z-index: var(--layer-flat);
   }
 
-  &__title {
-    &:not(:last-child) {
-      margin-bottom: $SPACING_XS;
+  &__content {
+    display: grid;
+    gap: var(--spacing-xs);
+    padding-block-start: var(--spacing-3xs);
+
+    p {
+      font-size: var(--font-size-s);
     }
   }
 
-  &__content p {
-    font-size: 1.4rem;
+  &__link a {
+    text-decoration: underline;
 
-    &:not(:last-child) {
-      margin-bottom: $SPACING_S;
-    }
-  }
-
-  /**
-   * Dark mode.
-   */
-  .is-dark & {
-    &::before {
-      background-color: $COLOR_DARK_MODE_WHITE;
-      border-color: $COLOR_DARK_MODE_BACKGROUND;
-    }
-
-    &::after {
-      background-color: $COLOR_DARK_MODE_WHITE;
+    &:hover {
+      text-decoration: none;
     }
   }
 }

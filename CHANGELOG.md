@@ -2,6 +2,13 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.9.0 - 2023-04-03
+* Added _Childsplay Clothing_ work entry
+* Updated other work entries
+* Updated about page content
+* Updated layout stylings
+* Fixed menu drawer not disabling body scroll on open
+
 ## 12.8.0 - 2023-02-14
 * Added _November 2022_ mountains entry
 * Updated about page content

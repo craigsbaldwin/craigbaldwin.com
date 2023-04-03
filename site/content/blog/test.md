@@ -14,23 +14,23 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porttitor effic
  * Comment.
  */
 code {
-  color: $COLOR_DARK_MODE_WHITE;
+  color: var(--color-text-inverse);
   display: block;
   font-family: 'Source Code Pro', monospace;
   font-size: 1.1rem;
   line-height: 1.6;
   min-width: fit-content;
-  padding-right: $SPACING_S;
+  padding-inline-end: var(--spacing-s);
 
   &::selection,
   span::selection {
-    background-color: $COLOR_BLUE;
-    color: $COLOR_DARK_MODE_WHITE;
+    background-color: var(--color-blue);
+    color: var(--color-text-inverse);
   }
 
   .ln {
     opacity: 0.5;
-    padding-right: $SPACING_S;
+    padding-inline-end: var(--spacing-s);
   }
 }
 {{< /highlight >}}

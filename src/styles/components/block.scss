@@ -6,67 +6,28 @@
  */
 .block {
   $parent: &;
-
-  &__link {
-    @include transition(color);
-    color: $COLOR_BLACK;
-
-    #{$parent}__title {
-      text-decoration: underline;
-    }
-  }
+  position: relative;
 
   &__image-container {
     display: flex;
     flex-direction: column;
-    line-height: 0;
     position: relative;
-  }
-
-  &__link:hover {
-    #{$parent}__title {
-      text-decoration: none;
-    }
-  }
-
-  &__meta-container {
-    position: relative;
-    z-index: $LAYER_RAISED;
   }
 
   &__meta {
-    @include transition(background-color);
-    line-height: $LINE_HEIGHT_S;
-    padding-bottom: $SPACING_S;
-    padding-right: $SPACING_S;
-  }
-
-  &__title {
-    margin-bottom: 0;
-  }
-
-  &__copyright {
-    line-height: $LINE_HEIGHT_S;
-    margin-top: $SPACING_S;
-
-    &#{&}--desktop {
-      display: none;
-    }
+    display: grid;
+    gap: var(--spacing-xs);
   }
 
   &__stats {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: var(--spacing-2xs);
   }
 
   &__stat {
-    &:first-child {
-      margin-top: $SPACING_XS;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: $SPACING_XS;
-    }
+    align-items: center;
+    display: flex;
+    gap: var(--spacing-s);
   }
 
   &__image {
@@ -77,24 +38,24 @@
 
   &__logo {
     align-items: center;
-    bottom: $SPACING_S;
+    bottom: var(--spacing-s);
     display: flex;
-    // Full height - height of title - image bottom margin
-    height: calc(100% - 47px - #{$SPACING_S});
+    height: 100%;
     justify-content: center;
     left: 0;
     position: absolute;
+    top: 0;
     width: 100%;
-    z-index: $LAYER_BASE;
+    z-index: var(--layer-flat);
   }
 
   &__content {
-    border-left: 3px solid currentColor;
-    margin-top: $SPACING_S;
-    padding-left: $SPACING_S;
+    border-left: 3px solid var(--color-text-primary);
+    // Why isn't inline supported?
+    padding-left: var(--spacing-s);
 
     + #{$parent}__content {
-      margin-top: $SPACING_S;
+      margin-block-start: var(--spacing-s);
     }
   }
 
@@ -117,13 +78,13 @@
    */
   &#{&}--logos {
     &:not(:last-child) {
-      margin-bottom: 0;
+      margin-block-end: 0;
     }
 
     #{$parent}__image-container {
       height: 0;
-      margin-bottom: 0;
-      padding-bottom: 60%;
+      margin-block-end: 0;
+      padding-block-end: 60%;
     }
 
     #{$parent}__title {
@@ -137,24 +98,20 @@
   }
 
   /**
-   * Colours.
+   * Clients customisation.
    */
-  .template--purple & {
-    &__content {
-      border-color: $COLOR_PURPLE;
+  &#{&}--clients {
+    #{$parent}__meta {
+      @include visually-hidden;
     }
   }
 
   /**
-   * Dark mode.
+   * Mountains customisation.
    */
-  .is-dark & {
-    &__meta {
-      background-color: mix($COLOR_MID_GREY, $COLOR_BLACK, 25%);
-    }
-
-    &__link {
-      color: $COLOR_DARK_MODE_WHITE;
+  &#{&}--mountains {
+    #{$parent}__image {
+      margin: var(--spacing-m) 0;
     }
   }
 
@@ -162,12 +119,8 @@
    * a11y.
    */
   .is-tabbable & {
-    #{$parent}__link:focus #{$parent}__title {
-      @include focus-ring;
-      text-decoration: none;
-    }
-
-    &#{$parent}--logos #{$parent}__link:focus #{$parent}__image-container {
+    &#{$parent}--logos #{$parent}__link:focus #{$parent}__image-container,
+    &#{$parent}--clients #{$parent}__link:focus #{$parent}__image-container {
       @include focus-ring;
     }
   }
@@ -175,33 +128,24 @@
   /**
    * Media queries.
    */
-  @include mq($from: medium) {
+  @include mq($from: l) {
     &__image-container {
       display: block;
     }
 
-    &__meta-container {
+    &__meta {
+      background-color: var(--color-light-grey);
       left: 0;
+      padding-block-end: var(--spacing-l);
       position: absolute;
       top: 0;
-      width: 100%;
-    }
-
-    &__meta {
-      background-color: mix($COLOR_MID_GREY, $COLOR_WHITE, 25%);
-      padding-bottom: $SPACING_M;
-      padding-right: $SPACING_M;
-    }
-
-    &__logo {
-      bottom: $SPACING_M;
-      // Height - image bottom margin
-      height: calc(100% - #{$SPACING_M});
+      width: 35%;
     }
 
     &__content {
-      margin-top: $SPACING_M;
-      padding-left: $SPACING_M;
+      left: 35%;
+      position: relative;
+      width: 65%;
     }
 
     &#{&}--logos {
@@ -210,24 +154,11 @@
         height: 100%;
       }
     }
-  }
 
-  @include mq($from: large) {
-    &__copyright {
-      margin-top: 0;
-      padding-bottom: $SPACING_2XS;
-      position: absolute;
-      right: 0;
-      top: 0;
-      transform: rotate(90deg) translate(100%, -100%);
-      transform-origin: 100% 0%;
-
-      &#{&}--mobile {
-        display: none;
-      }
-
-      &#{&}--desktop {
-        display: block;
+    &#{&}--mountains {
+      #{$parent}__image {
+        margin-block-end: var(--spacing-xl);
+        margin-block-start: 0;
       }
     }
   }

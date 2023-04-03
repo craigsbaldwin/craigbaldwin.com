@@ -6853,10 +6853,10 @@ var core_helpers = function() {
 		// Scale mouse coordinates into canvas coordinates
 		// by following the pattern laid out by 'jerryj' in the comments of
 		// https://www.html5canvastutorials.com/advanced/html5-canvas-mouse-coordinates/
-		var paddingLeft = parseFloat(helpers$1.getStyle(canvas, 'padding-left'));
-		var paddingTop = parseFloat(helpers$1.getStyle(canvas, 'padding-top'));
-		var paddingRight = parseFloat(helpers$1.getStyle(canvas, 'padding-right'));
-		var paddingBottom = parseFloat(helpers$1.getStyle(canvas, 'padding-bottom'));
+		var paddingLeft = parseFloat(helpers$1.getStyle(canvas, 'padding-inline-start'));
+		var paddingTop = parseFloat(helpers$1.getStyle(canvas, 'padding-block-start'));
+		var paddingRight = parseFloat(helpers$1.getStyle(canvas, 'padding-inline-end'));
+		var paddingBottom = parseFloat(helpers$1.getStyle(canvas, 'padding-block-end'));
 		var width = boundingRect.right - boundingRect.left - paddingLeft - paddingRight;
 		var height = boundingRect.bottom - boundingRect.top - paddingTop - paddingBottom;
 
@@ -6954,8 +6954,8 @@ var core_helpers = function() {
 		}
 
 		var clientWidth = container.clientWidth;
-		var paddingLeft = helpers$1._calculatePadding(container, 'padding-left', clientWidth);
-		var paddingRight = helpers$1._calculatePadding(container, 'padding-right', clientWidth);
+		var paddingLeft = helpers$1._calculatePadding(container, 'padding-inline-start', clientWidth);
+		var paddingRight = helpers$1._calculatePadding(container, 'padding-inline-end', clientWidth);
 
 		var w = clientWidth - paddingLeft - paddingRight;
 		var cw = helpers$1.getConstraintWidth(domNode);
@@ -6968,8 +6968,8 @@ var core_helpers = function() {
 		}
 
 		var clientHeight = container.clientHeight;
-		var paddingTop = helpers$1._calculatePadding(container, 'padding-top', clientHeight);
-		var paddingBottom = helpers$1._calculatePadding(container, 'padding-bottom', clientHeight);
+		var paddingTop = helpers$1._calculatePadding(container, 'padding-block-start', clientHeight);
+		var paddingBottom = helpers$1._calculatePadding(container, 'padding-block-end', clientHeight);
 
 		var h = clientHeight - paddingTop - paddingBottom;
 		var ch = helpers$1.getConstraintHeight(domNode);

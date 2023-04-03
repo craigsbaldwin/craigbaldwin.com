@@ -18,7 +18,6 @@ const selectors = {
   menuButton: '[js-header="menuButton"]',
   navigationDrawer: '[js-header="navigationDrawer"]',
   navigationLink: '[js-header="navigationLink"]',
-  darkMode: '[js-dark-mode="toggle"]',
 };
 
 /**
@@ -47,7 +46,7 @@ export default () => {
    * Initialise component.
    */
   function init() {
-    if (!window.matchMedia(`(min-width: ${breakpoints.medium})`).matches) {
+    if (!window.matchMedia(`(min-width: ${breakpoints.m})`).matches) {
       setInitState();
     }
 
@@ -58,7 +57,7 @@ export default () => {
    * Sets initial state based on screen size.
    */
   function setInitState() {
-    if (window.matchMedia(`(min-width: ${breakpoints.medium})`).matches) {
+    if (window.matchMedia(`(min-width: ${breakpoints.m})`).matches) {
       setTabindex(0);
       clearAriaProperties(true);
       return;
@@ -74,7 +73,6 @@ export default () => {
    */
   function setTabindex(tabindex) {
     nodeSelectors.navigationLink.forEach((element) => element.setAttribute('tabindex', tabindex));
-    nodeSelectors.navigationDrawer.querySelector(selectors.darkMode).setAttribute('tabindex', tabindex);
   }
 
   /**
@@ -119,10 +117,11 @@ export default () => {
    * Open the navigation drawer.
    */
   function openNavigationDrawer() {
+    document.body.classList.add(cssClasses.open)
     nodeSelectors.menuButton.classList.add(cssClasses.active);
     nodeSelectors.navigationDrawer.classList.add(cssClasses.active);
 
-    disableBodyScroll(document.body);
+    disableBodyScroll(nodeSelectors.navigationDrawer);
     setTabindex(0);
     setAriaProperties(true);
 
@@ -133,10 +132,11 @@ export default () => {
    * Close the navigation drawer.
    */
   function closeNavigationDrawer() {
+    document.body.classList.remove(cssClasses.open)
     nodeSelectors.menuButton.classList.remove(cssClasses.active);
     nodeSelectors.navigationDrawer.classList.remove(cssClasses.active);
 
-    enableBodyScroll(document.body);
+    enableBodyScroll(nodeSelectors.navigationDrawer);
     setTabindex(-1);
     setAriaProperties(false);
 
@@ -198,7 +198,7 @@ export default () => {
     const newWidth = window.innerWidth;
 
     if (
-      !window.matchMedia(`(min-width: ${breakpoints.medium})`).matches &&
+      !window.matchMedia(`(min-width: ${breakpoints.m})`).matches &&
       newWidth !== initWidth
     ) {
       closeNavigationDrawer();

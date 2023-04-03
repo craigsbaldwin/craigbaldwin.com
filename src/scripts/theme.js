@@ -18,7 +18,6 @@ import {pageHandle} from './helpers/utils';
  */
 import code from './components/code';
 import counter from './components/counter';
-import darkMode from './components/dark-mode';
 import distances from './components/distances';
 import header from './components/header';
 import highlighter from './components/highlighter';
@@ -37,7 +36,6 @@ window.site.eventBus = eventBus();
 document.addEventListener('DOMContentLoaded', () => {
   keyboardTabbable().init();
   header().init();
-  darkMode().init();
   highlighter().init();
 
   switch (pageHandle()) {

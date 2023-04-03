@@ -1,15 +1,15 @@
 {{ define "main" }}
-  <div class="row">
-    <div class="content-col">
+  <div class="grid">
+    <div class="col xs-span l3-11">
       {{- .Content -}}
     </div>
   </div>
 
-  <div class="row">
-    <div class="col wide-col">
+  <div class="grid">
+    <div class="col xs-span l2-12">
       {{ partial "map" . }}
 
-      <div class="blocks">
+      <div class="mountains-grid">
         {{ range (.Pages.ByParam "handle").Reverse }}
           {{ partial "block" . }}
         {{ end }}

@@ -1,72 +1,45 @@
 /**
  * Base > Layout.
  * ------------------------------------------------------------------------------
- * Determines base layout styling.
+ * Determines base styles.
  *
  */
-html {
-  @include transition(background-color);
-  background-color: $COLOR_WHITE;
+body {
+  background-color: var(--color-background);
+  border: var(--border-width-body) solid var(--color-border);
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   overflow-x: hidden;
-
-  &.is-dark {
-    background-color: $COLOR_BLACK;
-  }
-
-  &.no-transition {
-    transition: none;
-  }
 }
 
 /**
  * Selection.
  */
 ::selection {
-  @include transition(background-color, color);
-  background-color: $COLOR_BLACK;
-  color: $COLOR_WHITE;
+  background-color: var(--color-text-primary);
+  color: var(--color-text-inverse);
 }
 
 // stylelint-disable-next-line
 ::-moz-selection {
-  @include transition(background-color, color);
-  background-color: $COLOR_BLACK;
-  color: $COLOR_WHITE;
-}
-
-.is-dark {
-  ::selection {
-    background-color: $COLOR_DARK_MODE_WHITE;
-    color: $COLOR_BLACK;
-  }
-
-  // stylelint-disable-next-line
-  ::-moz-selection {
-    background-color: $COLOR_DARK_MODE_WHITE;
-    color: $COLOR_BLACK;
-  }
+  background-color: var(--color-text-primary);
+  color: var(--color-text-inverse);
 }
 
 /**
- * Body layout.
+ * Template borders.
  */
 .template {
-  @include transition(background-color, color);
-  background-color: $COLOR_BACKGROUND;
-  color: $COLOR_BLACK;
-  display: flex;
-  flex-direction: column;
-  margin: $SPACING_S;
-  min-height: calc(100vh - (2 * #{$SPACING_S}));
-
   &__border-left,
   &__border-right {
-    background-color: $COLOR_WHITE;
+    background-color: var(--color-border);
     height: 100vh;
     position: absolute;
     top: 0;
-    width: $SPACING_S;
-    z-index: $LAYER_BASE;
+    width: var(--border-width-body);
+    z-index: var(--layer-flat);
   }
 
   &__border-left {
@@ -76,24 +49,19 @@ html {
   &__border-right {
     right: 0;
   }
-
-  .is-dark & {
-    background-color: $COLOR_DARK_MODE_BACKGROUND;
-    color: $COLOR_DARK_MODE_WHITE;
-  }
 }
 
 .container {
   margin: 0 auto;
-  max-width: $SITE_WIDTH;
-  padding: 0 $SPACING_S;
+  max-width: var(--max-content-width);
+  padding: 0 var(--layout-margin);
   width: 100%;
 }
 
 .main {
-  margin-bottom: $SPACING_L;
+  margin-block-end: var(--spacing-4xl);
 
-  @include mq($from: medium) {
-    margin-bottom: $SPACING_2XL;
+  @include mq($from: l) {
+    margin-block-end: var(--spacing-7xl);
   }
 }

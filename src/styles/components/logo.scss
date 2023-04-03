@@ -8,6 +8,10 @@
   height: auto;
   width: 62%;
 
+  &#{&}--childsplay-clothing {
+    width: 68%;
+  }
+
   &#{&}--direct-doors {
     width: 85%;
   }
@@ -60,13 +64,17 @@
    * Parent modifiers.
    */
   .block__logo--clients & {
-    color: $COLOR_WHITE;
+    color: var(--color-white);
   }
 
   /**
    * Media queries.
    */
-  @include mq($from: medium) {
+  @include mq($from: l) {
+    &#{&}--childsplay-clothing {
+      width: 54%;
+    }
+
     &#{&}--direct-doors {
       width: 82%;
     }
