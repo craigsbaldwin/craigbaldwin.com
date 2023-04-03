@@ -6,19 +6,19 @@
  */
 .card {
   $parent: &;
-  margin-bottom: $SPACING_ML;
+  margin-block-end: var(--spacing-xl);
   width: 100%;
 
   &__subtitle {
     @include transition(color);
-    color: $COLOR_BLACK;
+    color: var(--color-text-primary);
     display: block;
-    margin-bottom: $SPACING_XS;
+    margin-block-end: var(--spacing-xs);
     text-decoration: none;
 
     a {
       @include transition(color);
-      color: $COLOR_BLACK;
+      color: var(--color-text-primary);
       text-decoration: none;
 
       &:hover {
@@ -28,12 +28,12 @@
   }
 
   &__title {
-    margin-bottom: $SPACING_S;
-    padding-bottom: $SPACING_S;
+    margin-block-end: var(--spacing-l);
+    padding-block-end: var(--spacing-m);
     position: relative;
 
     &::after {
-      background-color: $COLOR_BLUE;
+      background-color: var(--color-blue);
       bottom: 0;
       content: '';
       height: 3px;
@@ -43,10 +43,15 @@
     }
   }
 
-  &__copy {
-    &:not(:last-child) {
-      margin-bottom: $SPACING_S;
-    }
+  &__meta {
+    margin-block-start: var(--spacing-l);
+  }
+
+  .template--about &,
+  .template--stats &,
+  .template--content & {
+    // Desired margin - text grid gap
+    margin-block-end: calc(var(--spacing-xl) - var(--spacing-s));
   }
 
   /**
@@ -54,42 +59,42 @@
    */
   .template--orange & {
     &__title::after {
-      background-color: $COLOR_ORANGE;
+      background-color: var(--color-orange);
     }
   }
 
   .template--purple & {
     &__title::after {
-      background-color: $COLOR_PURPLE;
+      background-color: var(--color-purple);
     }
   }
 
   .template--green & {
     &__title::after {
-      background-color: $COLOR_GREEN;
+      background-color: var(--color-green);
     }
   }
 
   .template--red & {
     &__title::after {
-      background-color: $COLOR_RED;
-    }
-  }
-
-  /**
-   * Dark mode.
-   */
-  .is-dark & {
-    #{$parent}__subtitle,
-    #{$parent}__subtitle a {
-      color: $COLOR_DARK_MODE_WHITE;
+      background-color: var(--color-red);
     }
   }
 
   /**
    * Media queries.
    */
-  @include mq($from: large) {
-    margin-bottom: $SPACING_L;
+  @include mq($from: l) {
+    margin-block-end: var(--spacing-3xl);
+
+    &__copy {
+      width: 68%;
+    }
+
+    .template--about &,
+    .template--stats & {
+      // Desired margin - text grid gap
+      margin-block-end: calc(var(--spacing-3xl) - var(--spacing-s));
+    }
   }
 }

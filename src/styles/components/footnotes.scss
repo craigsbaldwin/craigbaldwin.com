@@ -1,117 +1,116 @@
 /**
- * Components > Footnote.
+ * Components > Footnotes.
  * ------------------------------------------------------------------------------
  * Individual footnote.
  *
  */
-.footnote {
-  @include transition(color);
-  align-items: center;
-  color: $COLOR_BLACK;
-  display: flex;
-  height: 60px;
-  position: relative;
-  text-decoration: none;
-  width: 100%;
+// stylelint-disable max-nesting-depth
 
-  &::before,
-  &::after {
-    background-color: $COLOR_BLACK;
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 1px;
-  }
+.footnotes {
+  display: grid;
+  gap: var(--layout-gutter);
+  grid-template-columns: repeat(2, 1fr);
+  margin-block-end: var(--spacing-l);
 
-  &::before {
-    @include transition(background-color);
-    width: 1px;
-  }
+  &__footnote {
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    justify-content: center;
+    padding-inline: var(--spacing-m);
+    position: relative;
+    text-decoration: none;
+    width: 100%;
 
-  &::after {
-    display: none;
-    width: 3px;
-  }
+    &::before,
+    &::after {
+      background-color: var(--color-text-primary);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 1px;
+    }
 
-  &__content {
-    padding-left: $SPACING_S;
-  }
-
-  &.is-active,
-  &:hover,
-  &:focus {
     &::before {
-      display: none;
+      width: 1px;
     }
 
     &::after {
-      display: block;
+      display: none;
+      width: 3px;
     }
 
-    &.footnote--about {
-      background-color: rgba($COLOR_ORANGE, 0.25);
+    &.is-active,
+    &:hover,
+    &:focus {
+      &::before {
+        display: none;
+      }
 
       &::after {
-        background-color: $COLOR_ORANGE;
+        display: block;
+      }
+
+      &.footnotes__footnote--about {
+        background-color: var(--color-orange-hover);
+
+        &::after {
+          background-color: var(--color-orange);
+        }
+      }
+
+      &.footnotes__footnote--blog {
+        background-color: var(--color-blue-hover);
+
+        &::after {
+          background-color: var(--color-blue);
+        }
+      }
+
+      &.footnotes__footnote--work {
+        background-color: var(--color-purple-hover);
+
+        &::after {
+          background-color: var(--color-purple);
+        }
+      }
+
+      &.footnotes__footnote--stats {
+        background-color: var(--color-green-hover);
+
+        &::after {
+          background-color: var(--color-green);
+        }
+      }
+
+      &.footnotes__footnote--contact {
+        background-color: var(--color-red-hover);
+
+        &::after {
+          background-color: var(--color-red);
+        }
       }
     }
 
-    &.footnote--blog {
-      background-color: rgba($COLOR_BLUE, 0.25);
-
-      &::after {
-        background-color: $COLOR_BLUE;
-      }
-    }
-
-    &.footnote--work {
-      background-color: rgba($COLOR_PURPLE, 0.25);
-
-      &::after {
-        background-color: $COLOR_PURPLE;
-      }
-    }
-
-    &.footnote--stats {
-      background-color: rgba($COLOR_GREEN, 0.25);
-
-      &::after {
-        background-color: $COLOR_GREEN;
-      }
-    }
-
-    &.footnote--contact {
-      background-color: rgba($COLOR_RED, 0.25);
-
-      &::after {
-        background-color: $COLOR_RED;
-      }
+    &.is-hidden {
+      display: none;
     }
   }
 
-  &.is-hidden {
-    display: none;
+  &__footnote-title {
+    font-weight: var(--font-weight-bold);
   }
 
-  &#{&}--home {
-    display: none;
+  /**
+   * Media queries.
+   */
+  @include mq($from: l) {
+    grid-template-columns: repeat(4, 1fr);
 
-    .template-- & {
-      display: block;
+    &__footnote {
+      height: 80px;
     }
-  }
-
-  .is-dark & {
-    color: $COLOR_DARK_MODE_WHITE;
-
-    &::before {
-      background-color: $COLOR_DARK_MODE_WHITE;
-    }
-  }
-
-  @include mq($from: medium) {
-    height: 80px;
   }
 }

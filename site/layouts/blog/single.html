@@ -4,40 +4,42 @@
     rel="stylesheet"
   >
 
-  <div class="row">
-    <div class="content-col">
-      <div class="row row--m6">
-        <div class="col s4 m6 l5">
-          <div class="card card--{{ lower $.Page.Title }}">
-            <h1 class="card__title">{{ .Params.Title }}</h1>
+  <div class="grid">
+    <div class="col xs-span l3-11">
+      <div class="card card--{{ lower $.Page.Title }}">
+        <h1 class="card__title">{{ .Params.Title }}</h1>
 
-            <p class="card__copy standfirst">
-              {{ .Params.Excerpt }}
-            </p>
+        <p class="card__copy text-body-l">
+          {{ .Params.Excerpt }}
+        </p>
 
-            <p class="card__meta sub-text col">
-              {{ partial "article-meta.html" . }}
-            </p>
-          </div>
-        </div>
+        <p class="card__meta text-body-s">
+          {{ partial "article-meta.html" . }}
+        </p>
       </div>
 
-      <div class="article__content rte">
+      <div class="article__content text-grid">
         {{- .Content -}}
       </div>
 
       <div class="article__navigation">
         {{ with .NextInSection }}
-          <a class="article__link article__link--next" href="{{ .Permalink }}">
-            <span class="h3">Next article</span>
-            <span class="sub-text">{{ .Title }}</span>
+          <a
+            class="article__link article__link--next"
+            href="{{ .Permalink }}"
+          >
+            <span class="text-heading-s">Next article</span>
+            <span class="text-body-s">{{ .Title }}</span>
           </a>
         {{ end }}
 
         {{ with .PrevInSection }}
-          <a class="article__link" href="{{ .Permalink }}">
-            <span class="h3">Previous article</span>
-            <span class="sub-text">{{ .Title }}</span>
+          <a
+            class="article__link"
+            href="{{ .Permalink }}"
+          >
+            <span class="text-heading-s">Previous article</span>
+            <span class="text-body-s">{{ .Title }}</span>
           </a>
         {{ end }}
       </div>

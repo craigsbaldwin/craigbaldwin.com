@@ -5,7 +5,6 @@
 
 <div
   class="
-    blocks__block
     block
     block--{{ .Params.block_type }}
     {{ if (eq .Params.hide_image true)}}
@@ -29,63 +28,53 @@
 
   <div class="block__image-container">
     {{ if (ne .Params.block_type "logos") }}
-      <div class="block__meta-container row row--m10 row--l8">
-        <div class="block__meta col s4 m3">
-          <h2 class="block__title">{{ .Title }}</h2>
+      <div class="block__meta">
+        <h2 class="block__title text-heading-s">{{ .Title }}</h2>
 
-          {{ if or (eq .Params.block_type "clients") (eq .Params.block_type "mountains") }}
-            <div class="block__stats sub-text">
-              <!-- Mountains stats -->
-              {{ if .Params.location }}
-                <div class="block__stat icon">
-                  <span class="icon__image">
-                    {{ partial "icons/location.svg" . }}
-                  </span>
+        {{ if or (eq .Params.block_type "clients") (eq .Params.block_type "mountains") }}
+          <div class="block__stats">
+            <!-- Mountains stats -->
+            {{ if .Params.location }}
+              <div class="block__stat">
+                {{ partial "icons/location.svg" . }}
 
-                  <span class="icon__text">
-                    {{ .Params.location }} ({{ .Params.duration }} nights)
-                  </span>
-                </div>
-              {{ end }}
+                <span class="text-body-s">
+                  {{ .Params.location }} ({{ .Params.duration }} nights)
+                </span>
+              </div>
+            {{ end }}
 
-              {{ if .Params.distance }}
-                <div class="block__stat icon">
-                  <span class="icon__image">
-                    {{ partial "icons/distance.svg" . }}
-                  </span>
+            {{ if .Params.distance }}
+              <div class="block__stat">
+                {{ partial "icons/distance.svg" . }}
 
-                  <span class="icon__text">
-                    {{ .Params.distance }} miles
-                  </span>
-                </div>
-              {{ end }}
+                <span class="text-body-s">
+                  {{ .Params.distance }} miles
+                </span>
+              </div>
+            {{ end }}
 
-              {{ if .Params.mountains }}
-                <div class="block__stat icon">
-                  <span class="icon__image">
-                    {{ partial "icons/mountains.svg" . }}
-                  </span>
+            {{ if .Params.mountains }}
+              <div class="block__stat">
+                {{ partial "icons/mountains.svg" . }}
 
-                  <span class="icon__text">
-                    {{ .Params.mountains }} ({{ .Params.mountains_new }} new)
-                  </span>
-                </div>
-              {{ end }}
+                <span class="text-body-s">
+                  {{ .Params.mountains }} ({{ .Params.mountains_new }} new)
+                </span>
+              </div>
+            {{ end }}
 
-              {{ if .Params.steps }}
-                <div class="block__stat icon">
-                  <span class="icon__image">
-                    {{ partial "icons/steps.svg" . }}
-                  </span>
+            {{ if .Params.steps }}
+              <div class="block__stat">
+                {{ partial "icons/steps.svg" . }}
 
-                  <span class="icon__text">
-                    {{ .Params.steps }} steps
-                  </span>
-                </div>
-              {{ end }}
-            </div>
-          {{ end }}
-        </div>
+                <span class="text-body-s">
+                  {{ .Params.steps }} steps
+                </span>
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
       </div>
     {{ end }}
 
@@ -128,12 +117,8 @@
   {{ end }}
 
   {{ if (eq .Params.block_type "mountains") }}
-    <div class="row row--m8">
-      <div class="col s4 m6 l5-10">
-        <div class="block__content">
-          {{ .Content }}
-        </div>
-      </div>
+    <div class="block__content text-body-s">
+      {{ .Content }}
     </div>
   {{ end }}
 </div>

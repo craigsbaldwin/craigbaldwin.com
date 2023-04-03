@@ -1,18 +1,13 @@
 /**
- * Components > Footer.
+ * Components > Update.
  * ------------------------------------------------------------------------------
- * Footer partial.
+ * Homepage latest update.
  *
  */
-.footer {
-  margin-block-end: var(--spacing-l);
-  margin-block-start: auto;
-
-  &__base {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-s);
-  }
+.update {
+  display: grid;
+  gap: var(--spacing-xs);
+  margin-block-start: var(--spacing-3xl);
 
   &__link {
     text-decoration: underline;
@@ -22,12 +17,14 @@
     }
   }
 
+  &__excerpt {
+    display: block;
+  }
+
   /**
    * Media queries.
    */
   @include mq($from: l) {
-    &__base {
-      gap: var(--spacing-m);
-    }
+    margin-block-start: var(--spacing-7xl);
   }
 }

@@ -5,14 +5,18 @@
  *
  */
 .map {
-  margin-bottom: $SPACING_L;
-  mix-blend-mode: darken;
+  margin-block-end: var(--spacing-2xl);
+
+  &__container {
+    background-color: var(--color-light-grey);
+  }
 
   &__display {
     @include transition(border-color);
-    border: 1px solid $COLOR_BLACK;
+    border: 1px solid var(--color-border-primary);
     height: 0;
-    padding-bottom: 100%;
+    mix-blend-mode: darken;
+    padding-block-end: 100%;
   }
 
   .leaflet-popup-pane {
@@ -20,14 +24,14 @@
   }
 
   .leaflet-popup-content-wrapper {
-    background-color: $COLOR_BLACK;
+    background-color: var(--color-text-primary);
     border-radius: 0;
     box-shadow: none;
-    color: $COLOR_DARK_MODE_WHITE;
+    color: var(--color-text-inverse);
   }
 
   .leaflet-popup-content {
-    margin: $SPACING_XS;
+    margin: var(--spacing-xs);
     padding: 0;
   }
 
@@ -38,15 +42,14 @@
   .leaflet-control-attribution,
   .leaflet-control-attribution a {
     @include transition(color);
-    color: $COLOR_BLACK;
-    font-family: $FONT;
+    color: var(--color-text-primary);
+    font-family: var(--font-family-body);
   }
 
   &__progress {
-    @include transition(background-image, border-color);
     // stylelint-disable-next-line
     background-image: url('data:image/svg+xml,%3Csvg width="4" height="4" viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%231b2229" fill-opacity="1" fill-rule="evenodd"%3E%3Ccircle cx="1" cy="1" r="1"/%3E%3Ccircle cx="1" cy="1" r="1"/%3E%3C/g%3E%3C/svg%3E');
-    border: 1px solid $COLOR_BLACK;
+    border: 1px solid var(--color-border-primary);
     border-top: 0;
     height: 50px;
     position: relative;
@@ -54,31 +57,31 @@
   }
 
   &__progress-bar {
-    @include transition(background-color, width $TIMING_XL ease);
-    background-color: $COLOR_BLACK;
+    @include transition(width var(--timing-slower) ease);
+    background-color: var(--color-text-primary);
     height: 100%;
     left: 0;
-    padding-right: $SPACING_S;
+    padding-inline-end: var(--spacing-s);
     position: absolute;
-    text-align: right;
+    text-align: end;
     top: 0;
     width: 0;
     z-index: 3;
   }
 
   &__progress-text {
-    font-weight: $WEIGHT_BOLD;
-    line-height: $LINE_HEIGHT_S;
-    padding: $SPACING_2XS $SPACING_XS $SPACING_3XS;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-baseline);
+    padding: var(--spacing-2xs) var(--spacing-xs) var(--spacing-3xs);
     position: absolute;
-    right: $SPACING_XS;
+    right: var(--spacing-xs);
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
 
     &#{&}--count {
-      @include transition(color, opacity $TIMING_L ease);
-      color: $COLOR_WHITE;
+      @include transition(opacity var(--timing-slow) var(--easing-normal));
+      color: var(--color-text-inverse);
       opacity: 0;
 
       &.is-active {
@@ -87,37 +90,25 @@
     }
 
     &#{&}--total {
-      @include transition(background-color, color);
-      background-color: $COLOR_WHITE;
-      color: $COLOR_BLACK;
+      background-color: var(--color-background);
+      color: var(--color-text-primary);
     }
   }
 
-  .is-dark & {
-    // mix-blend-mode: lighten;
-
+  /**
+   * Media queries.
+   */
+  @include mq($from: s) {
     &__display {
-      border-color: $COLOR_DARK_MODE_WHITE;
-    }
-
-    &__progress {
-      // stylelint-disable-next-line
-      background-image: url('data:image/svg+xml,%3Csvg width="4" height="4" viewBox="0 0 4 4" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23f2f2f2" fill-opacity="1" fill-rule="evenodd"%3E%3Ccircle cx="1" cy="1" r="1"/%3E%3Ccircle cx="1" cy="1" r="1"/%3E%3C/g%3E%3C/svg%3E');
-      border-color: $COLOR_DARK_MODE_WHITE;
+      padding-block-end: 75%;
     }
   }
 
-  @include mq($from: small) {
-    &__display {
-      padding-bottom: 75%;
-    }
-  }
-
-  @include mq($from: medium) {
-    margin-bottom: $SPACING_XL;
+  @include mq($from: l) {
+    margin-block-end: var(--spacing-4xl);
 
     &__display {
-      padding-bottom: 45%;
+      padding-block-end: 45%;
     }
   }
 }

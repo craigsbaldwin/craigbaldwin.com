@@ -1,43 +1,44 @@
 {{ define "main" }}
-  <div class="row">
-    <div class="content-col">
-      <div class="row row--m6">
-        <div class="card">
-          <span class="card__subtitle sub-text">
-            Tags >
-          </span>
+  <div class="grid">
+    <div class="col xs-span l3-11">
+      <div class="card">
+        <span class="card__subtitle text-body-s">
+          Tags >
+        </span>
 
-          <h1 class="card__title">{{ .Title }}</h1>
-        </div>
+        <h1 class="card__title">{{ .Title }}</h1>
       </div>
 
-      {{ range $index, $element := .Pages.ByPublishDate.Reverse }}
-        {{ if (eq $index 0) }}
-          <div class="articles articles--large">
-            <h2 class="articles__title">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h2>
+      <div class="blog">
+        {{ range $index, $element := .Pages.ByPublishDate.Reverse }}
+          {{ if (eq $index 0) }}
+            <div class="blog__article blog__first">
+              <h2 class="blog__title text-heading-m">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </h2>
 
-            <p class="articles__excerpt body-1">
-              {{ .Params.Excerpt }}
-            </p>
+              <p class="blog__excerpt text-body-m">
+                {{ .Params.Excerpt }}
+              </p>
 
-            <p class="articles__meta sub-text">
-              {{ partial "article-meta.html" . }}
-            </p>
-          </div>
-        {{ else }}
-          <div class="articles articles--small">
-            <h2 class="articles__title h2-5">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h2>
+              <p class="blog__meta text-body-s">
+                {{ partial "article-meta.html" . }}
+              </p>
+            </div>
 
-            <p class="articles__meta sub-text">
-              {{ partial "article-meta.html" . }}
-            </p>
-          </div>
+          {{ else }}
+            <div class="blog__article">
+              <h2 class="blog__title text-heading-s">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </h2>
+
+              <p class="blog__meta text-body-s">
+                {{ partial "article-meta.html" . }}
+              </p>
+            </div>
+          {{ end }}
         {{ end }}
-      {{ end }}
+          </div>
     </div>
   </div>
 {{ end }}

@@ -6,152 +6,94 @@
  */
 // stylelint-disable unit-blacklist
 
-/**
- * Font.
- */
-$FONT: 'Eczar', serif;
-
-/**
- * Line height.
- */
-$LINE_HEIGHT_S: 1;
-$LINE_HEIGHT_M: 1.35;
-$LINE_HEIGHT_L: 1.5;
-
-/**
- * Font weight.
- */
-$WEIGHT_REGULAR: 400;
-$WEIGHT_BOLD: 700;
-
-:root {
-  font-size: 62.5%;
-}
-
-/**
- * Font face.
- */
 @import url('https://fonts.googleapis.com/css?family=Eczar:400,700&display=swap');
 
-/**
- * Element styling.
- * - Type colours are not set here because they weren't transitioning.
- */
-body {
-  font-family: $FONT;
-  font-size: 1.4rem;
-  font-weight: $WEIGHT_REGULAR;
-  line-height: $LINE_HEIGHT_S;
-}
+html, body {
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--scale-base);
+  font-weight: var(--font-weight-baseline);
+  line-height: var(--line-height-m);
 
-/**
- * Headings.
- */
-h1, .h1, h2, .h2, h3, .h3 {
-  font-weight: $WEIGHT_BOLD;
-}
-
-h1,
-.h1 {
-  font-size: 3rem;
-}
-
-h2,
-.h2,
-%h2 {
-  font-size: 2rem;
-  line-height: $LINE_HEIGHT_M;
-  margin-bottom: $SPACING_2XS;
-}
-
-.h2-5 {
-  font-size: 1.8rem;
-}
-
-h3,
-.h3 {
-  font-size: 1.4rem;
-  line-height: $LINE_HEIGHT_M;
-}
-
-/**
- * Text.
- */
-p, .body-1 {
-  font-size: 1.8rem;
-  line-height: $LINE_HEIGHT_L;
-
-  &:not(:last-child) {
-    margin-bottom: $SPACING_P;
-  }
-
-  + h2 {
-    margin-top: $SPACING_M;
-  }
-
-  + .body-2 {
-    margin-top: -$SPACING_2XS;
+  a {
+    color: var(--color-text-primary);
+    text-decoration: none;
   }
 }
 
-.body-2 {
-  font-size: 1.4rem;
+/**
+ * Heading classes.
+ */
+// h1
+.text-heading-xl {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
 }
 
+h2, .text-heading-l {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-heading-m {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-bold);
+}
+
+// h3
+.text-heading-s {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+}
+
+/**
+ * Text classes.
+ */
+// Standfirst
+.text-body-l {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-regular);
+}
+
+// Body 1
+p, .text-body-m {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-l);
+}
+
+// Body 2
+.text-body-s {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-regular);
+}
+
+.text-body-xs {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+}
+
+/**
+ * Strong.
+ */
 strong {
-  font-weight: $WEIGHT_BOLD;
+  font-weight: var(--font-weight-bold);
 }
 
+/**
+ * Blockquote.
+ */
 blockquote {
-  background-color: rgba($COLOR_BLUE, 0.1);
-  border-left: 3px solid $COLOR_BLUE;
-  padding: $SPACING_M;
+  background-color: var(--color-blue-tint);
+  border-left: 3px solid var(--color-blue);
+  padding: var(--spacing-m);
 
   &:not(:last-child) {
-    margin-bottom: $SPACING_P;
+    margin-block-end: var(--spacing-l);
   }
 
   strong {
     display: block;
-    font-size: 1.6rem;
-  }
-
-  p {
-    font-size: 1.6rem;
-  }
-}
-
-.standfirst {
-  font-size: 2rem;
-  line-height: $LINE_HEIGHT_M;
-}
-
-.navigation {
-  @extend %text-link;
-  font-size: 1.4rem;
-  line-height: $LINE_HEIGHT_S;
-}
-
-.sub-text {
-  font-size: 1.4rem;
-}
-
-.button {
-  cursor: pointer;
-  font-family: $FONT;
-  font-weight: $WEIGHT_REGULAR;
-  line-height: $LINE_HEIGHT_S;
-  text-decoration: none;
-
-  &#{&}--text {
-    background: none;
-    border: 0;
-    color: inherit;
-    padding: 0;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
 
@@ -160,69 +102,50 @@ blockquote {
  */
 ul, ol {
   counter-reset: list;
-  font-size: 1.8rem;
-  line-height: $LINE_HEIGHT_L;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-l);
 
-  main & {
+  li {
+    padding-left: var(--spacing-m);
+    position: relative;
+
+    &::before {
+      display: inline-block;
+      left: 0;
+      position: absolute;
+    }
+
     &:not(:last-child) {
-      margin-bottom: $SPACING_P;
+      margin-bottom: var(--spacing-s);
     }
   }
 }
 
-main {
-  li {
-    padding-left: $SPACING_S;
-    position: relative;
+ul li::before {
+  background-color: var(--color-blue);
+  content: '';
+  height: 0.3em;
+  rotate: 45deg;
+  top: 0.5em;
+  width: 0.3em;
+}
 
-    &:not(:last-child) {
-      margin-bottom: $SPACING_XS;
-    }
-  }
-
-  ul li::before,
-  ol li::before {
-    display: inline-block;
-    left: 0;
-    position: absolute;
-  }
-
-  ul li::before {
-    background-color: $COLOR_BLUE;
-    content: '';
-    height: 0.35em;
-    top: 0.5em;
-    transform: rotate(45deg);
-    width: 0.35em;
-  }
-
-  ol li::before {
-    color: $COLOR_BLUE;
-    content: counter(list) '.';
-    counter-increment: list;
-    top: 0;
-  }
+ol li::before {
+  color: var(--color-blue);
+  content: counter(list) '.';
+  counter-increment: list;
+  top: 0;
 }
 
 /**
- * Helpers.
+ * Links.
  */
-.text-link,
-%text-link,
-h2 > a,
-h3 > a,
-p > a,
-li > a,
-strong > a {
-  color: currentColor;
-  display: inline-block;
+h2 a,
+p a,
+li a {
   text-decoration: underline;
 
   &:hover {
-    text-decoration: none;
-  }
-
-  &:focus {
     text-decoration: none;
   }
 }
