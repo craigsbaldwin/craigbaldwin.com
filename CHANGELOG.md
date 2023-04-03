@@ -2,7 +2,7 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
-## 12.9.0 - 2023-03-31
+## 12.9.0 - 2023-04-03
 * Added _Childsplay Clothing_ work entry
 * Updated other work entries
 * Updated about page content
