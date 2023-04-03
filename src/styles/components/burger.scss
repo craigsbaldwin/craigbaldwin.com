@@ -20,13 +20,6 @@
   body:not(.is-open).template--clients & {
     background-color: var(--color-background);
   }
-
-  .template--clients.template--pangaia &,
-  .template--clients.template--sofasofa &,
-  .template--clients.template--tp-toys &,
-  .template--clients.template--ufc & {
-    background-color: $COLOR_WHITE;
-  }
 }
 
 .burger {
