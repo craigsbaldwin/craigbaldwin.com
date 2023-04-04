@@ -48,6 +48,10 @@
     width: 50%;
   }
 
+  &#{&}--stephen-webster {
+    width: 47%;
+  }
+
   &#{&}--this-works {
     width: 78%;
   }
@@ -83,16 +87,24 @@
       width: 55%;
     }
 
+    &#{&}--hasbro, {
+      width: 44%;
+    }
+
     &#{&}--pangaia {
       width: 25%;
     }
 
     &#{&}--paul-valentine {
-      width: 33%;
+      width: 30%;
     }
 
     &#{&}--sofasofa {
       width: 30%;
+    }
+
+    &#{&}--stephen-webster {
+      width: 36%;
     }
 
     &#{&}--tp-toys {
