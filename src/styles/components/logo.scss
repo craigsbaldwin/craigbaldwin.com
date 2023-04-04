@@ -8,6 +8,10 @@
   height: auto;
   width: 62%;
 
+  &#{&}--canvas {
+    width: 21%;
+  }
+
   &#{&}--childsplay-clothing {
     width: 68%;
   }
