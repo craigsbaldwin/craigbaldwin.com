@@ -116,7 +116,7 @@ ul, ol {
     }
 
     &:not(:last-child) {
-      margin-bottom: var(--spacing-s);
+      margin-bottom: var(--spacing-xs);
     }
   }
 }
