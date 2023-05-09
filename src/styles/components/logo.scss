@@ -8,6 +8,10 @@
   height: auto;
   width: 62%;
 
+  &#{&}--canvas {
+    width: 19%;
+  }
+
   &#{&}--childsplay-clothing {
     width: 68%;
   }
@@ -48,6 +52,10 @@
     width: 50%;
   }
 
+  &#{&}--stephen-webster {
+    width: 47%;
+  }
+
   &#{&}--this-works {
     width: 78%;
   }
@@ -71,6 +79,10 @@
    * Media queries.
    */
   @include mq($from: l) {
+    &#{&}--canvas {
+      width: 18%;
+    }
+
     &#{&}--childsplay-clothing {
       width: 54%;
     }
@@ -83,16 +95,24 @@
       width: 55%;
     }
 
+    &#{&}--hasbro, {
+      width: 44%;
+    }
+
     &#{&}--pangaia {
       width: 25%;
     }
 
     &#{&}--paul-valentine {
-      width: 33%;
+      width: 30%;
     }
 
     &#{&}--sofasofa {
       width: 30%;
+    }
+
+    &#{&}--stephen-webster {
+      width: 36%;
     }
 
     &#{&}--tp-toys {
