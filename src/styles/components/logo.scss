@@ -9,7 +9,7 @@
   width: 62%;
 
   &#{&}--canvas {
-    width: 21%;
+    width: 19%;
   }
 
   &#{&}--childsplay-clothing {
@@ -79,6 +79,10 @@
    * Media queries.
    */
   @include mq($from: l) {
+    &#{&}--canvas {
+      width: 18%;
+    }
+
     &#{&}--childsplay-clothing {
       width: 54%;
     }

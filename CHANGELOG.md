@@ -2,6 +2,10 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.10.0 - 2023-05-09
+* Added _Canvas_ work entry
+* Added _Stephen Webster_ to work logos
+
 ## 12.9.1 - 2023-04-3
 * Fixed incomplete merge
 
