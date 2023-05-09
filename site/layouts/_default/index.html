@@ -6,7 +6,18 @@
       <div class="update">
         <h2 class="text-heading-s">Latest update</h2>
 
-        {{ range first 1 ($.Site.GetPage "section" "blog").Pages.ByPublishDate.Reverse }}
+        <a
+          class="update__link text-body-m"
+          href="/work"
+        >
+          Selected work updated with new entries
+        </a>
+
+        <p class="update__excerpt text-body-s">
+          Read more about my latest work on the <em>Canvas</em> framework and new client <em>Childsplay Clothing</em>
+        </p>
+
+        <!-- {{ range first 1 ($.Site.GetPage "section" "blog").Pages.ByPublishDate.Reverse }}
           <a
             class="update__link text-body-m"
             href="{{ .Permalink }}"
@@ -17,7 +28,7 @@
           <p class="update__excerpt text-body-s">
             {{ .Params.Excerpt }}
           </p>
-        {{ end }}
+        {{ end }} -->
         </div>
     </div>
   </div>
