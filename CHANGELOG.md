@@ -4,6 +4,7 @@ This changelog only provides headline changes, see the commit history for all ch
 
 ## 12.11.0 - 2023-05-??
 * Updated about page content
+* Updated _Canvas_ work entry
 
 ## 12.10.0 - 2023-05-09
 * Added _Canvas_ work entry
