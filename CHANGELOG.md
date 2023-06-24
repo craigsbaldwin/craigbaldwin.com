@@ -6,6 +6,7 @@ This changelog only provides headline changes, see the commit history for all ch
 * Updated about page content
 * Updated _Canvas_ work entry
 * Updated dark mode colours
+* Updated site max width
 * Fixed styles
 
 ## 12.10.0 - 2023-05-09
