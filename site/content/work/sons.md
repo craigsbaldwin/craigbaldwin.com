@@ -1,8 +1,8 @@
 ---
 block_type: "logos"
-title: "Sons"
 handle: "sons"
 link: "https://sons.co.uk"
+title: "Sons"
 weight: 5
 ---
 

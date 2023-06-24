@@ -1,7 +1,8 @@
 ---
 block_type: "logos"
-title: "CLUSE"
 handle: "cluse"
 link: "https://cluse.com/"
-weight: 0
+title: "CLUSE"
+weight: 2019
+year: 2019
 ---

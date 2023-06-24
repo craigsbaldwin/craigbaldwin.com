@@ -1,7 +1,8 @@
 ---
 block_type: "logos"
-title: "Hasbro Pulse"
 handle: "hasbro"
 link: "https://hasbropulse.com/"
-weight: 0
+title: "Hasbro Pulse"
+weight: 2019
+year: 2019
 ---

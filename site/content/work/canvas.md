@@ -1,12 +1,13 @@
 ---
 block_type: "clients"
-title: "Canvas"
 handle: "canvas"
-weight: 1
-srcset: true
 header_colour: "241, 68, 54"
+srcset: true
+title: "Canvas"
+weight: 20239
+year: "Ongoing"
 ---
-Lead developer and architect of the unique company framework called Canvas. Canvas is a Vue-based development environment used as We Make Websites' primary approach for Liquid-based development, it has now been used on over 20 projects.
+Lead developer and architect of the custom company framework called Canvas. Canvas is a Vue-based development environment used as We Make Websites' primary approach for Liquid-based development, it has now been used on over 20 projects.
 
 Canvas is supported by a custom Webpack-based compiler called Basis and a suite of dependencies called Brush, each designed to extend the functionality of Canvas and Basis.
 

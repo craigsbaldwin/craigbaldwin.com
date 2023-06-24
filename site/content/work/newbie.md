@@ -1,8 +1,9 @@
 ---
 block_type: "logos"
 display: true
-title: "Newbie"
 handle: "newbie"
 link: "https://newbiestore.com/"
-weight: 0
+title: "Newbie"
+weight: 2022
+year: 2022
 ---

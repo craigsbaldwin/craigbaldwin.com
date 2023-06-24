@@ -1,7 +1,8 @@
 ---
 block_type: "logos"
-title: "Lightbox"
 handle: "lightbox"
 link: "https://lightboxjewelry.com/"
-weight: 0
+title: "Lightbox"
+weight: 2019
+year: 2019
 ---

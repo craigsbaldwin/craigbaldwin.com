@@ -1,7 +1,8 @@
 ---
 block_type: "logos"
-title: "Emma Bridgewater"
 handle: "emma-bridgewater"
 link: "https://www.emmabridgewater.co.uk/"
-weight: 0
+title: "Emma Bridgewater"
+weight: 2018
+year: 2018
 ---
