@@ -136,8 +136,8 @@
    * Dark mode.
    */
   @media (prefers-color-scheme: dark) {
-    --color-background: var(--color-dark-mode);
-    --color-border: var(--color-black);
+    --color-background: var(--color-black);
+    --color-border: var(--color-dark-mode);
     --color-primary: var(--color-light-grey);
     --color-text-inverse: var(--color-black);
     --color-text-primary: var(--color-light-grey);
