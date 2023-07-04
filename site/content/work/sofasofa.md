@@ -6,7 +6,7 @@ handle: "sofasofa"
 header_colour: "241, 91, 26"
 link: "https://sofasofa.co.uk"
 title: "SofaSofa"
-weight: 2020
+weight: 20201026
 year: 2020
 ---
 

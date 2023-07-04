@@ -7,7 +7,7 @@ header_colour: "0, 187, 180"
 link: "https://www.tptoys.com/"
 srcset: true
 title: "TP Toys"
-weight: 2021
+weight: 20210121
 year: 2021
 ---
 

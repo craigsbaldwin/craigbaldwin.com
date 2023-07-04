@@ -6,7 +6,7 @@ handle: "pangaia"
 header_colour: "152, 98, 246"
 srcset: true
 title: "Pangaia"
-weight: 2021
+weight: 20211011
 year: 2021
 ---
 

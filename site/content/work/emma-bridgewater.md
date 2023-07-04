@@ -3,6 +3,6 @@ block_type: "logos"
 handle: "emma-bridgewater"
 link: "https://www.emmabridgewater.co.uk/"
 title: "Emma Bridgewater"
-weight: 2018
+weight: 20180516
 year: 2018
 ---

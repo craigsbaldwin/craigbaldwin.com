@@ -6,7 +6,7 @@ header_colour: "205, 174, 77"
 link: "https://www.childsplayclothing.co.uk/"
 srcset: true
 title: "Childsplay Clothing"
-weight: 20236
+weight: 20230221
 year: 2023
 ---
 
