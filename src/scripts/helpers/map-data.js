@@ -153,6 +153,15 @@ export function mapData() {
     {name: 'Cold Pike', latLng: [54.422538, -3.137541], region: 'lakes'},
     {name: 'Crinkle Crags', latLng: [54.434616, -3.157454], region: 'lakes'},
     {name: 'Bowfell', latLng: [54.447588, -3.165865], region: 'lakes'},
+
+    {name: 'Pen Tir', latLng: [51.920926, -3.200627], region: 'other'},
+    {name: 'Cefn Moel', latLng: [51.914764, -3.222609], region: 'other'},
+    {name: 'Pen Allt-mawr', latLng: [51.911485, -3.154262], region: 'other'},
+    {name: 'Pen Twyn Glas', latLng: [51.924195, -3.145849], region: 'other'},
+    {name: 'Waun Fach', latLng: [51.962306, -3.142929], region: 'other'},
+    {name: 'Pen y Gadair Fawr', latLng: [51.951511, -3.122839], region: 'other'},
+    {name: 'Pen Twyn Mawr', latLng: [51.933197, -3.103092], region: 'other'},
+    {name: 'Table Mountain', latLng: [51.879061, -3.126112], region: 'other'},
   ];
 
   return data;

@@ -1,7 +1,8 @@
 ---
 block_type: "logos"
 display: true
-title: "Madderson London"
 handle: "madderson-london"
-weight: 0
+title: "Madderson London"
+weight: 20170600
+year: 2017
 ---
