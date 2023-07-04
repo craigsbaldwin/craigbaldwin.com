@@ -103,7 +103,7 @@
   --line-height-xl: 1.6;
 
   // Max-content-width
-  --max-content-width: 90rem; // 1440px
+  --max-content-width: 84rem; // 1344px
 
   // Scale
   --scale-base: 16px;
@@ -136,8 +136,8 @@
    * Dark mode.
    */
   @media (prefers-color-scheme: dark) {
-    --color-background: var(--color-dark-mode);
-    --color-border: var(--color-black);
+    --color-background: var(--color-black);
+    --color-border: var(--color-dark-mode);
     --color-primary: var(--color-light-grey);
     --color-text-inverse: var(--color-black);
     --color-text-primary: var(--color-light-grey);
@@ -149,14 +149,14 @@ $mq-breakpoints: (
   s: 576px,
   m: 768px,
   l: 1024px,
-  xl: 1366px
+  xl: 1280px
 );
 
 $breakpoint-xs: 0; // 0px
 $breakpoint-s: 36rem; // 576px
 $breakpoint-m: 48rem; // 768px
 $breakpoint-l: 64rem; // 1024px
-$breakpoint-xl: 85.375rem; // 1366px
+$breakpoint-xl: 80rem; // 1280px
 
 $layout-gutter: var(--layout-gutter);
 $layout-mobile-columns: 6;

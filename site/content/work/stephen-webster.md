@@ -1,7 +1,8 @@
 ---
 block_type: "logos"
-title: "Stephen Webster"
 handle: "stephen-webster"
 link: "https://www.stephenwebster.com/"
-weight: 0
+title: "Stephen Webster"
+weight: 20230322
+year: 2023
 ---

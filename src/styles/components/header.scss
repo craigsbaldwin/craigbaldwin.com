@@ -27,7 +27,6 @@
 
   &__logo,
   &__link {
-    @include transition(color);
     text-decoration: underline;
 
     &:hover {

@@ -12,7 +12,7 @@ colour: "orange"
   copy="I'm Craig Baldwin, principal developer at We Make Websites, Shopify expert, avid runner and walker, living in Winchester."
 >}}
 
-I've worked at [We Make Websites](https://wemakewebsites.com/) for over five years, specialising in the front-end development of Shopify e-commerce stores. I'm a principal developer, working on key client accounts as well as developing our internal framework and compiler. I've led the development and launch of nine stores and supported the development of almost 50 stores.
+I've worked at [We Make Websites](https://wemakewebsites.com/) for over five years, specialising in the front-end development of Shopify e-commerce stores. I'm a principal developer, working on key client accounts as well as developing our internal framework and compiler. I've led the development and launch of nine stores and supported the development of over 50 stores.
 
 <!-- Childsplay Clothing, UFC Store, TP Toys, SofaSofa, This Works, Sons, Autonative (Ford), Underalls, Direct Doors -->
 

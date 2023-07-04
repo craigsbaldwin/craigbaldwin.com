@@ -90,3 +90,34 @@
     }
   }
 }
+
+.work-title {
+  display: block;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-normal);
+
+  sup {
+    color: var(--color-purple);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-bold);
+  }
+
+  &:not(:last-child) {
+    margin-block-end: var(--spacing-m);
+  }
+
+  &.link span {
+    text-decoration: underline;
+  }
+
+  /**
+   * Media queries.
+   */
+  @include mq($from: l) {
+    font-size: var(--font-size-5xl);
+
+    sup {
+      font-size: var(--font-size-m);
+    }
+  }
+}

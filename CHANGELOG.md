@@ -2,6 +2,15 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.11.0 - 2023-07-04
+* Added _June 2023_ mountains entry
+* Updated about page content
+* Updated work page layout
+* Updated _Canvas_ work entry
+* Updated dark mode colours
+* Updated site max width
+* Fixed styles
+
 ## 12.10.0 - 2023-05-09
 * Added _Canvas_ work entry
 * Added _Stephen Webster_ to work logos

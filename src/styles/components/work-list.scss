@@ -1,0 +1,39 @@
+/**
+ * Components > Work list.
+ * ------------------------------------------------------------------------------
+ * List of work entries.
+ *
+ */
+.work-list {
+  display: grid;
+  gap: var(--spacing-m);
+
+  &__title {
+    display: block;
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-normal);
+
+    sup {
+      color: var(--color-purple);
+      font-size: var(--font-size-s);
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+  &__link span {
+    text-decoration: underline;
+  }
+
+  /**
+   * Media queries.
+   */
+  @include mq($from: l) {
+    &__title {
+      font-size: var(--font-size-5xl);
+
+      sup {
+        font-size: var(--font-size-m);
+      }
+    }
+  }
+}

@@ -1,12 +1,13 @@
 ---
-block_type: "clients"
-title: "SofaSofa"
-handle: "sofasofa"
-link: "https://sofasofa.co.uk"
-weight: 3
-copyright: "Image © SofaSofa 2020"
 articles: true
+block_type: "clients"
+copyright: "Image © SofaSofa 2020"
+handle: "sofasofa"
 header_colour: "241, 91, 26"
+link: "https://sofasofa.co.uk"
+title: "SofaSofa"
+weight: 20201026
+year: 2020
 ---
 
 Senior developer working in close partnership with the project's designer to launch a technically challenging re-branded website with a tight focus on user experience.

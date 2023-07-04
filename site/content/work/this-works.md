@@ -1,7 +1,8 @@
 ---
 block_type: "logos"
-title: "This Works CBD"
 handle: "this-works"
 link: "https://www.thisworks.com/"
-weight: 0
+title: "This Works"
+weight: 20200706
+year: 2020
 ---

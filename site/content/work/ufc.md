@@ -1,13 +1,13 @@
 ---
 block_type: "clients"
-title: "UFC"
-handle: "ufc"
-link: "https://ufcstore.com/"
-weight: 3
 copyright: "Image © UFC 2022"
-srcset: true
+handle: "ufc"
 header_colour: "205, 20, 33"
-# subtitle: "Testing"
+link: "https://ufcstore.com/"
+srcset: true
+title: "UFC"
+weight: 20220000
+year: 2022
 ---
 
 Principal developer supporting development team using the new company framework with asynchronous Vue component loading built using new internal compiler that I originally developed in less than two months.

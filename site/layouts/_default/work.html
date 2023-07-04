@@ -5,27 +5,23 @@
     </div>
   </div>
 
-  <h2 class="visually-hidden">Selected</h2>
-
-  <div class="grid work-grid">
-    {{ range .Pages.ByWeight }}
-      {{ if and (eq .Params.block_type "clients") (ne .Params.display false) }}
-        <div class="col xs-span l6">
-          {{ partial "block" . }}
-        </div>
-      {{ end }}
-    {{ end }}
-  </div>
-
-  <h2 class="visually-hidden">More</h2>
-
   <div class="grid">
-    <div class="col xs-span l2-12 grid">
-      {{ range .Pages.ByTitle }}
-        {{ if and (eq .Params.block_type "logos") (ne .Params.display false) }}
-          <div class="col xs2 l2">
-            {{ partial "block" . }}
-          </div>
+    <div class="work-list col xs-span l3-11">
+      {{ range .Pages.ByWeight.Reverse }}
+        {{ if and (ne .Params.block_type "mountains") (ne .Params.display false) }}
+          {{ if (eq .Params.block_type "clients") }}
+            <a
+              class="work-list__title work-list__link"
+              href="{{ .Permalink }}"
+            >
+              <span style="text-decoration-color: rgb({{ .Params.header_colour }}, 0.65);">{{ .Title }}</span> <sup>({{ .Params.year }})</sup>
+            </a>
+
+          {{ else if (eq .Params.block_type "logos") }}
+            <div class="work-list__title">
+              <span>{{ .Title }}</span> <sup>({{ .Params.year }})</sup>
+            </div>
+          {{ end }}
         {{ end }}
       {{ end }}
     </div>
