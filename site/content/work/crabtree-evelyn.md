@@ -1,6 +1,7 @@
 ---
 block_type: "logos"
-title: "Crabtree & Evelyn"
 handle: "crabtree-evelyn"
-weight: 0
+title: "Crabtree & Evelyn"
+weight: 20190711
+year: 2019
 ---

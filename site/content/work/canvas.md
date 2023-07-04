@@ -1,14 +1,15 @@
 ---
 block_type: "clients"
-title: "Canvas"
 handle: "canvas"
-weight: 1
-srcset: true
 header_colour: "241, 68, 54"
+srcset: true
+title: "Canvas"
+weight: 20230704
+year: "Ongoing"
 ---
-Lead developer and architect of original company framework called Canvas. Canvas is a Vue-based development environment used as We Make Websites' primary approach for Liquid-based development, it has now been used on over 30 projects.
+Lead developer and architect of the custom company framework called Canvas. Canvas is a Vue-based development environment used as We Make Websites' primary approach for Liquid-based development, it has now been used on over 20 projects.
 
-Canvas is supported by a Webpack-based custom build compiler called Basis and a suite of dependencies called Brush, each designed to extend the functionality of Canvas and Basis.
+Canvas is supported by a custom Webpack-based compiler called Basis and a suite of dependencies called Brush, each designed to extend the functionality of Canvas and Basis.
 
 My responsibilities include the original development of Canvas, Basis, and Brush from scratch, and the continued development and support of all parts of the company development ecosystem.
 
@@ -16,14 +17,14 @@ Headline features include:
 
 * Just in time asynchronous Vue component loading for improved performance
 * Browsersync-based localhost development environment with local asset server enabling hot module replacement
-* Section and settings schemas are stored as separate JS files with support for importing fragments
-* First class support for Liquid locale strings using global Vue `$string()` helper function
-* Design command to automatically convert Figma tokens into CSS variables and text classes
+* Section and settings schemas stored as separate JS files with support for importing re-usable fragments
+* First class support for Liquid locale strings using the global `$string()` helper function
+* Design CLI tool to automatically convert Figma tokens into CSS variables and text classes
 * Synchronised Figma design system to accelerate designer workflow
-* Lightweight GraphQL compiling and querying function designed for Shopify's storefront API
-* Folder structure supports nesting and each component folder is self-contained with all corresponding files
-* SVG icons folder automatically compiles icon Liquid snippets and creates base64 strings for inline stylesheet support
-* Component command to scaffold component folder and files automatically
+* Lightweight GraphQL compiler and query function designed for Shopify's storefront API
+* Nested folder structure support and self-contained component folders with all corresponding files in one place
+* SVG icons folder automatically compiled into Liquid snippets with base64 inline stylesheet support
+* Component CLI tool to scaffold component folder and files automatically based on developer choices
 * Automatic creation of critical CSS Liquid snippets based on SCSS stylesheets
+* Library of pre-made components installed as packages to help jumpstart development
 * Storybook support for Vue component and helper preview
-* Library of pre-made components to speed up development
