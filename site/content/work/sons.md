@@ -1,6 +1,7 @@
 ---
-block_type: "logos"
+block_type: "clients"
 handle: "sons"
+header_colour: "65, 0, 230"
 link: "https://sons.co.uk"
 title: "Sons"
 weight: 5

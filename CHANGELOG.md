@@ -2,6 +2,10 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.12.0 - 2023-07-13
+* Re-added old _Direct Doors_ work entry
+* Re-added old _Sons_ work entry
+
 ## 12.11.0 - 2023-07-04
 * Added _June 2023_ mountains entry
 * Updated about page content

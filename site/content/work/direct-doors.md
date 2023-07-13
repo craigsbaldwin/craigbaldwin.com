@@ -1,7 +1,8 @@
 ---
-block_type: "logos"
+block_type: "clients"
 copyright: "Image © Direct Doors 2019"
 handle: "direct-doors"
+header_colour: "230, 30, 38"
 link: "https://directdoors.com/"
 title: "Direct Doors"
 weight: 20180806
