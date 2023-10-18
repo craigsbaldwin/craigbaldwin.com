@@ -78,8 +78,8 @@
       </div>
     {{ end }}
 
-    {{ if (ne .Params.hide_image true)}}
-      {{ if (ne .Params.block_type "logos")}}
+    {{ if (ne .Params.hide_image true) }}
+      {{ if (ne .Params.block_type "logos") }}
         <img
           class="block__image"
           {{ if .Params.alt }}
@@ -87,7 +87,11 @@
           {{ else }}
             role="presentation"
           {{ end }}
-          height="600"
+          {{ if (eq .Params.block_type "clients") }}
+            height="850"
+          {{ else }}
+            height="800"
+          {{ end }}
           {{ if (ne .Params.weight 1) }}
             loading="lazy"
           {{ end }}
@@ -100,7 +104,7 @@
               /images/{{ .Params.block_type }}/{{ .Params.handle }}_1200x.jpg 1200w,
             "
           {{ end }}
-          width="900"
+          width="1200"
         >
       {{ end }}
 
