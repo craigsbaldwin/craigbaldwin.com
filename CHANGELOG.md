@@ -4,6 +4,7 @@ This changelog only provides headline changes, see the commit history for all ch
 
 ## 12.13.0 - 2023-10-31
 * Added _August 2023_ mountains entry
+* Updated _Canvas_ work entry
 * Fixed image aspect ratio on work page
 
 ## 12.12.0 - 2023-07-13
