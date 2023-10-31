@@ -2,6 +2,11 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.13.0 - 2023-10-31
+* Added _August 2023_ mountains entry
+* Updated _Canvas_ work entry
+* Fixed image aspect ratio on work page
+
 ## 12.12.0 - 2023-07-13
 * Re-added old _Direct Doors_ work entry
 * Re-added old _Sons_ work entry
