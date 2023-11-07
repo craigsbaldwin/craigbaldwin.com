@@ -5,6 +5,7 @@ This changelog only provides headline changes, see the commit history for all ch
 ## 12.14.0 - 2023-11-??
 * Updated work page link behaviour
 * Updated _Canvas_ work entry image
+* Updated about page content
 
 ## 12.13.0 - 2023-10-31
 * Added _August 2023_ mountains entry
