@@ -10,12 +10,16 @@
       {{ range .Pages.ByWeight.Reverse }}
         {{ if and (ne .Params.block_type "mountains") (ne .Params.display false) }}
           {{ if (eq .Params.block_type "clients") }}
-            <a
-              class="work-list__title work-list__link"
-              href="{{ .Permalink }}"
-            >
-              <span style="text-decoration-color: rgb({{ .Params.header_colour }}, 0.65);">{{ .Title }}</span> <sup>({{ .Params.year }})</sup>
-            </a>
+            <div class="work-list__title">
+              <a
+                class="work-list__link"
+                href="{{ .Permalink }}"
+              >
+                <span style="text-decoration-color: rgb({{ .Params.header_colour }}, 0.65);">{{ .Title }}</span>
+              </a>
+
+              <sup>({{ .Params.year }})</sup>
+            </div>
 
           {{ else if (eq .Params.block_type "logos") }}
             <div class="work-list__title">
