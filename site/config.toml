@@ -63,7 +63,7 @@ title = "Craig Baldwin"
   [[menu.footer]]
     identifier = "repo"
     title = "Repo"
-    url = "https://github.com/csbrightside/craigbaldwin.com"
+    url = "https://github.com/craigsbaldwin/craigbaldwin.com"
     weight = -25
 
 [markup]
