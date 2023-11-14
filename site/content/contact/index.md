@@ -16,9 +16,8 @@ Do not get in touch about job opportunities at [We Make Websites](https://wemake
 
 * [Email](mailto:craigsbaldwin@gmail.com) – going to have to be interesting to get a response
 * [Daytum](https://daytum.com/CraigBaldwin) – statistics tracking of my travels
-* [GitHub](https://github.com/csbrightside) – personal coding projects
+* [GitHub](https://github.com/craigsbaldwin) – personal coding projects
 * [Instagram](https://www.instagram.com/craigsbaldwin/) – photos from my wanders
 * [Last.fm](https://www.last.fm/user/CSBrightside) – music listening habits
 * [LinkedIn](https://uk.linkedin.com/in/craigbaldwin/) – professional networking
 * [Strava](https://www.strava.com/athletes/craigbaldwin) – running and swimming
-* [~~Twitter~~](https://twitter.com/CraigBaldwin) – nothing much anymore
