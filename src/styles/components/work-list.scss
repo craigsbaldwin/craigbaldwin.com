@@ -20,8 +20,16 @@
     }
   }
 
-  &__link span {
-    text-decoration: underline;
+  &__link {
+    line-height: 100%;
+
+    span {
+      text-decoration: underline;
+    }
+
+    &:hover span {
+      text-decoration: none;
+    }
   }
 
   /**

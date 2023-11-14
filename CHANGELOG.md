@@ -2,6 +2,13 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.14.0 - 2023-11-14
+* Updated work page link behaviour
+* Updated _Canvas_ work entry image
+* Updated about page content
+* Updated contact page links
+* Updated repo links to point to new alias
+
 ## 12.13.0 - 2023-10-31
 * Added _August 2023_ mountains entry
 * Updated _Canvas_ work entry
