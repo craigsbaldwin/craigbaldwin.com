@@ -14,7 +14,7 @@ colour: "green"
 
 ## [Distances](/stats/distances)
 
-I like to keep track of as much data as possible using [Daytum](https://daytum.com/CraigBaldwin), Fitbit and a bit of manual calculation too.
+I like to track as much data as possible using [Daytum](https://daytum.com/CraigBaldwin), Fitbit, [Strava](https://www.strava.com/athletes/2320916), and VeloViewer.
 
 ## [Mountains](/stats/mountains)
 

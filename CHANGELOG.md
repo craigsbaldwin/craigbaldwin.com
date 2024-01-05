@@ -2,6 +2,9 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.15.0 - 2024-01-05
+* Updated distances graphs with 2023 data
+
 ## 12.14.0 - 2023-11-14
 * Updated work page link behaviour
 * Updated _Canvas_ work entry image
