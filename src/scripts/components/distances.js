@@ -7,7 +7,7 @@
  */
 import Cookies from 'js-cookie';
 
-import {elevationData, totalData, walkingData} from '../helpers/distances-data';
+import {totalData, walkingData} from '../helpers/distances-data';
 
  /**
  * DOM selectors.
@@ -29,7 +29,7 @@ export default () => {
   const nodeSelectors = {
     walking: document.querySelector(selectors.walking).getContext('2d'),
     total: document.querySelector(selectors.total).getContext('2d'),
-    elevation: document.querySelector(selectors.elevation).getContext('2d'),
+    // elevation: document.querySelector(selectors.elevation).getContext('2d'),
   };
 
   /**
@@ -66,11 +66,11 @@ export default () => {
    * Global variables.
    */
   const charts = {
-    elevation: {
-      id: 'elevation',
-      selector: nodeSelectors.elevation,
-      data: elevationData,
-    },
+    // elevation: {
+    //   id: 'elevation',
+    //   selector: nodeSelectors.elevation,
+    //   data: elevationData,
+    // },
     total: {
       id: 'total',
       selector: nodeSelectors.total,
