@@ -3,7 +3,6 @@ block_type: "clients"
 copyright: "Image © UFC 2022"
 handle: "ufc"
 header_colour: "205, 20, 33"
-link: "https://ufcstore.com/"
 srcset: true
 title: "UFC"
 weight: 20220000
