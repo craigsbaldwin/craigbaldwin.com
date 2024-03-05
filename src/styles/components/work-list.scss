@@ -13,10 +13,30 @@
     font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-normal);
 
+    span {
+      position: relative;
+    }
+
     sup {
       color: var(--color-purple);
       font-size: var(--font-size-s);
       font-weight: var(--font-weight-bold);
+    }
+
+    &#{&}--nda span::after {
+      background-color: var(--color-black);
+      color: var(--color-white);
+      content: 'NDA';
+      font-size: var(--font-size-xs);
+      height: 9px;
+      left: 0;
+      // stylelint-disable-next-line
+      line-height: 10px;
+      opacity: 0.9;
+      position: absolute;
+      text-align: center;
+      top: calc(50% - 4px);
+      width: 100%;
     }
   }
 
@@ -41,6 +61,13 @@
 
       sup {
         font-size: var(--font-size-m);
+      }
+
+      &#{&}--nda span::after {
+        height: 12px;
+        // stylelint-disable-next-line
+        line-height: 14px;
+        top: calc(50% - 6px);
       }
     }
   }

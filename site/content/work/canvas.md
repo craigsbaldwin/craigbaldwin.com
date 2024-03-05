@@ -4,7 +4,7 @@ handle: "canvas"
 header_colour: "241, 68, 54"
 srcset: true
 title: "Canvas"
-weight: 20230704
+weight: 20240704
 year: "Ongoing"
 ---
 Lead developer and architect of the custom company framework called Canvas. Canvas is a Vue-based development environment used as We Make Websites' primary approach for Liquid-based development, it has now been used on over 20 projects for clients such as B&Q, UFC, Grau, HP, Lyle & Scott, and John Hardy.
