@@ -22,7 +22,7 @@
             </div>
 
           {{ else if (eq .Params.block_type "logos") }}
-            <div class="work-list__title">
+            <div class="work-list__title {{ if (eq .Params.nda true) }}work-list__title--nda{{ end }}">
               <span>{{ .Title }}</span> <sup>({{ .Params.year }})</sup>
             </div>
           {{ end }}

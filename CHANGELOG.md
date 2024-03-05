@@ -2,6 +2,12 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 12.16.0 - 2024-03-05
+* Added NDA clients to work page
+* Removed homepage _Latest update_ section
+* Removed Blog from links
+* Removed link from _UFC_ work entry
+
 ## 12.15.0 - 2024-01-05
 * Updated distances graphs with 2023 data
 
