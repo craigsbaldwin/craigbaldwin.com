@@ -1,0 +1,12 @@
+/**
+ * Contact.
+ */
+.contact ul {
+  list-style-position: outside;
+  list-style-type: disc;
+  padding-inline-start: var(--spacing-m);
+}
+
+.contact li {
+  padding-inline-start: var(--spacing-xs);
+}

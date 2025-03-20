@@ -1,0 +1,121 @@
+/**
+ * Stats.
+ */
+.stats__list,
+.stats__year-list {
+  column-gap: var(--spacing-m);
+}
+
+.stats__list {
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+}
+
+.stats__list li[year] {
+  color: var(--color-page);
+  text-decoration: line-through;
+}
+
+.stats__year-list li::before {
+  content: attr(year) '. ';
+}
+
+h3[year="2017"],
+h3[year="2025"],
+.stats__year-list li[year="2017"]::before,
+.stats__year-list li[year="2025"]::before {
+  color: var(--color-2025);
+}
+
+h3[year="2016"],
+h3[year="2024"],
+.stats__year-list li[year="2016"]::before,
+.stats__year-list li[year="2024"]::before {
+  color: var(--color-2024);
+}
+
+h3[year="2015"],
+h3[year="2023"],
+.stats__year-list li[year="2015"]::before,
+.stats__year-list li[year="2023"]::before {
+  color: var(--color-2023);
+}
+
+h3[year="2014"],
+h3[year="2022"],
+.stats__year-list li[year="2014"]::before,
+.stats__year-list li[year="2022"]::before {
+  color: var(--color-2022);
+}
+
+h3[year="2013"],
+h3[year="2021"],
+.stats__year-list li[year="2013"]::before,
+.stats__year-list li[year="2021"]::before {
+  color: var(--color-2021);
+}
+
+h3[year="2012"],
+h3[year="2020"],
+.stats__year-list li[year="2012"]::before,
+.stats__year-list li[year="2020"]::before {
+  color: var(--color-2020);
+}
+
+h3[year="2011"],
+h3[year="2019"],
+.stats__year-list li[year="2011"]::before,
+.stats__year-list li[year="2019"]::before {
+  color: var(--color-2019);
+}
+
+h3[year="2010"],
+h3[year="2018"],
+.stats__year-list li[year="2010"]::before,
+.stats__year-list li[year="2018"]::before {
+  color: var(--color-2018);
+}
+
+@media screen and (min-width: 510px) {
+  .stats__list,
+  .stats__year-list {
+    columns: 2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .stats__list,
+  .stats__year-list {
+    columns: 3;
+  }
+}
+
+/**
+ * Progress bar.
+ */
+.progress-bar {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-m);
+  margin-block: var(--spacing-m);
+}
+
+.progress-bar__bar {
+  background-color: var(--color-mid-grey);
+  flex: 1 1 auto;
+  height: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.progress-bar__progress {
+  background-color: var(--color-green);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.progress-bar__text {
+  white-space: nowrap;
+}

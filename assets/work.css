@@ -1,0 +1,103 @@
+/**
+ * Work.
+ */
+.work__list {
+  column-gap: var(--spacing-m);
+  columns: 1;
+}
+
+.work__list li::before {
+  content: attr(year) '. ';
+}
+
+.work__list li[year="2017"]::before,
+.work__list li[year="2025"]::before {
+  color: var(--color-2025);
+}
+
+.work__list li[year="2024"]::before {
+  color: var(--color-2024);
+}
+
+.work__list li[year="2023"]::before {
+  color: var(--color-2023);
+}
+
+.work__list li[year="2022"]::before {
+  color: var(--color-2022);
+}
+
+.work__list li[year="2021"]::before {
+  color: var(--color-2021);
+}
+
+.work__list li[year="2020"]::before {
+  color: var(--color-2020);
+}
+
+.work__list li[year="2019"]::before {
+  color: var(--color-2019);
+}
+
+.work__list li[year="2018"]::before {
+  color: var(--color-2018);
+}
+
+.work__clients {
+  column-gap: var(--spacing-m);
+  columns: 1;
+  list-style-position: outside;
+  list-style-type: disc;
+  padding-inline-start: var(--spacing-m);
+}
+
+.work__clients li {
+  padding-inline-start: var(--spacing-xs);
+}
+
+@media screen and (min-width: 545px) {
+  .work__list,
+  .work__clients {
+    columns: 2;
+  }
+}
+
+@media screen and (min-width: 790px) {
+  .work__list,
+  .work__clients {
+    columns: 3;
+  }
+}
+
+/**
+ * Work entry.
+ */
+.work-entry ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-inline-start: var(--spacing-m);
+}
+
+.work-entry li {
+  padding-inline-start: var(--spacing-xs);
+}
+
+.work-entry__links {
+  border: 1px solid var(--color-work);
+  border-radius: var(--border-radius);
+  margin-block-start: var(--spacing-2xl);
+  padding: var(--spacing-m) var(--spacing-l);
+  position: relative;
+}
+
+.work-entry__links::after {
+  background-color: var(--color-work);
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0.1;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

@@ -1,13 +1,17 @@
-# [Craig Baldwin [dot] com](https://craigbaldwin.com)
+# Craig Baldwin [dot] com 13
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a84b60d8-a9e3-451a-bc1c-1cf156b7b85f/deploy-status)](https://app.netlify.com/sites/tender-shaw-bc6f22/deploys)
+Personal website of principal developer Craig Baldwin working at BORN Group Shopify practice (originally We Make Websites).
 
-Personal website of front-end developer Craig Baldwin working at We Make Websites.
+## Tech stack
 
-This site has been built using [Hugo](https://gohugo.io/) and the [Victor Hugo](https://github.com/netlify-templates/victor-hugo) template. It has been developed using HTML, SCSS, vanilla JS, and markdown. It does not support Internet Explorer 11.
+This site has been built from scratch with no build tool, I intentionally sought a minimal development experience using browser-native features. It has been developed using PHP, CSS, and web components.
 
-The repo is continuously deployed using [Netlify](https://www.netlify.com/).
+The font used is [Inconsolata](https://fonts.google.com/specimen/Inconsolata). The source code can be viewed on [GitHub](https://github.com/craigsbaldwin/craigbaldwin.com)</a>.
 
-Code quality standards follow [We Make Websites'](https://github.com/we-make-websites/wmw-coding-guidelines) (which I wrote).
+## Development
 
-See _package.json_ for full list of dependencies.
+1. Run the below command in the project folder to locally host
+```
+php -S 127.0.0.1:8000
+```
+2. Then open [127.0.0.1:8000](127.0.0.1:8000) in the browser
