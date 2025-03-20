@@ -24,7 +24,7 @@
           <a href="/about">
             <strong>Over 7 years experience</strong>
 
-            <p>I'm Craig Baldwin, principal developer at BORN Group, Shopify expert, avid runner and walker, living in Winchester.</p>
+            <p>I'm Craig Baldwin, principal developer at the BORN Group Shopify practice, Shopify expert, avid runner and walker, living in Winchester.</p>
           </a>
         </div>
 

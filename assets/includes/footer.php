@@ -3,7 +3,7 @@
 
   <div class="footer__content">
     <p class="footer__copyright">
-      <strong>Craig Baldwin</strong>
+      <strong>&copy; Craig Baldwin <?php echo date('Y'); ?></strong>
     </p>
   </div>
 
@@ -17,22 +17,26 @@
       </a>
     </li>
 
-    <li>
-      <a
-        class="footer__link<?php if ($page == 'info') echo ' is-active' ?>"
-        href="/about/info"
-      >
-        Info
-      </a>
-    </li>
+    <li class="footer__meta-links">
+      <ul>
+        <li>
+          <a
+            class="footer__link<?php if ($page == 'info') echo ' is-active' ?>"
+            href="/about/info"
+          >
+            Info
+          </a>
+        </li>
 
-    <li>
-      <a
-        class="footer__link"
-        href="https://github.com/craigsbaldwin/craigbaldwin.com"
-      >
-        Repo
-      </a>
+        <li">
+          <a
+            class="footer__link"
+            href="https://github.com/craigsbaldwin/craigbaldwin.com"
+          >
+            Repo
+          </a>
+        </li>
+      </ul>
     </li>
 
     <li>
