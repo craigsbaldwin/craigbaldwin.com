@@ -4,6 +4,7 @@ This changelog only provides headline changes, see the commit history for all ch
 
 ## 13.02 - 2025-03-25
 * Fixed body minimum height
+* Fixed homepage layout
 
 ## 13.0.1 - 2025-03-20
 * Fixed body minimum height

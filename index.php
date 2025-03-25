@@ -29,7 +29,7 @@
         </div>
 
         <div
-          class="index__block block-2x1"
+          class="index__block block-2x2 block-desktop-2x1"
           style="--background: var(--color-work);"
         >
           <a href="/work">
