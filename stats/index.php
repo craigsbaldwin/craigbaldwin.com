@@ -9,8 +9,8 @@
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include '../assets/includes/head.php' ?>
-    <link href="../assets/stats.css" rel="stylesheet" />
-    <script src="../assets/progress-bar.js" async></script>
+    <link href="../assets/stats.css?v=1302" rel="stylesheet" />
+    <script src="../assets/progress-bar.js?v=1302" async></script>
   </head>
 
   <body>
