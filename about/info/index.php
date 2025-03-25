@@ -10,7 +10,7 @@
     <title><?php echo $seo_title ?></title>
     <?php include '../../assets/includes/head.php' ?>
     <link href="../../assets/info.css" rel="stylesheet" />
-    <script src="../assets/time-since.js" async></script>
+    <script src="../../assets/time-since.js" async></script>
   </head>
 
   <body>
