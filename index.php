@@ -9,7 +9,7 @@
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include 'assets/includes/head.php' ?>
-    <link href="assets/index.css" rel="stylesheet" />
+    <link href="assets/index.css?v=1302" rel="stylesheet" />
   </head>
 
   <body>
@@ -29,7 +29,7 @@
         </div>
 
         <div
-          class="index__block block-2x1"
+          class="index__block block-2x2 block-desktop-2x1"
           style="--background: var(--color-work);"
         >
           <a href="/work">

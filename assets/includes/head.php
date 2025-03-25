@@ -129,5 +129,5 @@
   }
 </style>
 
-<link href="/assets/reset.css" rel="stylesheet" />
-<link href="/assets/theme.css" rel="stylesheet" />
+<link href="/assets/reset.css?v=1302" rel="stylesheet" />
+<link href="/assets/theme.css?v=1302" rel="stylesheet" />

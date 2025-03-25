@@ -9,7 +9,8 @@ body {
   background-color: var(--color-background);
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - (var(--spacing-l)));
+  min-height: 100vh;
+  min-height: 100dvh;
   padding: var(--spacing-l);
 }
 
