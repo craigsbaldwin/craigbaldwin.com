@@ -20,6 +20,10 @@
       <div class="content stats">
         <?php include '../assets/includes/card.php' ?>
 
+        <h2>Strava</h2>
+
+        <p>You can find all my activities on my <a href="https://www.strava.com/athletes/craigbaldwin">Strava account</a>.</p>
+
         <h2 id="mountains">Mountains</h2>
 
         <p>I hope to climb all of the 214 Lake District fells described by <a href="https://www.wainwright.org.uk/about-aw/">Wainwright</a> one day. I keep track of my progress here, along with any other mountains I've climbed.</p>
