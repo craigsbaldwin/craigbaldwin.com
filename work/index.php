@@ -20,15 +20,16 @@
         <?php include '../assets/includes/card.php' ?>
 
         <ol class="work__list">
+          <li year="2025">Jewells</li>
           <li year="2025">Iron Heart <strong>*</strong></li>
           <li year="2024"><a href="/work/haynes">Haynes</a> <strong>*</strong></li>
           <li year="2024">Lyle &amp; Scott</li>
-          <li year="2024"><a href="/work/canvas/">Canvas</a> <strong>*</strong></li>
           <li year="2024">ESN</li>
           <li year="2023">Stephen Webster</li>
           <li year="2023">Grau</li>
           <li year="2023"><a href="/work/childsplay-clothing">Childsplay Clothing</a> <strong>*</strong></li>
           <li year="2022"><a href="/work/ufc">UFC</a> <strong>*</strong></li>
+          <li year="2022"><a href="/work/canvas/">Canvas</a> <strong>*</strong></li>
           <li year="2021"><a href="/work/pangaia">Pangaia</a></li>
           <li year="2021"><a href="/work/tp-toys">TP Toys</a> <strong>*</strong></li>
           <li year="2020"><a href="/work/sofasofa">SofaSofa</a> <strong>*</strong></li>
