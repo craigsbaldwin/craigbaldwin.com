@@ -2,7 +2,7 @@
   $page = 'info';
   $seo_title = 'Info - Craig Baldwin';
   $title = 'Info';
-  $description = 'You are viewing version 13.0.2 of the site.';
+  $description = 'You are viewing version 13.1.0 of the site.';
 ?>
 
 <html lang="en">
