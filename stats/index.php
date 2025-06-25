@@ -9,8 +9,8 @@
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include '../assets/includes/head.php' ?>
-    <link href="../assets/stats.css?v=1302" rel="stylesheet" />
-    <script src="../assets/progress-bar.js?v=1302" async></script>
+    <link href="../assets/stats.css?v=1310" rel="stylesheet" />
+    <script src="../assets/progress-bar.js?v=1310" async></script>
   </head>
 
   <body>
@@ -19,6 +19,10 @@
 
       <div class="content stats">
         <?php include '../assets/includes/card.php' ?>
+
+        <h2>Strava</h2>
+
+        <p>You can find all my activities on my <a href="https://www.strava.com/athletes/craigbaldwin">Strava account</a>.</p>
 
         <h2 id="mountains">Mountains</h2>
 

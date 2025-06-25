@@ -2,52 +2,24 @@
   $page = 'index';
   $seo_title = 'Craig Baldwin - I make websites';
   $title = 'I make websites';
-  $description = 'Principal developer at the BORN Group Shopify practice, developing Shopify Plus sites and our internal framework.';
+  $description = 'Principal developer at the BORN Group Shopify practice, Shopify expert, developing Shopify Plus sites and our internal framework.';
 ?>
 
 <html lang="en">
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include 'assets/includes/head.php' ?>
-    <link href="assets/index.css?v=1302" rel="stylesheet" />
+    <link href="assets/index.css?v=1310" rel="stylesheet" />
   </head>
 
   <body>
     <div class="container">
       <?php include 'assets/includes/header.php' ?>
 
-      <div class="content index">
-        <div
-          class="index__block block-4x3"
-          style="--background: var(--color-about);"
-        >
-          <a href="/about">
-            <strong>Over 7 years experience</strong>
+      <div class="content indexV2">
+        <p><strong>I'm Craig Baldwin, I make websites.</strong></p>
 
-            <p>I'm Craig Baldwin, principal developer at the BORN Group Shopify practice, Shopify expert, avid runner and walker, living in Winchester.</p>
-          </a>
-        </div>
-
-        <div
-          class="index__block block-2x2 block-desktop-2x1"
-          style="--background: var(--color-work);"
-        >
-          <a href="/work">
-            <strong>Launched 11 projects</strong>
-
-            <p>And I've worked on over 50 more websites</p>
-          </a>
-        </div>
-
-        <div
-          class="index__block block-1x1"
-          style="--background: var(--color-stats);"
-        >
-          <a href="/stats">
-            <strong>Stats</strong>
-          </a>
-        </div>
-      </div>
+        <p>I'm the <a class="indexV2__about" href="/about">principal developer</a> at the BORN Group Shopify practice. I've led the <a class="indexV2__work" href="/work">launch of 11 projects</a>. I'm also a Shopify expert, avid <a class="indexV2__stats" href="/stats">runner, walker, and cyclist</a>, and I live in Winchester.</p>
     </div>
 
     <?php include 'assets/includes/footer.php' ?>

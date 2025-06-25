@@ -34,7 +34,7 @@
     --color-black: rgb(0 0 0);
     --color-black-opacity: rgb(0 0 0 / 60%);
     --color-blue: rgb(52 152 219);
-    --color-dark-blue: rgb(10 61 98);
+    --color-dark-blue: rgb(45 140 128);
     --color-dark-grey: rgb(60 60 60);
     --color-darker-grey: rgb(35 35 35);
     --color-darkest-grey: rgb(15 15 15);
@@ -129,5 +129,5 @@
   }
 </style>
 
-<link href="/assets/reset.css?v=1302" rel="stylesheet" />
-<link href="/assets/theme.css?v=1302" rel="stylesheet" />
+<link href="/assets/reset.css?v=1310" rel="stylesheet" />
+<link href="/assets/theme.css?v=1310" rel="stylesheet" />
