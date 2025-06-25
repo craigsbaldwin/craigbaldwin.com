@@ -2,7 +2,11 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
-## 13.02 - 2025-03-25
+## 13.1.0 - 2025-06-25
+* Added Jewells to work page
+* Fixed dark mode colours
+
+## 13.0.2 - 2025-03-25
 * Fixed asset caching
 * Fixed body minimum height
 * Fixed homepage layout
