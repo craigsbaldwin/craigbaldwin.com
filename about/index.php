@@ -9,7 +9,7 @@
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include '../assets/includes/head.php' ?>
-    <link href="../assets/about.css?v=1310" rel="stylesheet" />
+    <link href="../assets/about.css?v=1311" rel="stylesheet" />
   </head>
 
   <body>
@@ -23,7 +23,7 @@
 
         <!-- Iron Heart, Haynes, Childsplay Clothing, UFC Store, TP Toys, SofaSofa, This Works, Sons, Autonative (Ford), Underalls, Direct Doors -->
 
-        <p>I enjoy technically challenging tasks which require complex logical problem solving and I have a tendency towards perfectism in my code. My background in Graphic Design means I have an attention for detail and an eye for design.</p>
+        <p>I enjoy technically challenging tasks which require complex logical problem solving and I have a tendency towards perfectionism in my code. My background in Graphic Design means I have an attention for detail and an eye for design.</p>
 
         <h2 id="languages">Languages</h2>
 

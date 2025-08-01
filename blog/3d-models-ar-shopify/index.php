@@ -9,8 +9,8 @@
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include '../../assets/includes/head.php' ?>
-    <link href="../../assets/blog.css?v=1310" rel="stylesheet" />
-    <script src="../assets/code-block.js?v=1310" async></script>
+    <link href="../../assets/blog.css?v=1311" rel="stylesheet" />
+    <script src="../assets/code-block.js?v=1311" async></script>
   </head>
 
   <body>

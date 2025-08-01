@@ -9,7 +9,7 @@
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include '../assets/includes/head.php' ?>
-    <link href="../assets/contact.css?v=1310" rel="stylesheet" />
+    <link href="../assets/contact.css?v=1311" rel="stylesheet" />
   </head>
 
   <body>

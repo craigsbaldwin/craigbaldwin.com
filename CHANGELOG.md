@@ -2,6 +2,10 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 13.1.1 - 2025-08-01
+* FIxed footer layout on homepage
+* Fixed typo on about page
+
 ## 13.1.0 - 2025-06-25
 * Added Jewells to work page
 * Updated homepage content
@@ -23,4 +27,3 @@ This changelog only provides headline changes, see the commit history for all ch
 
 ## 13.0.0 - 2025-03-20
 * Initial launch
-* Site completely rebuilt using Hugo and deployed using Netlify

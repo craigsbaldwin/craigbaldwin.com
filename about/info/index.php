@@ -2,15 +2,15 @@
   $page = 'info';
   $seo_title = 'Info - Craig Baldwin';
   $title = 'Info';
-  $description = 'You are viewing version 13.1.0 of the site.';
+  $description = 'You are viewing version 13.1.1 of the site.';
 ?>
 
 <html lang="en">
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include '../../assets/includes/head.php' ?>
-    <link href="../../assets/info.css?v=1310" rel="stylesheet" />
-    <script src="../../assets/time-since.js?v=1310" async></script>
+    <link href="../../assets/info.css?v=1311" rel="stylesheet" />
+    <script src="../../assets/time-since.js?v=1311" async></script>
   </head>
 
   <body>
