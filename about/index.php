@@ -9,7 +9,7 @@
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include '../assets/includes/head.php' ?>
-    <link href="../assets/about.css?v=1311" rel="stylesheet" />
+    <link href="../assets/about.css?v=1320" rel="stylesheet" />
   </head>
 
   <body>
@@ -19,9 +19,9 @@
       <div class="content about">
         <?php include '../assets/includes/card.php' ?>
 
-        <p>I've worked at the <a href="https://borngroup.com/">BORN Group Shopify practice</a> (originally We Make Websites) for over seven years, specialising in the front-end development of Shopify e-commerce stores. I'm a principal developer, working on key client accounts as well as developing our internal framework and compiler. I've led the development and launch of 11 projects and supported the development of over 50 more.</p>
+        <p>I've worked at the <a href="https://borngroup.com/">BORN Group Shopify practice</a> (originally We Make Websites) for over seven years, specialising in the front-end development of Shopify e-commerce stores. I'm a principal developer, working on key client accounts as well as developing our internal framework and compiler. I've led the development and launch of 12 projects and supported the development of over 50 more.</p>
 
-        <!-- Iron Heart, Haynes, Childsplay Clothing, UFC Store, TP Toys, SofaSofa, This Works, Sons, Autonative (Ford), Underalls, Direct Doors -->
+        <!-- Iron Heart, Haynes, ESN, Childsplay Clothing, UFC Store, TP Toys, SofaSofa, This Works, Sons, Autonative (Ford), Underalls, Direct Doors -->
 
         <p>I enjoy technically challenging tasks which require complex logical problem solving and I have a tendency towards perfectionism in my code. My background in Graphic Design means I have an attention for detail and an eye for design.</p>
 

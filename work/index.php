@@ -9,7 +9,7 @@
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include '../assets/includes/head.php' ?>
-    <link href="../assets/work.css?v=1311" rel="stylesheet" />
+    <link href="../assets/work.css?v=1320" rel="stylesheet" />
   </head>
 
   <body>
@@ -20,11 +20,12 @@
         <?php include '../assets/includes/card.php' ?>
 
         <ol class="work__list">
+          <li year="2025">Veronica Beard</li>
           <li year="2025">Jewells</li>
           <li year="2025">Iron Heart <strong>*</strong></li>
           <li year="2024"><a href="/work/haynes">Haynes</a> <strong>*</strong></li>
           <li year="2024">Lyle &amp; Scott</li>
-          <li year="2024">ESN</li>
+          <li year="2024">ESN <strong>*</strong></li>
           <li year="2023">Stephen Webster</li>
           <li year="2023">Grau</li>
           <li year="2023"><a href="/work/childsplay-clothing">Childsplay Clothing</a> <strong>*</strong></li>

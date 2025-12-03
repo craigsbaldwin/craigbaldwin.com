@@ -2,8 +2,13 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 13.2.0 - 2025-12-03
+* Add Veronica Beard to work page
+* Fixed project lead count
+* Fixed missing code block asset
+
 ## 13.1.1 - 2025-08-01
-* FIxed footer layout on homepage
+* Fixed footer layout on homepage
 * Fixed typo on about page
 
 ## 13.1.0 - 2025-06-25
