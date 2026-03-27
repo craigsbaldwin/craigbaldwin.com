@@ -37,26 +37,6 @@ ol.blog__list {
   content: attr(year) '. ';
 }
 
-.blog__list li[year="2024"]::before {
-  color: var(--color-green);
-}
-
-.blog__list li[year="2023"]::before {
-  color: var(--color-blue);
-}
-
-.blog__list li[year="2022"]::before {
-  color: var(--color-red);
-}
-
-.blog__list li[year="2021"]::before {
-  color: var(--color-purple);
-}
-
-.blog__list li[year="2020"]::before {
-  color: var(--color-orange);
-}
-
 /**
  * Links.
  */

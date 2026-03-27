@@ -9,8 +9,8 @@
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include '../assets/includes/head.php' ?>
-    <link href="../assets/stats.css?v=1320" rel="stylesheet" />
-    <script src="../assets/progress-bar.js?v=1320" async></script>
+    <link href="../assets/stats.css?v=1330" rel="stylesheet" />
+    <script src="../assets/progress-bar.js?v=1330" async></script>
   </head>
 
   <body>
@@ -26,7 +26,7 @@
 
         <h2 id="mountains">Mountains</h2>
 
-        <p>I hope to climb all of the 214 Lake District fells described by <a href="https://www.wainwright.org.uk/about-aw/">Wainwright</a> one day. I keep track of my progress here, along with any other mountains I've climbed.</p>
+        <p>I hope to climb all of the 214 Lake District fells listed by <a href="https://www.wainwright.org.uk/about-aw/">Wainwright</a> one day. I keep track of my progress here, along with any other mountains I've climbed.</p>
 
         <progress-bar>
           <div class="progress-bar">
@@ -65,7 +65,7 @@
               <li year="2012">Skiddaw</li>
               <li>Great End</li>
               <li year="2022">Bowfell</li>
-              <li>Great Gable</li>
+              <li year="2026">Great Gable</li>
               <li>Pillar</li>
               <li year="2014">Nethermost Pike</li>
               <li year="2017">Catstycam</li>
@@ -91,9 +91,9 @@
               <li year="2019">High Stile</li>
               <li year="2016">Coniston Old Man</li>
               <li>High Raise (High Street)</li>
-              <li>Kirk Fell</li>
+              <li year="2026">Kirk Fell</li>
               <li year="2016">Swirl How</li>
-              <li>Green Gable</li>
+              <li year="2026">Green Gable</li>
               <li>Haycock</li>
               <li year="2016">Brim Fell</li>
               <li year="2015">Dove Crag</li>
@@ -154,7 +154,7 @@
               <li>Grey Knotts</li>
               <li year="2015">Loft Crag</li>
               <li>Seatallan</li>
-              <li>Great Calva</li>
+              <li year="2026">Great Calva</li>
               <li>Bannerdale Crags</li>
               <li year="2021">Ullock Pike</li>
               <li year="2017">Sheffield Pike</li>
@@ -174,7 +174,7 @@
               <li>Harter Fell (Eskdale)</li>
               <li>Great Sca Fell</li>
               <li>Fleetwith Pike</li>
-              <li>Base Brown</li>
+              <li year="2026">Base Brown</li>
               <li>Rossett Pike</li>
               <li>Grey Crag</li>
               <li year="2020">Causey Pike</li>
@@ -188,7 +188,7 @@
               <li year="2014">Heron Pike</li>
               <li>High Seat</li>
               <li>Illgill Head</li>
-              <li>Seathwaite Fell</li>
+              <li year="2026">Seathwaite Fell</li>
               <li>Haystacks</li>
               <li year="2016">Bleaberry Fell</li>
               <li>Shipman Knotts</li>
@@ -245,7 +245,7 @@
               <li year="2016">Lingmoor Fell</li>
               <li>Barf</li>
               <li year="2021">Raven Crag</li>
-              <li>Great Crag</li>
+              <li year="2026">Great Crag</li>
               <li year="2014">Barrow</li>
               <li year="2013">Catbells</li>
               <li>Graystones</li>
@@ -257,7 +257,7 @@
               <li>Buckbarrow</li>
               <li year="2010">Gibson Knott</li>
               <li year="2019">Fellbarrow</li>
-              <li>Grange Fell</li>
+              <li year="2026">Grange Fell</li>
               <li year="2019">Low Fell</li>
               <li year="2010">Helm Crag</li>
               <li year="2014">Silver How</li>
@@ -304,141 +304,147 @@
 
         <h2 id="walking-diary">Walking Diary</h2>
 
+        <h3 year="2026">March 2026</h3>
+        <p>
+          <strong>Keswick for 6 nights.<br>Climbed 12 mountains (8 new).</strong><br>
+          Base Brown, Green Gable, Great Gable, Kirk Fell, Seathwaite Fell, Latrigg, Great Calva, Bakestall, Skiddaw, Skiddaw Little Man, Grange Fell, & Great Crag.
+        </p>
+
         <h3 year="2024">May 2024</h3>
         <p>
-          <strong>Near Llanbedr for 3 nights. Climbed 4 mountains (3 new).</strong><br>
+          <strong>Near Llanbedr for 3 nights.<br>Climbed 4 mountains (3 new).</strong><br>
           Blaen yr Henbant, Crug Mawr, Sugar Loaf, & Table Mountain.
         </p>
 
         <h3 year="2023">August 2023</h3>
         <p>
-          <strong>Keswick for 6 nights. Climbed 1 mountains (0 new).</strong><br>
-          Latrigg, & illness meant I didn't climb any other mountains.
+          <strong>Keswick for 6 nights.<br>Climbed 1 mountains (0 new).</strong><br>
+          Latrigg. Illness meant I didn't climb any other mountains.
         </p>
 
         <h3 year="2023">June 2023</h3>
         <p>
-          <strong>Crickhowell for 6 nights. Climbed 8 mountains (8 new).</strong><br>
+          <strong>Crickhowell for 6 nights.<br>Climbed 8 mountains (8 new).</strong><br>
           Pen Tir, Cefn Moel, Pen Allt-mawr, Pen Twyn Glas, Waun Fach, Pen y Gadair Fawr, Pen Twyn Mawr, & Table Mountain.
         </p>
 
         <h3 year="2022">November 2022</h3>
         <p>
-          <strong>Grasmere for 6 nights. Climbed 6 mountains (4 new).</strong><br>
+          <strong>Grasmere for 6 nights.<br>Climbed 6 mountains (4 new).</strong><br>
           Silver Howe, Blea Rigg, Pike of Blisco, Cold Pike, Crinkle Crags, & Bowfell.
         </p>
 
         <h3 year="2021">October 2021</h3>
         <p>
-          <strong>Keswick for 7 nights. Climbed 12 mountains (9 new).</strong><br>
+          <strong>Keswick for 7 nights.<br>Climbed 12 mountains (9 new).</strong><br>
           High Rigg, Raven Crag, Gowbarrow Fell, Little Mell Fell, Great Mell Fell, Ullock Pike, Long Side, Carl Side, Skiddaw, Bakestall, Skiddaw Little Man, & Lonscale Fell.
         </p>
 
         <h3 year="2020">August 2020</h3>
         <p>
-          <strong>Keswick for 6 nights. Climbed 11 mountains (5 new).</strong><br>
+          <strong>Keswick for 6 nights.<br>Climbed 11 mountains (5 new).</strong><br>
           Latrigg, Dale Head, Hindscarth, Robinson, Knott Rigg, Ard Crags, Walla Crag, Eel Crag, Sail, Scar Crags, & Causey Pike.
         </p>
 
         <h3 year="2019">August 2019</h3>
         <p>
-          <strong>Keswick for 7 nights. Climbed 0 mountains (0 new).</strong><br>
+          <strong>Keswick for 7 nights.<br>Climbed 0 mountains (0 new).</strong><br>
           Injuries meant I didn't climb any mountains.
         </p>
 
         <h3 year="2019">February 2019</h3>
         <p>
-          <strong>Buttermere for 7 nights. Climbed 16 mountains (16 new).</strong><br>
+          <strong>Buttermere for 7 nights.<br>Climbed 16 mountains (16 new).</strong><br>
           Whiteside, Hopegill Head, Grisedale Pike, Grasmoor, Eel Crag, Sail, Wandope, Whiteless Pike, Rannerdale Knotts, Mellbreak, High Crag, High Stile, Red Pike (Buttermere), Starling Dodd, Fellbarrow, & Low Fell.
         </p>
 
         <h3 year="2018">August 2018</h3>
         <p>
-          <strong>Keswick for 7 nights. Climbed 2 mountains (0 new).</strong><br>
-          Latrigg, & Dodd.
+          <strong>Keswick for 7 nights.<br>Climbed 2 mountains (0 new).</strong><br>
+          Latrigg & Dodd.
         </p>
 
         <h3 year="2017">November 2017</h3>
         <p>
-          <strong>Glenridding for 6 nights. Climbed 17 mountains (13 new).</strong><br>
+          <strong>Glenridding for 6 nights.<br>Climbed 17 mountains (13 new).</strong><br>
           St. Sunday Crag, Birks, Arnison Crag, Birkhouse Moor, Catstycam, Helvellyn, White Side, Raise, Hart Side, Sheffield Pike, Glenridding Dodd, Place Fell, Hallin Fell, Hartsop above How, Hart Crag, Dove Crag, Little Hart Crag, & High Hartsop Dodd.
         </p>
 
         <h3 year="2017">March 2017</h3>
         <p>
-          <strong>Troutbeck for 6 nights. Climbed 12 mountains (12 new).</strong><br>
+          <strong>Troutbeck for 6 nights.<br>Climbed 12 mountains (12 new).</strong><br>
           Troutbeck Tongue, Sallows, Yoke, Ill Bell, Froswick, Thornthwaite Crag, High Street, Mardale Ill Bell, Gray Crag, Caudale Moor, Hartsop Dodd, & Sour Howes.
         </p>
 
         <h3 year="2016">November 2016</h3>
         <p>
-          <strong>Near Dolgellau for 6 nights. Climbed 3 mountains (3 new).</strong><br>
+          <strong>Near Dolgellau for 6 nights.<br>Climbed 3 mountains (3 new).</strong><br>
           Mynydd Ceiswyn, Craig Cau, & Cadair Idris.
         </p>
 
         <h3 year="2016">August 2016</h3>
         <p>
-          <strong>Keswick for 7 nights. Climbed 4 mountains (2 new).</strong><br>
+          <strong>Keswick for 7 nights.<br>Climbed 4 mountains (2 new).</strong><br>
           Walla Crag, Bleaberry Fell, Blencathra, & Latrigg.
         </p>
 
         <h3 year="2016">June 2016</h3>
         <p>
-          <strong>Near Llanfrynach for 3 nights. Climbed 4 mountains (4 new).</strong><br>
+          <strong>Near Llanfrynach for 3 nights.<br>Climbed 4 mountains (4 new).</strong><br>
           Cribyn, Pen y Fan, Corn Du, & Fan y Big.
         </p>
 
         <h3 year="2016">March 2016</h3>
         <p>
-          <strong>Coniston for 7 nights. Climbed 10 mountains (10 new).</strong><br>
+          <strong>Coniston for 7 nights.<br>Climbed 10 mountains (10 new).</strong><br>
           Holme Fell, Black Fell, Coniston Old Man, Brim Fell, Dow Crag, Wetherlam, Swirl How, Great Carrs, Grey Friar, & Lingmoor Fell.
         </p>
 
         <h3 year="2015">August 2015</h3>
         <p>
-          <strong>Ambleside for 7 nights. Climbed 4 mountains (3 new).</strong><br>
+          <strong>Ambleside for 7 nights.<br>Climbed 4 mountains (3 new).</strong><br>
           Loughrigg, Red Screes, Middle Dodd, & Wansfell.
         </p>
 
         <h3 year="2015">March 2015</h3>
         <p>
-          <strong>Grasmere for 7 nights. Climbed 20 mountains (16 new).</strong><br>
+          <strong>Grasmere for 7 nights.<br>Climbed 20 mountains (16 new).</strong><br>
           Helm Crag, Gibson Knott, Calf Crag, Tarn Crag, Loft Crag, Pike O’Stickle, Harrison Stickle, Pavey Ark, Thunacar Knott, High Raise, Sergeant Man, Seat Sandal, Fairfield, Hart Crag, Dove Crag, High Pike, Low Pike, Sergeant’s Crag, Eagle Crag, & Ullscarf.
         </p>
 
         <h3 year="2014">August 2014</h3>
         <p>
-          <strong>Keswick for 7 nights. Climbed 8 mountains (5 new).</strong><br>
+          <strong>Keswick for 7 nights.<br>Climbed 8 mountains (5 new).</strong><br>
           Latrigg, Skiddaw Little Man, Skiddaw, Carl Side, Scafell Pike, Barrow, Outerside, & Walla Crag.
         </p>
 
         <h3 year="2014">April 2014</h3>
         <p>
-          <strong>Grasmere for 7 nights. Climbed 21 mountains (17 new).</strong><br>
+          <strong>Grasmere for 7 nights.<br>Climbed 21 mountains (17 new).</strong><br>
           Heron Pike, Nab Scar, Loughrigg Fell, Stone Arthur, Great Rigg, Fairfield, Dollywagon Pike, Nethermost Pike, Helvellyn, White Side, Raise, Stybarrow Dodd, Watson’s Dodd, Great Dodd, Clough Head, Steel Fell, Calf Crag, Gibson Knott, Helm Crag, Blea Rigg, & Silver How.
         </p>
 
         <h3 year="2013">August 2013</h3>
         <p>
-          <strong>Keswick for 7 nights. Climbed 7 mountains (6 new).</strong><br>
+          <strong>Keswick for 7 nights.<br>Climbed 7 mountains (6 new).</strong><br>
           Latrigg, Cat Bells, Maiden Moor, High Spy, Helvellyn, Hindscarth, & Robinson.
         </p>
 
         <h3 year="2012">August 2012</h3>
         <p>
-          <strong>Keswick for 7 nights. Climbed 4 mountains (3 new).</strong><br>
+          <strong>Keswick for 7 nights.<br>Climbed 4 mountains (3 new).</strong><br>
           Walla Crag, Dodd, Skiddaw, & Latrigg.
         </p>
 
         <h3 year="2011">August 2011</h3>
         <p>
-          <strong>Keswick for 7 nights. Climbed 1 mountains (0 new).</strong><br>
+          <strong>Keswick for 7 nights.<br>Climbed 1 mountain (0 new).</strong><br>
           Latrigg. Either walked in valleys or just missed the summits.
         </p>
 
         <h3 year="2010">August 2010</h3>
         <p>
-          <strong>Keswick for 10 nights. Climbed 5 mountains (5 new).</strong><br>
+          <strong>Keswick for 10 nights.<br>Climbed 5 mountains (5 new).</strong><br>
           Latrigg, Helm Crag, Gibson Knott, Calf Crag, & Castle Crag.
         </p>
       </div>

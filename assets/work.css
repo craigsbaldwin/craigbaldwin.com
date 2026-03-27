@@ -10,39 +10,6 @@
   content: attr(year) '. ';
 }
 
-.work__list li[year="2017"]::before,
-.work__list li[year="2025"]::before {
-  color: var(--color-2025);
-}
-
-.work__list li[year="2024"]::before {
-  color: var(--color-2024);
-}
-
-.work__list li[year="2023"]::before {
-  color: var(--color-2023);
-}
-
-.work__list li[year="2022"]::before {
-  color: var(--color-2022);
-}
-
-.work__list li[year="2021"]::before {
-  color: var(--color-2021);
-}
-
-.work__list li[year="2020"]::before {
-  color: var(--color-2020);
-}
-
-.work__list li[year="2019"]::before {
-  color: var(--color-2019);
-}
-
-.work__list li[year="2018"]::before {
-  color: var(--color-2018);
-}
-
 .work__clients {
   column-gap: var(--spacing-m);
   columns: 1;

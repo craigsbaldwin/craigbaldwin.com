@@ -9,7 +9,7 @@
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include '../../assets/includes/head.php' ?>
-    <link href="../../assets/work.css?v=1320" rel="stylesheet" />
+    <link href="../../assets/work.css?v=1330" rel="stylesheet" />
   </head>
 
   <body>
@@ -27,7 +27,7 @@
 
         <div class="work-entry__links">
           <ul>
-            <li><a href="https://au.haynes.com/">View Haynes website</a></li>
+            <li><a href="https://uk.haynes.com/">View Haynes website</a></li>
           </ul>
         </div>
       </div>

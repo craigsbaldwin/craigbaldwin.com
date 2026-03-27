@@ -296,6 +296,94 @@ summary * {
 }
 
 /**
+ * Years.
+ */
+h3[year="2026"],
+li[year="2026"]::before {
+  color: var(--color-06);
+}
+
+h3[year="2025"],
+li[year="2025"]::before {
+  color: var(--color-05);
+}
+
+h3[year="2024"],
+li[year="2024"]::before {
+  color: var(--color-04);
+}
+
+h3[year="2023"],
+li[year="2023"]::before {
+  color: var(--color-03);
+}
+
+h3[year="2022"],
+li[year="2022"]::before {
+  color: var(--color-02);
+}
+
+h3[year="2021"],
+li[year="2021"]::before {
+  color: var(--color-01);
+}
+
+h3[year="2020"],
+li[year="2020"]::before {
+  color: var(--color-00);
+}
+
+h3[year="2019"],
+li[year="2019"]::before {
+  color: var(--color-09);
+}
+
+h3[year="2018"],
+li[year="2018"]::before {
+  color: var(--color-08);
+}
+
+h3[year="2017"],
+li[year="2017"]::before {
+  color: var(--color-07);
+}
+
+h3[year="2016"],
+li[year="2016"]::before {
+  color: var(--color-06);
+}
+
+h3[year="2015"],
+li[year="2015"]::before {
+  color: var(--color-05);
+}
+
+h3[year="2014"],
+li[year="2014"]::before {
+  color: var(--color-04);
+}
+
+h3[year="2013"],
+li[year="2013"]::before {
+  color: var(--color-03);
+}
+
+h3[year="2012"],
+li[year="2012"]::before {
+  color: var(--color-02);
+}
+
+h3[year="2011"],
+li[year="2011"]::before {
+  color: var(--color-01);
+}
+
+h3[year="2010"],
+li[year="2010"]::before {
+  color: var(--color-00);
+}
+
+/**
  * Footer.
  */
 .footer {

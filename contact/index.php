@@ -2,14 +2,14 @@
   $page = 'contact';
   $seo_title = 'Contact - Craig Baldwin';
   $title = 'Get in touch';
-  $description = 'I\'m currently working full-time at BORN Group but if you have something interesting then use the details below to get in touch.';
+  $description = 'I\'m currently working full-time at By Association Only but if you have something interesting then use the details below to get in touch.';
 ?>
 
 <html lang="en">
   <head>
     <title><?php echo $seo_title ?></title>
     <?php include '../assets/includes/head.php' ?>
-    <link href="../assets/contact.css?v=1320" rel="stylesheet" />
+    <link href="../assets/contact.css?v=1330" rel="stylesheet" />
   </head>
 
   <body>
@@ -19,10 +19,10 @@
       <div class="content contact">
         <?php include '../assets/includes/card.php' ?>
 
-        <p>Do not get in touch about job opportunities at BORN Group or Tech M.</p>
+        <p>Do not get in touch about job opportunities at By Association Only.</p>
 
         <ul>
-          <li><a href="mailto:craigsbaldwin@gmail.com">Email</a> - I check it occassionally</li>
+          <li><a href="mailto:craigsbaldwin@gmail.com">Email</a> - I check it occasionally</li>
           <li><a href="https://daytum.com/CraigBaldwin">Daytum</a> - statistics 2009-2024</li>
           <li><a href="https://github.com/craigsbaldwin">GitHub</a> - personal coding projects</li>
           <li><a href="https://www.instagram.com/craigsbaldwin/">Instagram</a> - photos from my wanders</li>

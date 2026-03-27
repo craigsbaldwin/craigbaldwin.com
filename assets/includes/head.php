@@ -34,12 +34,10 @@
     --color-black: rgb(0 0 0);
     --color-black-opacity: rgb(0 0 0 / 60%);
     --color-blue: rgb(52 152 219);
-    --color-dark-blue: rgb(45 140 128);
     --color-dark-grey: rgb(60 60 60);
     --color-darker-grey: rgb(35 35 35);
     --color-darkest-grey: rgb(15 15 15);
     --color-deep-purple: rgb(52 73 94);
-    --color-fuchsia: rgb(179 55 113);
     --color-green: rgb(46 204 113);
     --color-grey: rgb(241 241 241);
     --color-light-blue: rgb(156 220 254);
@@ -47,7 +45,6 @@
     --color-lighter-grey: rgb(220 220 220);
     --color-mid-grey: rgb(75 75 75);
     --color-orange: rgb(230 126 34);
-    --color-pink: rgb(232 67 147);
     --color-purple: rgb(155 89 182);
     --color-red: rgb(231 76 60);
     --color-white: rgb(255 255 255);
@@ -79,14 +76,16 @@
     --color-work: var(--color-purple);
 
     /* Year colours */
-    --color-2025: var(--color-fuchsia);
-    --color-2024: var(--color-green);
-    --color-2023: var(--color-blue);
-    --color-2022: var(--color-red);
-    --color-2021: var(--color-purple);
-    --color-2020: var(--color-orange);
-    --color-2019: var(--color-pink);
-    --color-2018: var(--color-dark-blue);
+    --color-09: rgb(94 79 162);
+    --color-08: rgb(50 136 189);
+    --color-07: rgb(102 194 165);
+    --color-06: rgb(171 221 164);
+    --color-05: rgb(245 199 157);
+    --color-04: rgb(245  145 97);
+    --color-03: rgb(253 174 97);
+    --color-02: rgb(244 109 67);
+    --color-01: rgb(213 62 79);
+    --color-00: rgb(158 1 66);
 
     /* Dynamic colours */
     --color-background: var(--color-white);
@@ -129,5 +128,5 @@
   }
 </style>
 
-<link href="/assets/reset.css?v=1320" rel="stylesheet" />
-<link href="/assets/theme.css?v=1320" rel="stylesheet" />
+<link href="/assets/reset.css?v=1330" rel="stylesheet" />
+<link href="/assets/theme.css?v=1330" rel="stylesheet" />
