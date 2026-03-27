@@ -1,6 +1,6 @@
 # Craig Baldwin [dot] com 13
 
-Personal website of principal developer Craig Baldwin working at BORN Group Shopify practice (originally We Make Websites).
+Personal website of principal developer Craig Baldwin working at By Association Only, previously worked at We Make Websites.
 
 ## Tech stack
 

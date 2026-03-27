@@ -2,8 +2,15 @@
 
 This changelog only provides headline changes, see the commit history for all changes.
 
+## 13.3.0 - 2026-03-27
+* Updated homepage content
+* Updated about page content
+* Updated work page content
+* Updated stats page content
+* Updated year colours
+
 ## 13.2.0 - 2025-12-03
-* Add Veronica Beard to work page
+* Added Veronica Beard to work page
 * Fixed project lead count
 * Fixed missing code block asset
 
